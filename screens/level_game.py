@@ -110,6 +110,11 @@ def mostrar_level_game(
                     _input_text += ev.unicode
 
             elif ev.type == pygame.MOUSEBUTTONDOWN:
+                btn_back = pygame.Rect(20, HEIGHT - 68, 250, 44)
+                if btn_back.collidepoint(mouse_pos):
+                    reset_level()
+                    return "volver_menu"
+
                 btn = pygame.Rect(0, 0, 240, 55)
                 btn.center = (center_x, center_y + 80)
                 if btn.collidepoint(mouse_pos) and _input_text.strip():
@@ -196,6 +201,14 @@ def mostrar_level_game(
         pygame.draw.rect(screen, btn_color, btn, border_radius=10)
         label = font_button.render("Confirmar  [Enter]", True, WHITE)
         screen.blit(label, label.get_rect(center=btn.center))
+
+    # ── Botón Volver al mapa ───────────────────────────────────────────────
+    font_back  = pygame.font.SysFont("Arial", 22, bold=True)
+    back_label = font_back.render("< Volver al mapa", True, WHITE)
+    btn_back   = pygame.Rect(20, HEIGHT - 68, back_label.get_width() + 36, 44)
+    back_color = (130, 35, 35) if btn_back.collidepoint(mouse_pos) else (85, 22, 22)
+    pygame.draw.rect(screen, back_color, btn_back, border_radius=10)
+    screen.blit(back_label, back_label.get_rect(center=btn_back.center))
 
     # ── Flash de feedback ──────────────────────────────────────────────────
     if _feedback == "correcto":

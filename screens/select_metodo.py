@@ -64,11 +64,13 @@ def mostrar_select_metodo(
     except Exception:
         screen.blit(font_title.render(str(game_state.vidas), True, WHITE), (WIDTH - 125, 25))
 
-    # ── HUD: temporizador ──────────────────────────────────────────────────
-    elapsed        = int(time.time() - start_time)
-    remaining      = max(0, 1800 - elapsed)
-    timer_surf     = font_title.render(f"{remaining // 60:02}:{remaining % 60:02}", True, WHITE)
-    screen.blit(timer_surf, (WIDTH - 300, 25))
+    # ── HUD: temporizador (a la izquierda de los corazones) ───────────────
+    elapsed    = int(time.time() - start_time)
+    remaining  = max(0, 1800 - elapsed)
+    timer_surf = font_title.render(f"{remaining // 60:02}:{remaining % 60:02}", True, WHITE)
+    hearts_left_x = WIDTH - 45 - (max(game_state.vidas, 1) - 1) * 42
+    timer_rect = timer_surf.get_rect(right=hearts_left_x - 18, centery=38)
+    screen.blit(timer_surf, timer_rect)
 
     # ── HUD: línea y estación ──────────────────────────────────────────────
     color_linea = LINEA_COLORES.get(linea, WHITE)
@@ -146,5 +148,16 @@ def mostrar_select_metodo(
 
         if event.type == pygame.MOUSEBUTTONDOWN and btn.collidepoint(mouse_pos):
             return "metodo_correcto" if opcion == correct_option else "incorrecto"
+
+    # ── Botón Volver al mapa ───────────────────────────────────────────────
+    font_back  = pygame.font.SysFont("Arial", 22, bold=True)
+    back_label = font_back.render("< Volver al mapa", True, WHITE)
+    btn_back   = pygame.Rect(20, HEIGHT - 68, back_label.get_width() + 36, 44)
+    back_color = (130, 35, 35) if btn_back.collidepoint(mouse_pos) else (85, 22, 22)
+    pygame.draw.rect(screen, back_color, btn_back, border_radius=10)
+    screen.blit(back_label, back_label.get_rect(center=btn_back.center))
+
+    if event.type == pygame.MOUSEBUTTONDOWN and btn_back.collidepoint(mouse_pos):
+        return "volver_menu"
 
     return None

@@ -70,9 +70,19 @@ def _reset_minijuego(nivel):
     }.get(nivel.get("minijuego", ""), reset_level)()
 
 
+PUNTOS_POR_VIDA = 5000
+MAX_VIDAS       = 9
+
 def _nivel_superado(nivel_ref, ctx):
-    gs = ctx["game_state"]
+    gs         = ctx["game_state"]
+    prev_bonus = gs.puntos // PUNTOS_POR_VIDA
     gs.puntos += nivel_ref.get("puntos", 1000)
+    new_bonus  = gs.puntos // PUNTOS_POR_VIDA
+    if new_bonus > prev_bonus and gs.vidas < MAX_VIDAS:
+        gs.vidas += 1
+        ctx["vida_ganada"] = True
+    else:
+        ctx["vida_ganada"] = False
     ctx["nivel_completado"] = nivel_ref
     siguiente = gs.nivel_actual + 1
     total     = level_manager.total_levels()
@@ -89,7 +99,7 @@ def main():
     start_time       = None
     nivel_completado = None
     clock            = pygame.time.Clock()
-    ctx              = {"game_state": game_state, "nivel_completado": None}
+    ctx              = {"game_state": game_state, "nivel_completado": None, "vida_ganada": False}
     transition       = ScreenTransition()
 
     # Fade-in inicial al arrancar el juego
@@ -176,6 +186,12 @@ def main():
                     game_state.vidas -= 1
                     SaveManager.guardar(game_state)
                     transition.request("game_over" if game_state.vidas <= 0 else "incorrecto")
+                elif result == "volver_menu":
+                    game_state.vidas -= 1
+                    SaveManager.guardar(game_state)
+                    if nivel and "opciones_mezcladas" in nivel:
+                        del nivel["opciones_mezcladas"]
+                    transition.request("game_over" if game_state.vidas <= 0 else "menu")
 
         # CABLES
         elif current_screen == "cables":
@@ -274,12 +290,18 @@ def main():
                     game_state.vidas -= 1
                     SaveManager.guardar(game_state)
                     transition.request("game_over" if game_state.vidas <= 0 else "incorrecto")
+                elif result == "volver_menu":
+                    game_state.vidas -= 1
+                    SaveManager.guardar(game_state)
+                    transition.request("game_over" if game_state.vidas <= 0 else "menu")
 
         # CORRECTO
         elif current_screen == "correcto":
             result = mostrar_correcto(screen, WIDTH, HEIGHT, font_title, font_button,
-                                      game_state, nivel_completado or nivel, event, mouse_pos)
+                                      game_state, nivel_completado or nivel, event, mouse_pos,
+                                      vida_ganada=ctx["vida_ganada"])
             if not busy and result == "menu":
+                ctx["vida_ganada"] = False
                 transition.request("menu")
 
         # INCORRECTO
