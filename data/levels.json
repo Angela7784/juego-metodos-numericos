@@ -210,11 +210,11 @@
             },
             {
               "pregunta": "s",
-              "respuesta": "-1.3333"
+              "respuesta": "-1.333333333"
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "4.5178"
+              "respuesta": "4.517777778"
             }
           ]
         },
@@ -239,7 +239,7 @@
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "7.1913"
+              "respuesta": "7.19125"
             }
           ]
         },
@@ -260,11 +260,11 @@
             },
             {
               "pregunta": "s",
-              "respuesta": "-0.6667"
+              "respuesta": "-0.666666667"
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "3.6311"
+              "respuesta": "3.631111111"
             }
           ]
         }
@@ -300,15 +300,15 @@
             },
             {
               "pregunta": "D1[2]",
-              "respuesta": "0.8286"
+              "respuesta": "0.8285714286"
             },
             {
               "pregunta": "D2[1]",
-              "respuesta": "0.081"
+              "respuesta": "0.08095238095"
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "-1.3538"
+              "respuesta": "-1.353809524"
             }
           ]
         },
