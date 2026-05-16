@@ -252,6 +252,7 @@ def mostrar_semaforo(
     screen.blit(title, title.get_rect(center=(center_x, 115)))
 
     # ── Enunciado del problema ─────────────────────────────────────────────
+    enun_bottom = 148
     if _enunciado:
         font_enun = pygame.font.SysFont("Arial", 23)
         lines = _wrap_text(_enunciado, font_enun, WIDTH - 160)
@@ -262,11 +263,12 @@ def mostrar_semaforo(
         for i, line in enumerate(lines):
             lsurf = font_enun.render(line, True, (200, 225, 255))
             screen.blit(lsurf, lsurf.get_rect(center=(center_x, 159 + i * 30 + 6)))
+        enun_bottom = 150 + panel_h
 
     # ── Semáforos ──────────────────────────────────────────────────────────
     spacing   = min(160, (WIDTH - 200) // max(total_pasos, 1))
     start_sem = center_x - (total_pasos - 1) * spacing // 2
-    sem_cy    = 330
+    sem_cy    = max(330, enun_bottom + 90)
 
     for i in range(total_pasos):
         sx = start_sem + i * spacing
