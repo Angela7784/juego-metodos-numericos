@@ -634,8 +634,8 @@
         {
           "correcto": "Punto Fijo",
           "incorrecto1": "Bisectriz",
-          "incorrecto2": "Grafico",
-          "incorrecto3": "Interpolación lineal"
+          "incorrecto2": "Gráfico",
+          "incorrecto3": "Interpolación Lineal"
         }
       ],
       "problemas": [
@@ -835,8 +835,12 @@
               "respuesta": "4.99950025"
             },
             {
+              "pregunta": "x5",
+              "respuesta": "4.999928602"
+            },
+            {
               "pregunta": "error",
-              "respuesta": "0.002996753"
+              "respuesta": "0.000428352"
             }
           ]
         },
@@ -885,8 +889,12 @@
               "respuesta": "1.617647059"
             },
             {
+              "pregunta": "x5",
+              "respuesta": "1.617977528"
+            },
+            {
               "pregunta": "error",
-              "respuesta": "0.002262443"
+              "respuesta": "0.000330469"
             }
           ]
         }
@@ -896,9 +904,9 @@
       "id": 10,
       "linea": "1",
       "estacion": "Central",
-      "tipo": "osciloscopio",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "osciloscopio",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_central.png",
       "seleccion_metodo": [
         {
@@ -910,65 +918,81 @@
       ],
       "problemas": [
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = x³ - 4x + 1",
+          "enunciado": "f(x) = 3x² - 5x - 2\nx0 = -1,   x1 = 0",
           "opciones": [
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "8"
+              "pregunta": "x2",
+              "respuesta": "-0.25"
             },
             {
-              "pregunta": "f(x) De Última Iteración",
-              "respuesta": "-0.000000328"
+              "pregunta": "x3",
+              "respuesta": "-0.347826087"
             },
             {
-              "pregunta": "x",
-              "respuesta": "1.860805802"
+              "pregunta": "x4",
+              "respuesta": "-0.3328"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000035789"
+              "pregunta": "x5",
+              "respuesta": "-0.33333004"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.00053004"
             }
           ]
         },
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = cos(x) - x",
+          "enunciado": "f(x) = x² - 3x + 1\nx0 = 0,   x1 = 1",
           "opciones": [
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "5"
+              "pregunta": "x2",
+              "respuesta": "0.5"
             },
             {
-              "pregunta": "f(x) De Última Iteración",
-              "respuesta": "0.000000036"
+              "pregunta": "x3",
+              "respuesta": "0.333333333"
             },
             {
-              "pregunta": "x",
-              "respuesta": "0.739085112"
+              "pregunta": "x4",
+              "respuesta": "0.384615385"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000034250"
+              "pregunta": "x5",
+              "respuesta": "0.382022472"
+            },
+            {
+              "pregunta": "x6",
+              "respuesta": "0.381965944"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.0000565"
             }
           ]
         },
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = x³ + 2x² - x - 1",
+          "enunciado": "f(x) = x³ + x² - 4x - 3\nx0 = 1,   x1 = 2",
           "opciones": [
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "7"
+              "pregunta": "x2",
+              "respuesta": "1.833333333"
             },
             {
-              "pregunta": "f(x) De Última Iteración",
-              "respuesta": "0.000000845"
+              "pregunta": "x3",
+              "respuesta": "1.907928389"
             },
             {
-              "pregunta": "x",
-              "respuesta": "0.801937940"
+              "pregunta": "x4",
+              "respuesta": "1.91244964"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000079821"
+              "pregunta": "x5",
+              "respuesta": "1.912228586"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000221055"
             }
           ]
         }
@@ -978,79 +1002,91 @@
       "id": 11,
       "linea": "1",
       "estacion": "Cuauhtémoc",
-      "tipo": "osciloscopio",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "osciloscopio",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_cuauhtemoc.png",
       "seleccion_metodo": [
         {
-          "correcto": "Newton-Raphson",
-          "incorrecto1": "Regla trapezoidal",
-          "incorrecto2": "Interpolación Lineal",
-          "incorrecto3": "Gauss - Jordán"
+          "correcto": "Punto Fijo",
+          "incorrecto1": "Diferencias Divididas",
+          "incorrecto2": "Montante",
+          "incorrecto3": "Jacobi"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = x⁴ - x - 10",
+          "enunciado": "f(x) = x² - 12x + 4 = 0\nx0 = 0",
           "opciones": [
             {
-              "pregunta": "f'(x)",
-              "respuesta": "4x^3 - 1"
+              "pregunta": "x1",
+              "respuesta": "0.333333333"
             },
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "5"
+              "pregunta": "x2",
+              "respuesta": "0.342592593"
             },
             {
-              "pregunta": "x",
-              "respuesta": "1.855584528"
+              "pregunta": "x3",
+              "respuesta": "0.343114140"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000000549"
+              "pregunta": "raiz",
+              "respuesta": "0.343145750"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000000006"
             }
           ]
         },
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = e^x - 3x",
+          "enunciado": "f(x) = 2x² + 9x + 3 = 0\nx0 = 0",
           "opciones": [
             {
-              "pregunta": "f'(x)",
-              "respuesta": "e^x - 3"
+              "pregunta": "x1",
+              "respuesta": "-0.333333333"
             },
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "3"
+              "pregunta": "x2",
+              "respuesta": "-0.358024691"
             },
             {
-              "pregunta": "x",
-              "respuesta": "1.512134552"
+              "pregunta": "x3",
+              "respuesta": "-0.361818151"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000000074"
+              "pregunta": "raiz",
+              "respuesta": "-0.362541391"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000000002"
             }
           ]
         },
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = x³ - 5x + 3",
+          "enunciado": "f(x) = 2x² - 11x + 3 = 0\nx0 = 0",
           "opciones": [
             {
-              "pregunta": "f'(x)",
-              "respuesta": "3x^2 - 5"
+              "pregunta": "x1",
+              "respuesta": "0.272727273"
             },
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "4"
+              "pregunta": "x2",
+              "respuesta": "0.286250939"
             },
             {
-              "pregunta": "x",
-              "respuesta": "1.834243184"
+              "pregunta": "x3",
+              "respuesta": "0.287625382"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000000320"
+              "pregunta": "raiz",
+              "respuesta": "0.287785549"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000000002"
             }
           ]
         }
@@ -1060,79 +1096,95 @@
       "id": 12,
       "linea": "1",
       "estacion": "Del Golfo",
-      "tipo": "osciloscopio",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "osciloscopio",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_delGolfo.png",
       "seleccion_metodo": [
         {
-          "correcto": "Punto Fijo",
-          "incorrecto1": "Lagrange",
-          "incorrecto2": "Regla de Simpson 1/3",
-          "incorrecto3": "Euler modificado"
+          "correcto": "Falsa Posición",
+          "incorrecto1": "Bisectriz",
+          "incorrecto2": "Cúbica",
+          "incorrecto3": "Línea Recta"
         }
       ],
       "problemas": [
         {
-          "enunciado": "calcula la raíz de f(x) = e^-x - 3x usando la fórmula equivalente x = (e^-x)/3 y un valor inicial de x0 = 0",
+          "enunciado": "f(x) = 2x³ - 5x - 2\na = 1,   b = 2",
           "opciones": [
             {
               "pregunta": "x1",
-              "respuesta": "0.333333333"
+              "respuesta": "1.555555556"
             },
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "9"
+              "pregunta": "x2",
+              "respuesta": "1.715539947"
             },
             {
-              "pregunta": "x",
-              "respuesta": "0.257629181"
+              "pregunta": "x3",
+              "respuesta": "1.746004563"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000006962"
+              "pregunta": "x4",
+              "respuesta": "1.751260520"
+            },
+            {
+              "pregunta": "x5",
+              "respuesta": "1.752151156"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000890636"
             }
           ]
         },
         {
-          "enunciado": "calcula la raíz de f(x) = cos(x) - 2x usando la fórmula equivalente x = cos(x)/2 y un valor inicial de x0 = 0",
+          "enunciado": "f(x) = x² + 4x - 7\na = 1,   b = 2",
           "opciones": [
             {
               "pregunta": "x1",
-              "respuesta": "0.5"
+              "respuesta": "1.285714286"
             },
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "8"
+              "pregunta": "x2",
+              "respuesta": "1.313725490"
             },
             {
-              "pregunta": "x",
-              "respuesta": "0.450182415"
+              "pregunta": "x3",
+              "respuesta": "1.316353887"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000006696"
+              "pregunta": "x4",
+              "respuesta": "1.316599487"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000245600"
             }
           ]
         },
         {
-          "enunciado": "calcula la raíz de f(x) = e^-x - 4x usando la fórmula equivalente x = (e^-x)/4 y un valor inicial de x0 = 0",
+          "enunciado": "f(x) = x³ - x² - 3\na = 1,   b = 2",
           "opciones": [
             {
               "pregunta": "x1",
-              "respuesta": "0.25"
+              "respuesta": "1.750000000"
             },
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "8"
+              "pregunta": "x2",
+              "respuesta": "1.853211009"
             },
             {
-              "pregunta": "x",
-              "respuesta": "0.203887692"
+              "pregunta": "x3",
+              "respuesta": "1.862780652"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000003912"
+              "pregunta": "x4",
+              "respuesta": "1.863625189"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000844536"
             }
           ]
         }
@@ -1142,79 +1194,91 @@
       "id": 13,
       "linea": "1",
       "estacion": "Félix U. Gómez",
-      "tipo": "osciloscopio",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "osciloscopio",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_felixUGomez.png",
       "seleccion_metodo": [
         {
           "correcto": "Secante",
           "incorrecto1": "Montante",
-          "incorrecto2": "Euler hacia adelante",
-          "incorrecto3": "Lagrange"
+          "incorrecto2": "Bisectriz",
+          "incorrecto3": "Jacobi"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = e^x - 2x - 1.5",
+          "enunciado": "f(x) = 2x² + x - 5\nx0 = 1,   x1 = 2",
           "opciones": [
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "7"
+              "pregunta": "x2",
+              "respuesta": "1.285714286"
             },
             {
-              "pregunta": "f(x) De Última Iteración",
-              "respuesta": "0.000000072"
+              "pregunta": "x3",
+              "respuesta": "1.339622642"
             },
             {
-              "pregunta": "x",
-              "respuesta": "1.507329812"
+              "pregunta": "x4",
+              "respuesta": "1.351013368"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000022989"
+              "pregunta": "x5",
+              "respuesta": "1.350780247"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000233121"
             }
           ]
         },
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = xln(x) - 1",
+          "enunciado": "f(x) = x² - 6x + 4\nx0 = 0,   x1 = 1",
           "opciones": [
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "5"
+              "pregunta": "x2",
+              "respuesta": "0.800000000"
             },
             {
-              "pregunta": "f(x) De Última Iteración",
-              "respuesta": "-0.000000006"
+              "pregunta": "x3",
+              "respuesta": "0.761904762"
             },
             {
-              "pregunta": "x",
-              "respuesta": "1.763222830"
+              "pregunta": "x4",
+              "respuesta": "0.763948498"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000012910"
+              "pregunta": "x5",
+              "respuesta": "0.763932030"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000016468"
             }
           ]
         },
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = sin(x) - e^-x",
+          "enunciado": "f(x) = x² - 2x - 5\nx0 = 3,   x1 = 4",
           "opciones": [
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "5"
+              "pregunta": "x2",
+              "respuesta": "3.400000000"
             },
             {
-              "pregunta": "f(x) De Última Iteración",
-              "respuesta": "0.000007786"
+              "pregunta": "x3",
+              "respuesta": "3.444444444"
             },
             {
-              "pregunta": "x",
-              "respuesta": "0.588538358"
+              "pregunta": "x4",
+              "respuesta": "3.449541284"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000721256"
+              "pregunta": "x5",
+              "respuesta": "3.449489690"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000051595"
             }
           ]
         }
