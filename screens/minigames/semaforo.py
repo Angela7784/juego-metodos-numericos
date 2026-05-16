@@ -202,7 +202,7 @@ def mostrar_semaforo(
                     _input_text += ev.unicode
 
             elif ev.type == pygame.MOUSEBUTTONDOWN:
-                btn = pygame.Rect(0, 0, 240, 52)
+                btn = pygame.Rect(0, 0, 288, 52)
                 btn.center = (center_x, HEIGHT - 95)
                 if btn.collidepoint(mouse_pos) and _input_text.strip():
                     correcta = _preguntas[_paso_actual]["respuesta"]
@@ -303,13 +303,13 @@ def mostrar_semaforo(
 
     # ── Botón Confirmar ────────────────────────────────────────────────────
     if _feedback is None:
-        btn = pygame.Rect(0, 0, 240, 52)
+        lbl_confirm = font_button.render("Confirmar", True, WHITE)
+        btn = pygame.Rect(0, 0, lbl_confirm.get_width() + 48, 52)
         btn.center = (center_x, HEIGHT - 95)
         bc = (50, 65, 80) if btn.collidepoint(mouse_pos) else PANEL
         pygame.draw.rect(screen, bc,   btn, border_radius=10)
         pygame.draw.rect(screen, CYAN, btn, 1, border_radius=10)
-        screen.blit(font_button.render("Confirmar  [Enter]", True, WHITE),
-                    font_button.render("Confirmar  [Enter]", True, WHITE).get_rect(center=btn.center))
+        screen.blit(lbl_confirm, lbl_confirm.get_rect(center=btn.center))
 
     # ── Flash de feedback ──────────────────────────────────────────────────
     if _feedback == "correcto":

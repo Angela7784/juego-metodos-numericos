@@ -10,13 +10,43 @@ GREEN  = (40, 200, 100)
 ORANGE = (253, 126, 20)
 
 
+def _wrap_lineas(font, lineas, max_w):
+    """Parte las líneas que no caben en max_w preservando la indentación."""
+    resultado = []
+    for linea in lineas:
+        if not linea.strip():
+            resultado.append("")
+            continue
+        if font.size(linea)[0] <= max_w:
+            resultado.append(linea)
+            continue
+        stripped = linea.lstrip()
+        indent   = linea[:len(linea) - len(stripped)]
+        cont     = indent + "  "
+        words    = stripped.split()
+        cur      = indent
+        for word in words:
+            test = cur + word if cur == indent else cur + " " + word
+            if font.size(test)[0] <= max_w:
+                cur = test
+            else:
+                if cur.strip():
+                    resultado.append(cur)
+                cur = cont + word
+        if cur.strip():
+            resultado.append(cur)
+    return resultado
+
+
 def _dibujar_seccion(screen, font_header, font_small, titulo, lineas, color, x, y, ancho):
     """
     Dibuja una sección con título coloreado, línea decorativa y contenido.
     Retorna la Y final del bloque.
     """
-    # Fondo semitransparente de la tarjeta
-    alto_estimado = 45 + 12 + len(lineas) * 30 + 20
+    max_text_w   = ancho - 30
+    lineas_wrap  = _wrap_lineas(font_small, lineas, max_text_w)
+
+    alto_estimado = 45 + 12 + len(lineas_wrap) * 30 + 20
     card = pygame.Surface((ancho, alto_estimado), pygame.SRCALPHA)
     card.fill((255, 255, 255, 18))
     screen.blit(card, (x, y))
@@ -31,9 +61,9 @@ def _dibujar_seccion(screen, font_header, font_small, titulo, lineas, color, x, 
                      (x + 15, y + 48),
                      (x + ancho - 15, y + 48), 2)
 
-    # Líneas de contenido
+    # Líneas de contenido (ya wrapeadas)
     cy = y + 58
-    for linea in lineas:
+    for linea in lineas_wrap:
         surf = font_small.render(linea, True, WHITE)
         screen.blit(surf, (x + 15, cy))
         cy += 30
@@ -56,10 +86,14 @@ def mostrar_instrucciones(screen, WIDTH, HEIGHT, font_title, font_button, event,
     """
 
     # ── Fondo ──────────────────────────────────────────────────────────────
+    # Se escala más alto y se desplaza hacia abajo para que la simbología
+    # de la imagen quede por debajo de las tarjetas de instrucciones.
     try:
-        bg = pygame.image.load("assets/menu_background4.png")
-        bg = pygame.transform.scale(bg, (WIDTH, HEIGHT))
-        screen.blit(bg, (0, 0))
+        bg       = pygame.image.load("assets/menu_background4.png")
+        bg_shift = 100
+        bg       = pygame.transform.scale(bg, (WIDTH, HEIGHT + bg_shift))
+        screen.fill(DARK)
+        screen.blit(bg, (0, bg_shift))
     except Exception:
         screen.fill(DARK)
 
@@ -96,8 +130,10 @@ def mostrar_instrucciones(screen, WIDTH, HEIGHT, font_title, font_button, event,
         "4. Resuelve cada paso escribiendo",
         "   el resultado intermedio.",
         "5. Completa todos los pasos",
-        "   para ganar puntos.",
-        "6. Avanza por las 3 lineas del metro.",
+        "   para ganar puntos y vidas.",
+        "6. Usa 'Volver al mapa' si necesitas",
+        "   cambiar de nivel (cuesta 1 vida).",
+        "7. Avanza por las 3 lineas del metro.",
     ]
     _dibujar_seccion(screen, font_button, font_small,
                      "Como jugar", como_jugar,
@@ -105,16 +141,17 @@ def mostrar_instrucciones(screen, WIDTH, HEIGHT, font_title, font_button, event,
 
     # ── Sección 2: Vidas y puntos ──────────────────────────────────────────
     vidas_info = [
-        "Comienzas con 6 vidas.",
+        "Comienzas con 6 vidas (maximo 9).",
         "Pierdes 1 vida si:",
         "  - Eliges el metodo incorrecto.",
         "  - Das una respuesta incorrecta.",
+        "  - Usas 'Volver al mapa'.",
         "Al quedarte sin vidas: Game Over.",
         "",
+        "Ganas +1 vida cada 5,000 puntos.",
+        "",
         "Puntos por nivel completado:",
-        "  Linea 1: 1,000 pts / nivel",
-        "  Linea 2: 1,500 pts / nivel",
-        "  Linea 3: 2,000 pts / nivel",
+        "  1,000 pts / nivel",
     ]
     _dibujar_seccion(screen, font_button, font_small,
                      "Vidas y puntos", vidas_info,

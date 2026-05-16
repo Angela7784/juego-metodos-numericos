@@ -19,7 +19,7 @@ def _get_mapa(WIDTH, HEIGHT):
     global _mapa_img
     if _mapa_img is None:
         try:
-            raw = pygame.image.load("assets/mapa_metrorrey.png").convert()
+            raw = pygame.image.load("assets/mapa_oscuro.png").convert()
             # Escalar manteniendo aspecto y centrando con barras negras si hace falta
             img_w, img_h = raw.get_size()
             scale = min(WIDTH / img_w, HEIGHT / img_h)
