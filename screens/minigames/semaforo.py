@@ -65,19 +65,24 @@ def _comparar(user_input: str, correcta: str) -> bool:
 
 
 def _wrap_text(text, font, max_width):
-    words = text.split()
-    lines, current = [], ""
-    for word in words:
-        test = (current + " " + word).strip()
-        if font.size(test)[0] <= max_width:
-            current = test
+    result = []
+    for raw in text.split('\n'):
+        if font.size(raw)[0] <= max_width:
+            result.append(raw)
         else:
+            words = raw.split()
+            current = ""
+            for word in words:
+                test = (current + " " + word).strip()
+                if font.size(test)[0] <= max_width:
+                    current = test
+                else:
+                    if current:
+                        result.append(current)
+                    current = word
             if current:
-                lines.append(current)
-            current = word
-    if current:
-        lines.append(current)
-    return lines
+                result.append(current)
+    return result
 
 
 # ── Dibujo de un semáforo individual ───────────────────────────────────────
@@ -154,7 +159,7 @@ def mostrar_semaforo(
         _resueltas     = set()
         problemas = nivel.get("problemas", [])
         if problemas:
-            problema   = random.choice(problemas)
+            problema   = nivel.get("problema_seleccionado") or random.choice(problemas)
             _enunciado = problema.get("enunciado", "")
             _preguntas = problema.get("opciones", [])
         else:

@@ -18,30 +18,66 @@
       ],
       "problemas": [
         {
-          "enunciado": "Dada la función f(x) = e^x, con intervalos de 0 en f(a) y de 1 en f(b), estima g(0.5)",
+          "enunciado": "Estimar Ln(4) usando los intervalos Ln(2) y Ln(6).",
           "opciones": [
-            { "pregunta": "f(a)", "respuesta": "1" },
-            { "pregunta": "f(b)", "respuesta": "2.718281828" },
-            { "pregunta": "g(x)", "respuesta": "1.859140914" },
-            { "pregunta": "error", "respuesta": "0.2104196435" }
+            {
+              "pregunta": "f(a) = Ln(2)",
+              "respuesta": "0.6931471806"
+            },
+            {
+              "pregunta": "f(b) = Ln(6)",
+              "respuesta": "1.7917594692"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "1.2424533249"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.1438410362"
+            }
           ]
         },
         {
-          "enunciado": "Dada la función f(x) = cos(2x) + x^2, con intervalos de 1 en f(a) y de 2 en f(b), estima g(1.5)",
+          "enunciado": "Estimar Ln(6) usando los intervalos Ln(4) y Ln(8).",
           "opciones": [
-            { "pregunta": "f(a)", "respuesta": "0.5838531635" },
-            { "pregunta": "f(b)", "respuesta": "3.346356379" },
-            { "pregunta": "g(x)", "respuesta": "1.965104771" },
-            { "pregunta": "error", "respuesta": "0.7050972679" }
+            {
+              "pregunta": "f(a) = Ln(4)",
+              "respuesta": "1.3862943611"
+            },
+            {
+              "pregunta": "f(b) = Ln(8)",
+              "respuesta": "2.0794415417"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "1.7328679514"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.0588915178"
+            }
           ]
         },
         {
-          "enunciado": "Dada la función f(x) = sin(2x) + 3x^3, con intervalos de 0 en f(a) y de 1 en f(b), estima g(0.5)",
+          "enunciado": "Estimar Ln(9) usando los intervalos Ln(6) y Ln(12).",
           "opciones": [
-            { "pregunta": "f(a)", "respuesta": "0" },
-            { "pregunta": "f(b)", "respuesta": "3.909297427" },
-            { "pregunta": "g(x)", "respuesta": "1.954648713" },
-            { "pregunta": "error", "respuesta": "0.7381777286" }
+            {
+              "pregunta": "f(a) = Ln(6)",
+              "respuesta": "1.7917594692"
+            },
+            {
+              "pregunta": "f(b) = Ln(12)",
+              "respuesta": "2.4849066498"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "2.1383330595"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.0588915178"
+            }
           ]
         }
       ]
@@ -64,30 +100,78 @@
       ],
       "problemas": [
         {
-          "enunciado": "Tabla: x=[0,1,2,3], f=[1,4,9,16]. Estima f(0.5).",
+          "enunciado": "Obtener g(x) para x = 1.4:\n  x1 = 1.0          y1 = 1.0000\n  x2 = 1.5          y2 = 1.2247\n  x3 = 2.0          y3 = 1.4142",
           "opciones": [
-            { "pregunta": "Δf(xi)", "respuesta": "3" },
-            { "pregunta": "s", "respuesta": "0.5" },
-            { "pregunta": "s(s-1)/2", "respuesta": "-0.125" },
-            { "pregunta": "g(x)", "respuesta": "2.25" }
+            {
+              "pregunta": "h",
+              "respuesta": "0.5"
+            },
+            {
+              "pregunta": "Df(x1)",
+              "respuesta": "0.2247"
+            },
+            {
+              "pregunta": "D2f(x1)",
+              "respuesta": "-0.0352"
+            },
+            {
+              "pregunta": "s",
+              "respuesta": "0.8"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "1.1826"
+            }
           ]
         },
         {
-          "enunciado": "Tabla con h=1: x=[1,2,3,4], f=[2,5,10,17]. Estima f(1.5).",
+          "enunciado": "Obtener g(x) para x = 2.3:\n  x1 = 2.0          y1 = 0.3010\n  x2 = 2.5          y2 = 0.3979\n  x3 = 3.0          y3 = 0.4771",
           "opciones": [
-            { "pregunta": "Δf(xi)", "respuesta": "3" },
-            { "pregunta": "s", "respuesta": "0.5" },
-            { "pregunta": "Δ²f(x₀)", "respuesta": "2" },
-            { "pregunta": "g(x)", "respuesta": "3.25" }
+            {
+              "pregunta": "h",
+              "respuesta": "0.5"
+            },
+            {
+              "pregunta": "Df(x1)",
+              "respuesta": "0.0969"
+            },
+            {
+              "pregunta": "D2f(x1)",
+              "respuesta": "-0.0177"
+            },
+            {
+              "pregunta": "s",
+              "respuesta": "0.6"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "0.3613"
+            }
           ]
         },
         {
-          "enunciado": "Tabla con h=2: x=[0,2,4,6], f=[3,7,15,27]. Estima f(1).",
+          "enunciado": "Obtener g(x) para x = 5.4:\n  x1 = 5.0          y1 = 2.2361\n  x2 = 5.5          y2 = 2.3452\n  x3 = 6.0          y3 = 2.4495",
           "opciones": [
-            { "pregunta": "s", "respuesta": "0.5" },
-            { "pregunta": "Δf(xi)", "respuesta": "4" },
-            { "pregunta": "Δ²f(xi)", "respuesta": "4" },
-            { "pregunta": "g(x)", "respuesta": "4.75" }
+            {
+              "pregunta": "h",
+              "respuesta": "0.5"
+            },
+            {
+              "pregunta": "Df(x1)",
+              "respuesta": "0.1091"
+            },
+            {
+              "pregunta": "D2f(x1)",
+              "respuesta": "-0.0048"
+            },
+            {
+              "pregunta": "s",
+              "respuesta": "0.8"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "2.3238"
+            }
           ]
         }
       ]
@@ -110,30 +194,78 @@
       ],
       "problemas": [
         {
-          "enunciado": "Tabla: x=[1,2,3,4], f=[1,4,9,16]. Estima f(3.5) con Newton hacia atrás.",
+          "enunciado": "Obtener g(x) para x = 3.2:\n  x1 = 3.0          y1 = 4.27\n  x2 = 3.3          y2 = 4.65\n  x3 = 3.6          y3 = 5.08",
           "opciones": [
-            { "pregunta": "△f(xi)", "respuesta": "7" },
-            { "pregunta": "s", "respuesta": "-0.5" },
-            { "pregunta": "s(s+1)/2", "respuesta": "-0.125" },
-            { "pregunta": "g(x)", "respuesta": "12.25" }
+            {
+              "pregunta": "h",
+              "respuesta": "0.3"
+            },
+            {
+              "pregunta": "Vf(xi)",
+              "respuesta": "0.43"
+            },
+            {
+              "pregunta": "V2f(xi)",
+              "respuesta": "0.05"
+            },
+            {
+              "pregunta": "s",
+              "respuesta": "-1.3333"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "4.5178"
+            }
           ]
         },
         {
-          "enunciado": "Tabla: x=[0,1,2,3], f=[0,1,8,27]. Estima f(2.5) con Newton hacia atrás (xₙ=3).",
+          "enunciado": "Obtener g(x) para x = 5.6:\n  x1 = 5.0          y1 = 6.34\n  x2 = 5.4          y2 = 6.89\n  x3 = 5.8          y3 = 7.51",
           "opciones": [
-            { "pregunta": "△f(xi)", "respuesta": "19" },
-            { "pregunta": "s", "respuesta": "-0.5" },
-            { "pregunta": "△²f(xi)", "respuesta": "12" },
-            { "pregunta": "g(x)", "respuesta": "15.625" }
+            {
+              "pregunta": "h",
+              "respuesta": "0.4"
+            },
+            {
+              "pregunta": "Vf(xi)",
+              "respuesta": "0.62"
+            },
+            {
+              "pregunta": "V2f(xi)",
+              "respuesta": "0.07"
+            },
+            {
+              "pregunta": "s",
+              "respuesta": "-0.5"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "7.1913"
+            }
           ]
         },
         {
-          "enunciado": "Tabla: x=[2,4,6,8], f=[4,16,36,64]. Estima f(7) con Newton hacia atrás (xₙ=8).",
+          "enunciado": "Obtener g(x) para x = 8.5:\n  x1 = 8.1          y1 = 3.18\n  x2 = 8.4          y2 = 3.51\n  x3 = 8.7          y3 = 3.89",
           "opciones": [
-            { "pregunta": "△f(xi)", "respuesta": "28" },
-            { "pregunta": "s", "respuesta": "-0.5" },
-            { "pregunta": "s(s+1)/2", "respuesta": "-0.125" },
-            { "pregunta": "g(x)", "respuesta": "49.0" }
+            {
+              "pregunta": "h",
+              "respuesta": "0.3"
+            },
+            {
+              "pregunta": "Vf(xi)",
+              "respuesta": "0.38"
+            },
+            {
+              "pregunta": "V2f(xi)",
+              "respuesta": "0.05"
+            },
+            {
+              "pregunta": "s",
+              "respuesta": "-0.6667"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "3.6311"
+            }
           ]
         }
       ]
@@ -156,30 +288,78 @@
       ],
       "problemas": [
         {
-          "enunciado": "Tabla: x=[1,3,5], f=[2,6,14]. Estima f(2).",
+          "enunciado": "Encuentre g(x) para x = 5.0:\n  x1 = 6.0          y1 = -0.42\n  x2 = 5.2          y2 = -1.18\n  x3 = 4.5          y3 = -1.76",
           "opciones": [
-            { "pregunta": "D1^1f[xi]", "respuesta": "2.0" },
-            { "pregunta": "D2^1f[xi]", "respuesta": "4.0" },
-            { "pregunta": "D1^2f[xi]", "respuesta": "0.5" },
-            { "pregunta": "g(x)", "respuesta": "3.5" }
+            {
+              "pregunta": "D0",
+              "respuesta": "-0.42"
+            },
+            {
+              "pregunta": "D1[1]",
+              "respuesta": "0.95"
+            },
+            {
+              "pregunta": "D1[2]",
+              "respuesta": "0.8286"
+            },
+            {
+              "pregunta": "D2[1]",
+              "respuesta": "0.081"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "-1.3538"
+            }
           ]
         },
         {
-          "enunciado": "Tabla: x=[0,2,4], f=[1,5,17]. Estima f(1).",
+          "enunciado": "Encuentre g(x) para x = 8.2:\n  x1 = 9.5          y1 = 4.10\n  x2 = 8.6          y2 = 3.22\n  x3 = 7.8          y3 = 2.61",
           "opciones": [
-            { "pregunta": "D1^1f[xi]", "respuesta": "2.0" },
-            { "pregunta": "D2^1f[xi]", "respuesta": "6.0" },
-            { "pregunta": "D1^2f[xi]", "respuesta": "1.0" },
-            { "pregunta": "g(x)", "respuesta": "2.0" }
+            {
+              "pregunta": "D0",
+              "respuesta": "4.10"
+            },
+            {
+              "pregunta": "D1[1]",
+              "respuesta": "0.9778"
+            },
+            {
+              "pregunta": "D1[2]",
+              "respuesta": "0.7625"
+            },
+            {
+              "pregunta": "D2[1]",
+              "respuesta": "0.1266"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "2.8947"
+            }
           ]
         },
         {
-          "enunciado": "Tabla: x=[1,3,5], f=[1,9,25]. Estima f(2).",
+          "enunciado": "Encuentre g(x) para x = 2.6:\n  x1 = 1.5          y1 = -2.10\n  x2 = 2.3          y2 = -1.45\n  x3 = 3.0          y3 = -0.82",
           "opciones": [
-            { "pregunta": "D1^1f[xi]", "respuesta": "4.0" },
-            { "pregunta": "D2^1f[xi]", "respuesta": "8.0" },
-            { "pregunta": "D1^2f[xi]", "respuesta": "1.0" },
-            { "pregunta": "g(x)", "respuesta": "4.0" }
+            {
+              "pregunta": "D0",
+              "respuesta": "-2.10"
+            },
+            {
+              "pregunta": "D1[1]",
+              "respuesta": "0.8125"
+            },
+            {
+              "pregunta": "D1[2]",
+              "respuesta": "0.9"
+            },
+            {
+              "pregunta": "D2[1]",
+              "respuesta": "0.0583"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "-1.187"
+            }
           ]
         }
       ]
@@ -202,30 +382,66 @@
       ],
       "problemas": [
         {
-          "enunciado": "Tabla: x=[1,2,3], f=[1,4,9]. Estima f(1.5).",
+          "enunciado": "Obtener g(x) para x = 4.2:\n  x1 = 4.0          y1 = 2.14\n  x2 = 4.4          y2 = 2.43\n  x3 = 4.8          y3 = 2.75",
           "opciones": [
-            { "pregunta": "Primero Término", "respuesta": "0.375" },
-            { "pregunta": "Segundo Término", "respuesta": "0.75" },
-            { "pregunta": "Tercer Término", "respuesta": "-0.125" },
-            { "pregunta": "g(x)", "respuesta": "2.25" }
+            {
+              "pregunta": "L1(x)",
+              "respuesta": "0.8025"
+            },
+            {
+              "pregunta": "L2(x)",
+              "respuesta": "1.8225"
+            },
+            {
+              "pregunta": "L3(x)",
+              "respuesta": "-0.3438"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "2.2812"
+            }
           ]
         },
         {
-          "enunciado": "Tabla: x=[0,1,2], f=[0,1,8]. Estima f(1.5).",
+          "enunciado": "Obtener g(x) para x = 7.4:\n  x1 = 7.0          y1 = 3.52\n  x2 = 7.6          y2 = 3.95\n  x3 = 8.1          y3 = 4.31",
           "opciones": [
-            { "pregunta": "Primero Término", "respuesta": "-0.125" },
-            { "pregunta": "Segundo Término", "respuesta": "0.75" },
-            { "pregunta": "Tercer Término", "respuesta": "0.375" },
-            { "pregunta": "g(x)", "respuesta": "3.75" }
+            {
+              "pregunta": "L1(x)",
+              "respuesta": "0.7467"
+            },
+            {
+              "pregunta": "L2(x)",
+              "respuesta": "3.6867"
+            },
+            {
+              "pregunta": "L3(x)",
+              "respuesta": "-0.6269"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "3.8065"
+            }
           ]
         },
         {
-          "enunciado": "Tabla: x=[1,3,5], f=[2,10,26]. Estima f(2).",
+          "enunciado": "Obtener g(x) para x = 5.8:\n  x1 = 5.5          y1 = 0.85\n  x2 = 6.0          y2 = 1.12\n  x3 = 6.6          y3 = 1.47",
           "opciones": [
-            { "pregunta": "Primero Término", "respuesta": "0.375" },
-            { "pregunta": "Segundo Término", "respuesta": "0.75" },
-            { "pregunta": "Tercer Término", "respuesta": "-0.125" },
-            { "pregunta": "g(x)", "respuesta": "5.0" }
+            {
+              "pregunta": "L1(x)",
+              "respuesta": "0.2473"
+            },
+            {
+              "pregunta": "L2(x)",
+              "respuesta": "0.896"
+            },
+            {
+              "pregunta": "L3(x)",
+              "respuesta": "-0.1336"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "1.0097"
+            }
           ]
         }
       ]
@@ -248,30 +464,78 @@
       ],
       "problemas": [
         {
-          "enunciado": "Tabla: x=[0,1,3], f=[3,6,18]. Estima f(2).",
+          "enunciado": "Encuentre g(x) para x = 2.8:\n  x1 = 2.4          y1 = 1.35\n  x2 = 3.2          y2 = 1.89\n  x3 = 3.9          y3 = 2.41",
           "opciones": [
-            { "pregunta": "D1^1f[xi]", "respuesta": "3.0" },
-            { "pregunta": "D2^1f[xi]", "respuesta": "6.0" },
-            { "pregunta": "D1^2f[xi]", "respuesta": "1.0" },
-            { "pregunta": "g(x)", "respuesta": "11.0" }
+            {
+              "pregunta": "D0",
+              "respuesta": "1.35"
+            },
+            {
+              "pregunta": "D1[1]",
+              "respuesta": "0.675"
+            },
+            {
+              "pregunta": "D1[2]",
+              "respuesta": "0.7429"
+            },
+            {
+              "pregunta": "D2[1]",
+              "respuesta": "0.0453"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "1.6128"
+            }
           ]
         },
         {
-          "enunciado": "Tabla: x=[1,2,4], f=[5,11,29]. Estima f(3).",
+          "enunciado": "Encuentre g(x) para x = 11.0:\n  x1 = 10.5          y1 = -3.21\n  x2 = 11.3          y2 = -2.68\n  x3 = 12.0          y3 = -2.09",
           "opciones": [
-            { "pregunta": "D1^1f[xi]", "respuesta": "6.0" },
-            { "pregunta": "D2^1f[xi]", "respuesta": "9.0" },
-            { "pregunta": "D1^2f[xi]", "respuesta": "1.0" },
-            { "pregunta": "g(x)", "respuesta": "19.0" }
+            {
+              "pregunta": "D0",
+              "respuesta": "-3.21"
+            },
+            {
+              "pregunta": "D1[1]",
+              "respuesta": "0.6625"
+            },
+            {
+              "pregunta": "D1[2]",
+              "respuesta": "0.8429"
+            },
+            {
+              "pregunta": "D2[1]",
+              "respuesta": "0.1203"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "-2.8968"
+            }
           ]
         },
         {
-          "enunciado": "Tabla: x=[0,1,3], f=[1,3,13]. Estima f(2).",
+          "enunciado": "Encuentre g(x) para x = 0.9:\n  x1 = 0.5          y1 = 4.82\n  x2 = 1.2          y2 = 3.95\n  x3 = 2.0          y3 = 3.14",
           "opciones": [
-            { "pregunta": "D1^1f[xi]", "respuesta": "2.0" },
-            { "pregunta": "D2^1f[xi]", "respuesta": "5.0" },
-            { "pregunta": "D1^2f[xi]", "respuesta": "1.0" },
-            { "pregunta": "g(x)", "respuesta": "7.0" }
+            {
+              "pregunta": "D0",
+              "respuesta": "4.82"
+            },
+            {
+              "pregunta": "D1[1]",
+              "respuesta": "-1.2429"
+            },
+            {
+              "pregunta": "D1[2]",
+              "respuesta": "-1.0125"
+            },
+            {
+              "pregunta": "D2[1]",
+              "respuesta": "0.1536"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "4.3044"
+            }
           ]
         }
       ]
@@ -294,30 +558,66 @@
       ],
       "problemas": [
         {
-          "enunciado": "Tabla: x=[0,1,2], f=[1,3,7]. Estima f(1.5).",
+          "enunciado": "Obtener g(x) para x = 2.1:\n  x1 = 1.8          y1 = -0.75\n  x2 = 2.4          y2 = -0.32\n  x3 = 3.0          y3 =  0.18",
           "opciones": [
-            { "pregunta": "Primero Término", "respuesta": "-0.125" },
-            { "pregunta": "Segundo Término", "respuesta": "0.75" },
-            { "pregunta": "Tercer Término", "respuesta": "0.375" },
-            { "pregunta": "g(x)", "respuesta": "4.75" }
+            {
+              "pregunta": "L1(x)",
+              "respuesta": "-0.2812"
+            },
+            {
+              "pregunta": "L2(x)",
+              "respuesta": "-0.24"
+            },
+            {
+              "pregunta": "L3(x)",
+              "respuesta": "-0.0225"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "-0.5437"
+            }
           ]
         },
         {
-          "enunciado": "Tabla: x=[1,2,3], f=[4,11,22]. Estima f(2.5).",
+          "enunciado": "Obtener g(x) para x = 4.0:\n  x1 = 3.4          y1 = 5.76\n  x2 = 3.9          y2 = 6.38\n  x3 = 4.5          y3 = 7.20",
           "opciones": [
-            { "pregunta": "Primero Término", "respuesta": "-0.125" },
-            { "pregunta": "Segundo Término", "respuesta": "0.75" },
-            { "pregunta": "Tercer Término", "respuesta": "0.375" },
-            { "pregunta": "g(x)", "respuesta": "16.0" }
+            {
+              "pregunta": "L1(x)",
+              "respuesta": "-0.5236"
+            },
+            {
+              "pregunta": "L2(x)",
+              "respuesta": "6.38"
+            },
+            {
+              "pregunta": "L3(x)",
+              "respuesta": "0.6545"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "6.5109"
+            }
           ]
         },
         {
-          "enunciado": "Tabla: x=[0,2,4], f=[2,6,14]. Estima f(3).",
+          "enunciado": "Obtener g(x) para x = 9.5:\n  x1 =  9.2          y1 = 2.85\n  x2 =  9.8          y2 = 3.14\n  x3 = 10.3          y3 = 3.47",
           "opciones": [
-            { "pregunta": "Primero Término", "respuesta": "-0.125" },
-            { "pregunta": "Segundo Término", "respuesta": "0.75" },
-            { "pregunta": "Tercer Término", "respuesta": "0.375" },
-            { "pregunta": "g(x)", "respuesta": "9.5" }
+            {
+              "pregunta": "L1(x)",
+              "respuesta": "1.0364"
+            },
+            {
+              "pregunta": "L2(x)",
+              "respuesta": "2.512"
+            },
+            {
+              "pregunta": "L3(x)",
+              "respuesta": "-0.5678"
+            },
+            {
+              "pregunta": "g(x)",
+              "respuesta": "2.9806"
+            }
           ]
         }
       ]
@@ -326,44 +626,80 @@
       "id": 7,
       "linea": "1",
       "estacion": "Simón Bolívar",
-      "tipo": "osciloscopio",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "osciloscopio",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_simonBolivar.png",
       "seleccion_metodo": [
         {
-          "correcto": "Gráfico",
-          "incorrecto1": "Jacobi",
-          "incorrecto2": "Ajuste cúbico",
-          "incorrecto3": "Diferencias divididas"
+          "correcto": "Punto Fijo",
+          "incorrecto1": "Bisectriz",
+          "incorrecto2": "Grafico",
+          "incorrecto3": "Interpolación lineal"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Identifica los intervalos donde f(x) = x^3 - 6x + 2 cambia de signo. Evalua en [-3,3]",
+          "enunciado": "f(x) = 3x^2 + 2x - 1 = 0\ng(x) = 1 / (3x + 2)\nx0 = 0",
           "opciones": [
-            { "pregunta": "Intervalo 1", "respuesta": "" },
-            { "pregunta": "Intervalo 2", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" }
+            {
+              "pregunta": "x1",
+              "respuesta": "0.5"
+            },
+            {
+              "pregunta": "x2",
+              "respuesta": "0.2857"
+            },
+            {
+              "pregunta": "x3",
+              "respuesta": "0.35"
+            },
+            {
+              "pregunta": "raiz",
+              "respuesta": "0.3333"
+            }
           ]
         },
         {
-          "enunciado": "",
+          "enunciado": "f(x) = 2x^2 - 5x + 2 = 0\ng(x) = (2x^2 + 2) / 5\nx0 = 0",
           "opciones": [
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" }
+            {
+              "pregunta": "x1",
+              "respuesta": "0.4"
+            },
+            {
+              "pregunta": "x2",
+              "respuesta": "0.464"
+            },
+            {
+              "pregunta": "x3",
+              "respuesta": "0.4861"
+            },
+            {
+              "pregunta": "raiz",
+              "respuesta": "0.5"
+            }
           ]
         },
         {
-          "enunciado": "",
+          "enunciado": "f(x) = x^2 - 2x - 3 = 0\ng(x) = sqrt(2x + 3)\nx0 = 1",
           "opciones": [
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" }
+            {
+              "pregunta": "x1",
+              "respuesta": "2.2361"
+            },
+            {
+              "pregunta": "x2",
+              "respuesta": "2.7335"
+            },
+            {
+              "pregunta": "x3",
+              "respuesta": "2.9098"
+            },
+            {
+              "pregunta": "raiz",
+              "respuesta": "3.0"
+            }
           ]
         }
       ]
@@ -388,28 +724,64 @@
         {
           "enunciado": "Obtener g(x) para la función:  y = x^4 - 3x^2 + x - 1",
           "opciones": [
-            { "pregunta": "a final", "respuesta": "1.661438" },
-            { "pregunta": "b final", "respuesta": "1.661499" },
-            { "pregunta": "x", "respuesta": "1.661438" },
-            { "pregunta": "ε", "respuesta": "0.000061" }
+            {
+              "pregunta": "a final",
+              "respuesta": "1.661438"
+            },
+            {
+              "pregunta": "b final",
+              "respuesta": "1.661499"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.661438"
+            },
+            {
+              "pregunta": "ε",
+              "respuesta": "0.000061"
+            }
           ]
         },
         {
           "enunciado": "Obtener g(x) para la función:  y = 2x^3 - 9x^2 + 3",
           "opciones": [
-            { "pregunta": "a final", "respuesta": "0.621887" },
-            { "pregunta": "b final", "respuesta": "0.621948" },
-            { "pregunta": "x", "respuesta": "0.621887" },
-            { "pregunta": "ε", "respuesta": "0.000061" }
+            {
+              "pregunta": "a final",
+              "respuesta": "0.621887"
+            },
+            {
+              "pregunta": "b final",
+              "respuesta": "0.621948"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "0.621887"
+            },
+            {
+              "pregunta": "ε",
+              "respuesta": "0.000061"
+            }
           ]
         },
         {
           "enunciado": "Obtener g(x) para la función:  y = x^3 - 4x^2 + 2",
           "opciones": [
-            { "pregunta": "a final", "respuesta": "3.86615" },
-            { "pregunta": "b final", "respuesta": "3.866211" },
-            { "pregunta": "x", "respuesta": "3.86615" },
-            { "pregunta": "ε", "respuesta": "0.000061" }
+            {
+              "pregunta": "a final",
+              "respuesta": "3.86615"
+            },
+            {
+              "pregunta": "b final",
+              "respuesta": "3.866211"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "3.86615"
+            },
+            {
+              "pregunta": "ε",
+              "respuesta": "0.000061"
+            }
           ]
         }
       ]
@@ -434,28 +806,64 @@
         {
           "enunciado": "Calcule la raíz real de la función f(x) = x^2 - 3",
           "opciones": [
-            { "pregunta": "f(b)", "respuesta": "1" },
-            { "pregunta": "Número Última Iteración", "respuesta": "4" },
-            { "pregunta": "x", "respuesta": "1.732026144" },
-            { "pregunta": "Є", "respuesta": "0.000318827" }
+            {
+              "pregunta": "f(b)",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "4"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.732026144"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000318827"
+            }
           ]
         },
         {
           "enunciado": "Calcule la raíz real de la función f(x) = x^3 - 2x - 5",
           "opciones": [
-            { "pregunta": "f(b)", "respuesta": "16" },
-            { "pregunta": "Número Última Iteración", "respuesta": "6" },
-            { "pregunta": "x", "respuesta": "2.094305" },
-            { "pregunta": "Є", "respuesta": "0.000421" }
+            {
+              "pregunta": "f(b)",
+              "respuesta": "16"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "6"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "2.094305"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000421"
+            }
           ]
         },
         {
           "enunciado": "Calcule la raíz real de la función f(x) = e^x - 3x",
           "opciones": [
-            { "pregunta": "f(b)", "respuesta": "1.389056099" },
-            { "pregunta": "Número Última Iteración", "respuesta": "10" },
-            { "pregunta": "x", "respuesta": "1.511608" },
-            { "pregunta": "Є", "respuesta": "0.000615" }
+            {
+              "pregunta": "f(b)",
+              "respuesta": "1.389056099"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "10"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.511608"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000615"
+            }
           ]
         }
       ]
@@ -480,28 +888,64 @@
         {
           "enunciado": "Calcule la raíz de la ecuación f(x) = x^3 - 4x + 1",
           "opciones": [
-            { "pregunta": "Número Última Iteración", "respuesta": "8" },
-            { "pregunta": "f(x) De Última Iteración", "respuesta": "-0.000000328" },
-            { "pregunta": "x", "respuesta": "1.860805802" },
-            { "pregunta": "Є", "respuesta": "0.000035789" }
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "8"
+            },
+            {
+              "pregunta": "f(x) De Última Iteración",
+              "respuesta": "-0.000000328"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.860805802"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000035789"
+            }
           ]
         },
         {
           "enunciado": "Calcule la raíz de la ecuación f(x) = cos(x) - x",
           "opciones": [
-            { "pregunta": "Número Última Iteración", "respuesta": "5" },
-            { "pregunta": "f(x) De Última Iteración", "respuesta": "0.000000036" },
-            { "pregunta": "x", "respuesta": "0.739085112" },
-            { "pregunta": "Є", "respuesta": "0.000034250" }
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "5"
+            },
+            {
+              "pregunta": "f(x) De Última Iteración",
+              "respuesta": "0.000000036"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "0.739085112"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000034250"
+            }
           ]
         },
         {
           "enunciado": "Calcule la raíz de la ecuación f(x) = x^3 + 2x^2 - x - 1",
           "opciones": [
-            { "pregunta": "Número Última Iteración", "respuesta": "7" },
-            { "pregunta": "f(x) De Última Iteración", "respuesta": "0.000000845" },
-            { "pregunta": "x", "respuesta": "0.801937940" },
-            { "pregunta": "Є", "respuesta": "0.000079821" }
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "7"
+            },
+            {
+              "pregunta": "f(x) De Última Iteración",
+              "respuesta": "0.000000845"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "0.801937940"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000079821"
+            }
           ]
         }
       ]
@@ -526,28 +970,64 @@
         {
           "enunciado": "Calcule la raíz de la ecuación f(x) = x^4 - x - 10",
           "opciones": [
-            { "pregunta": "f'(x)", "respuesta": "4x^3 - 1" },
-            { "pregunta": "Número Última Iteración", "respuesta": "5" },
-            { "pregunta": "x", "respuesta": "1.855584528" },
-            { "pregunta": "Є", "respuesta": "0.000000549" }
+            {
+              "pregunta": "f'(x)",
+              "respuesta": "4x^3 - 1"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "5"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.855584528"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000000549"
+            }
           ]
         },
         {
           "enunciado": "Calcule la raíz de la ecuación f(x) = e^x - 3x",
           "opciones": [
-            { "pregunta": "f'(x)", "respuesta": "e^x - 3" },
-            { "pregunta": "Número Última Iteración", "respuesta": "3" },
-            { "pregunta": "x", "respuesta": "1.512134552" },
-            { "pregunta": "Є", "respuesta": "0.000000074" }
+            {
+              "pregunta": "f'(x)",
+              "respuesta": "e^x - 3"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "3"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.512134552"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000000074"
+            }
           ]
         },
         {
           "enunciado": "Calcule la raíz de la ecuación f(x) = x^3 - 5x + 3",
           "opciones": [
-            { "pregunta": "f'(x)", "respuesta": "3x^2 - 5" },
-            { "pregunta": "Número Última Iteración", "respuesta": "4" },
-            { "pregunta": "x", "respuesta": "1.834243184" },
-            { "pregunta": "Є", "respuesta": "0.000000320" }
+            {
+              "pregunta": "f'(x)",
+              "respuesta": "3x^2 - 5"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "4"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.834243184"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000000320"
+            }
           ]
         }
       ]
@@ -572,28 +1052,64 @@
         {
           "enunciado": "calcula la raíz de f(x) = e^-x - 3x usando la fórmula equivalente x = (e^-x)/3 y un valor inicial de x0 = 0",
           "opciones": [
-            { "pregunta": "x1", "respuesta": "0.333333333" },
-            { "pregunta": "Número Última Iteración", "respuesta": "9" },
-            { "pregunta": "x", "respuesta": "0.257629181" },
-            { "pregunta": "Є", "respuesta": "0.000006962" }
+            {
+              "pregunta": "x1",
+              "respuesta": "0.333333333"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "9"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "0.257629181"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000006962"
+            }
           ]
         },
         {
           "enunciado": "calcula la raíz de f(x) = cos(x) - 2x usando la fórmula equivalente x = cos(x)/2 y un valor inicial de x0 = 0",
           "opciones": [
-            { "pregunta": "x1", "respuesta": "0.5" },
-            { "pregunta": "Número Última Iteración", "respuesta": "8" },
-            { "pregunta": "x", "respuesta": "0.450182415" },
-            { "pregunta": "Є", "respuesta": "0.000006696" }
+            {
+              "pregunta": "x1",
+              "respuesta": "0.5"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "8"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "0.450182415"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000006696"
+            }
           ]
         },
         {
           "enunciado": "calcula la raíz de f(x) = e^-x - 4x usando la fórmula equivalente x = (e^-x)/4 y un valor inicial de x0 = 0",
           "opciones": [
-            { "pregunta": "x1", "respuesta": "0.25" },
-            { "pregunta": "Número Última Iteración", "respuesta": "8" },
-            { "pregunta": "x", "respuesta": "0.203887692" },
-            { "pregunta": "Є", "respuesta": "0.000003912" }
+            {
+              "pregunta": "x1",
+              "respuesta": "0.25"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "8"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "0.203887692"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000003912"
+            }
           ]
         }
       ]
@@ -618,28 +1134,64 @@
         {
           "enunciado": "Calcule la raíz de la ecuación f(x) = e^x - 2x - 1.5",
           "opciones": [
-            { "pregunta": "Número Última Iteración", "respuesta": "7" },
-            { "pregunta": "f(x) De Última Iteración", "respuesta": "0.000000072" },
-            { "pregunta": "x", "respuesta": "1.507329812" },
-            { "pregunta": "Є", "respuesta": "0.000022989" }
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "7"
+            },
+            {
+              "pregunta": "f(x) De Última Iteración",
+              "respuesta": "0.000000072"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.507329812"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000022989"
+            }
           ]
         },
         {
           "enunciado": "Calcule la raíz de la ecuación f(x) = xln(x) - 1",
           "opciones": [
-            { "pregunta": "Número Última Iteración", "respuesta": "5" },
-            { "pregunta": "f(x) De Última Iteración", "respuesta": "-0.000000006" },
-            { "pregunta": "x", "respuesta": "1.763222830" },
-            { "pregunta": "Є", "respuesta": "0.000012910" }
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "5"
+            },
+            {
+              "pregunta": "f(x) De Última Iteración",
+              "respuesta": "-0.000000006"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.763222830"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000012910"
+            }
           ]
         },
         {
           "enunciado": "Calcule la raíz de la ecuación f(x) = sin(x) - e^-x",
           "opciones": [
-            { "pregunta": "Número Última Iteración", "respuesta": "5" },
-            { "pregunta": "f(x) De Última Iteración", "respuesta": "0.000007786" },
-            { "pregunta": "x", "respuesta": "0.588538358" },
-            { "pregunta": "Є", "respuesta": "0.000721256" }
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "5"
+            },
+            {
+              "pregunta": "f(x) De Última Iteración",
+              "respuesta": "0.000007786"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "0.588538358"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000721256"
+            }
           ]
         }
       ]
@@ -664,28 +1216,64 @@
         {
           "enunciado": "",
           "opciones": [
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" }
+            {
+              "pregunta": "",
+              "respuesta": ""
+            },
+            {
+              "pregunta": "",
+              "respuesta": ""
+            },
+            {
+              "pregunta": "",
+              "respuesta": ""
+            },
+            {
+              "pregunta": "",
+              "respuesta": ""
+            }
           ]
         },
         {
           "enunciado": "",
           "opciones": [
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" }
+            {
+              "pregunta": "",
+              "respuesta": ""
+            },
+            {
+              "pregunta": "",
+              "respuesta": ""
+            },
+            {
+              "pregunta": "",
+              "respuesta": ""
+            },
+            {
+              "pregunta": "",
+              "respuesta": ""
+            }
           ]
         },
         {
           "enunciado": "",
           "opciones": [
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" },
-            { "pregunta": "", "respuesta": "" }
+            {
+              "pregunta": "",
+              "respuesta": ""
+            },
+            {
+              "pregunta": "",
+              "respuesta": ""
+            },
+            {
+              "pregunta": "",
+              "respuesta": ""
+            },
+            {
+              "pregunta": "",
+              "respuesta": ""
+            }
           ]
         }
       ]
@@ -710,28 +1298,64 @@
         {
           "enunciado": "calcula la raíz de f(x) = e^-x - 5x usando la fórmula equivalente x = (e^-x)/5 y un valor inicial de x0 = 0",
           "opciones": [
-            { "pregunta": "x1", "respuesta": "0.2" },
-            { "pregunta": "Número Última Iteración", "respuesta": "7" },
-            { "pregunta": "x", "respuesta": "0.168916686" },
-            { "pregunta": "Є", "respuesta": "0.000004931" }
+            {
+              "pregunta": "x1",
+              "respuesta": "0.2"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "7"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "0.168916686"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000004931"
+            }
           ]
         },
         {
           "enunciado": "calcula la raíz de f(x) = sin(x) + 1 - 3x usando la fórmula equivalente x = (sin(x) + 1)/3 y un valor inicial de x0 = 0",
           "opciones": [
-            { "pregunta": "x1", "respuesta": "0.333333333" },
-            { "pregunta": "Número Última Iteración", "respuesta": "10" },
-            { "pregunta": "x", "respuesta": "0.490292820" },
-            { "pregunta": "Є", "respuesta": "0.000006544" }
+            {
+              "pregunta": "x1",
+              "respuesta": "0.333333333"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "10"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "0.490292820"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000006544"
+            }
           ]
         },
         {
           "enunciado": "calcula la raíz de f(x) = cos(x) - 3x usando la fórmula equivalente x = cos(x)/3 y un valor inicial de x0 = 0",
           "opciones": [
-            { "pregunta": "x1", "respuesta": "0.333333333" },
-            { "pregunta": "Número Última Iteración", "respuesta": "6" },
-            { "pregunta": "x", "respuesta": "0.316750624" },
-            { "pregunta": "Є", "respuesta": "0.000002175" }
+            {
+              "pregunta": "x1",
+              "respuesta": "0.333333333"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "6"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "0.316750624"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000002175"
+            }
           ]
         }
       ]
@@ -756,28 +1380,64 @@
         {
           "enunciado": "Calcule la raíz real de la función f(x) = x^3 - x - 1",
           "opciones": [
-            { "pregunta": "f(b)", "respuesta": "5" },
-            { "pregunta": "Número Última Iteración", "respuesta": "8" },
-            { "pregunta": "x", "respuesta": "1.324279462" },
-            { "pregunta": "Є", "respuesta": "0.000595168" }
+            {
+              "pregunta": "f(b)",
+              "respuesta": "5"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "8"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.324279462"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000595168"
+            }
           ]
         },
         {
           "enunciado": "Calcule la raíz real de la función f(x) = xln(x) - 1.2",
           "opciones": [
-            { "pregunta": "f(b)", "respuesta": "0.186294361" },
-            { "pregunta": "Número Última Iteración", "respuesta": "3" },
-            { "pregunta": "x", "respuesta": "1.888079849" },
-            { "pregunta": "Є", "respuesta": "0.000388406" }
+            {
+              "pregunta": "f(b)",
+              "respuesta": "0.186294361"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "3"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.888079849"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000388406"
+            }
           ]
         },
         {
           "enunciado": "Calcule la raíz real de la función f(x) = cos(x) - x",
           "opciones": [
-            { "pregunta": "f(b)", "respuesta": "-0.459697694" },
-            { "pregunta": "Número Última Iteración", "respuesta": "4" },
-            { "pregunta": "x", "respuesta": "0.739078131" },
-            { "pregunta": "Є", "respuesta": "0.000132775" }
+            {
+              "pregunta": "f(b)",
+              "respuesta": "-0.459697694"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "4"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "0.739078131"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000132775"
+            }
           ]
         }
       ]
@@ -802,28 +1462,64 @@
         {
           "enunciado": "Calcule la raíz de la ecuación f(x) = x^3 - 4x^2 + 1",
           "opciones": [
-            { "pregunta": "f'(x)", "respuesta": "3x^2 - 8x" },
-            { "pregunta": "Número Última Iteración", "respuesta": "3" },
-            { "pregunta": "x", "respuesta": "3.935432332" },
-            { "pregunta": "Є", "respuesta": "0.0000022249" }
+            {
+              "pregunta": "f'(x)",
+              "respuesta": "3x^2 - 8x"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "3"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "3.935432332"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.0000022249"
+            }
           ]
         },
         {
           "enunciado": "Calcule la raíz de la ecuación f(x) = sin(x) - x/2",
           "opciones": [
-            { "pregunta": "f'(x)", "respuesta": "cos(x) - 0.5" },
-            { "pregunta": "Número Última Iteración", "respuesta": "4" },
-            { "pregunta": "x", "respuesta": "1.895494267" },
-            { "pregunta": "Є", "respuesta": "0.000000000" }
+            {
+              "pregunta": "f'(x)",
+              "respuesta": "cos(x) - 0.5"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "4"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.895494267"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000000000"
+            }
           ]
         },
         {
           "enunciado": "Calcule la raíz de la ecuación f(x) = xln(x) - 2",
           "opciones": [
-            { "pregunta": "f'(x)", "respuesta": "ln(x) + 1" },
-            { "pregunta": "Número Última Iteración", "respuesta": "4" },
-            { "pregunta": "x", "respuesta": "2.345750755" },
-            { "pregunta": "Є", "respuesta": "0.000000000" }
+            {
+              "pregunta": "f'(x)",
+              "respuesta": "ln(x) + 1"
+            },
+            {
+              "pregunta": "Número Última Iteración",
+              "respuesta": "4"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "2.345750755"
+            },
+            {
+              "pregunta": "Є",
+              "respuesta": "0.000000000"
+            }
           ]
         }
       ]
@@ -848,33 +1544,68 @@
         {
           "enunciado": "Obtener g(x) para la función:  y = 3x^3 - 7x + 2",
           "opciones": [
-            { "pregunta": "a final", "respuesta": "1.357227" },
-            { "pregunta": "b final", "respuesta": "1.357324" },
-            { "pregunta": "x", "respuesta": "1.357227" },
-            { "pregunta": "ε", "respuesta": "0.000098" }
+            {
+              "pregunta": "a final",
+              "respuesta": "1.357227"
+            },
+            {
+              "pregunta": "b final",
+              "respuesta": "1.357324"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.357227"
+            },
+            {
+              "pregunta": "ε",
+              "respuesta": "0.000098"
+            }
           ]
         },
         {
           "enunciado": "Obtener g(x) para la función:  y = x^3 - 2x^2 - 4x + 5",
           "opciones": [
-            { "pregunta": "a final", "respuesta": "2.791229" },
-            { "pregunta": "b final", "respuesta": "2.791321" },
-            { "pregunta": "x", "respuesta": "2.791229" },
-            { "pregunta": "ε", "respuesta": "0.000092" }
+            {
+              "pregunta": "a final",
+              "respuesta": "2.791229"
+            },
+            {
+              "pregunta": "b final",
+              "respuesta": "2.791321"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "2.791229"
+            },
+            {
+              "pregunta": "ε",
+              "respuesta": "0.000092"
+            }
           ]
         },
         {
           "enunciado": "Obtener g(x) para la función:  y = x^4 - 6x^2 - 2",
           "opciones": [
-            { "pregunta": "a final", "respuesta": "1.999939" },
-            { "pregunta": "b final", "respuesta": "2" },
-            { "pregunta": "x", "respuesta": "1.999939" },
-            { "pregunta": "ε", "respuesta": "0.000061" }
+            {
+              "pregunta": "a final",
+              "respuesta": "1.999939"
+            },
+            {
+              "pregunta": "b final",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1.999939"
+            },
+            {
+              "pregunta": "ε",
+              "respuesta": "0.000061"
+            }
           ]
         }
       ]
-    },    
-
+    },
     {
       "id": 19,
       "linea": "2",
@@ -892,32 +1623,68 @@
         }
       ],
       "problemas": [
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 2x + y - z = 3, 3x + 2y + z = 10, x - y + 2z = 5", 
-          "opciones": [ 
-            { "pregunta": "Pivote Matriz 2", "respuesta": "1" }, 
-            { "pregunta": "x", "respuesta": "2" }, 
-            { "pregunta": "y", "respuesta": "1" }, 
-            { "pregunta": "z", "respuesta": "2" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 2x + y - z = 3, 3x + 2y + z = 10, x - y + 2z = 5",
+          "opciones": [
+            {
+              "pregunta": "Pivote Matriz 2",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "y",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "z",
+              "respuesta": "2"
+            }
+          ]
         },
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + 2y - z = 2, 2x - y + 3z = 9, 3x + y + z = 8", 
-          "opciones": [ 
-            { "pregunta": "Pivote Matriz 2", "respuesta": "-5" }, 
-            { "pregunta": "x", "respuesta": "1" }, 
-            { "pregunta": "y", "respuesta": "2" }, 
-            { "pregunta": "z", "respuesta": "3" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + 2y - z = 2, 2x - y + 3z = 9, 3x + y + z = 8",
+          "opciones": [
+            {
+              "pregunta": "Pivote Matriz 2",
+              "respuesta": "-5"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "y",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "z",
+              "respuesta": "3"
+            }
+          ]
         },
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 5, 2x - 3y + z = 11, -x + 2y + 2z = 4", 
-          "opciones": [ 
-            { "pregunta": "Pivote Matriz 2", "respuesta": "-5" }, 
-            { "pregunta": "x", "respuesta": "2" }, 
-            { "pregunta": "y", "respuesta": "1" }, 
-            { "pregunta": "z", "respuesta": "4" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 5, 2x - 3y + z = 11, -x + 2y + 2z = 4",
+          "opciones": [
+            {
+              "pregunta": "Pivote Matriz 2",
+              "respuesta": "-5"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "y",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "z",
+              "respuesta": "4"
+            }
+          ]
         }
       ]
     },
@@ -938,32 +1705,68 @@
         }
       ],
       "problemas": [
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 6, 2x - y + 3z = 9, -x + 2y + z = 6", 
-          "opciones": [ 
-            { "pregunta": "Pivote Matriz 2", "respuesta": "1" }, 
-            { "pregunta": "x", "respuesta": "1" }, 
-            { "pregunta": "y", "respuesta": "2" }, 
-            { "pregunta": "z", "respuesta": "3" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 6, 2x - y + 3z = 9, -x + 2y + z = 6",
+          "opciones": [
+            {
+              "pregunta": "Pivote Matriz 2",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "y",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "z",
+              "respuesta": "3"
+            }
+          ]
         },
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 0, 2x - y + z = 5, x - 2y - z = 4", 
-          "opciones": [ 
-            { "pregunta": "Pivote Matriz 2", "respuesta": "1" }, 
-            { "pregunta": "x", "respuesta": "1" }, 
-            { "pregunta": "y", "respuesta": "-2" }, 
-            { "pregunta": "z", "respuesta": "1" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 0, 2x - y + z = 5, x - 2y - z = 4",
+          "opciones": [
+            {
+              "pregunta": "Pivote Matriz 2",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "y",
+              "respuesta": "-2"
+            },
+            {
+              "pregunta": "z",
+              "respuesta": "1"
+            }
+          ]
         },
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + 2y - z = 6, 2x - y + 3z = -13, 3x - 2y + z = 14", 
-          "opciones": [ 
-            { "pregunta": "Pivote Matriz 2", "respuesta": "1" }, 
-            { "pregunta": "x", "respuesta": "-2" }, 
-            { "pregunta": "y", "respuesta": "3" }, 
-            { "pregunta": "z", "respuesta": "-2" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + 2y - z = 6, 2x - y + 3z = -13, 3x - 2y + z = 14",
+          "opciones": [
+            {
+              "pregunta": "Pivote Matriz 2",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "-2"
+            },
+            {
+              "pregunta": "y",
+              "respuesta": "3"
+            },
+            {
+              "pregunta": "z",
+              "respuesta": "-2"
+            }
+          ]
         }
       ]
     },
@@ -984,32 +1787,68 @@
         }
       ],
       "problemas": [
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + 2y + z = 2, 3x + 8y + z = 12, x + 3y + 2z = 11", 
-          "opciones": [ 
-            { "pregunta": "Valor final de posición 3,3", "respuesta": "-4" }, 
-            { "pregunta": "x", "respuesta": "-13" }, 
-            { "pregunta": "y", "respuesta": "6" }, 
-            { "pregunta": "z", "respuesta": "3" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + 2y + z = 2, 3x + 8y + z = 12, x + 3y + 2z = 11",
+          "opciones": [
+            {
+              "pregunta": "Valor final de posición 3,3",
+              "respuesta": "-4"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "-13"
+            },
+            {
+              "pregunta": "y",
+              "respuesta": "6"
+            },
+            {
+              "pregunta": "z",
+              "respuesta": "3"
+            }
+          ]
         },
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 90, 2x + 3y - z = 110, x - 2y + 2z = 60", 
-          "opciones": [ 
-            { "pregunta": "Valor final de posición 3,3", "respuesta": "-8" }, 
-            { "pregunta": "x", "respuesta": "40" }, 
-            { "pregunta": "y", "respuesta": "20" }, 
-            { "pregunta": "z", "respuesta": "30" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 90, 2x + 3y - z = 110, x - 2y + 2z = 60",
+          "opciones": [
+            {
+              "pregunta": "Valor final de posición 3,3",
+              "respuesta": "-8"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "40"
+            },
+            {
+              "pregunta": "y",
+              "respuesta": "20"
+            },
+            {
+              "pregunta": "z",
+              "respuesta": "30"
+            }
+          ]
         },
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 17, 3x + 2y + z = 26, 2x - y + 3z = 29", 
-          "opciones": [ 
-            { "pregunta": "Valor final de posición 3,3", "respuesta": "7" }, 
-            { "pregunta": "x", "respuesta": "2" }, 
-            { "pregunta": "y", "respuesta": "5" }, 
-            { "pregunta": "z", "respuesta": "10" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 17, 3x + 2y + z = 26, 2x - y + 3z = 29",
+          "opciones": [
+            {
+              "pregunta": "Valor final de posición 3,3",
+              "respuesta": "7"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "y",
+              "respuesta": "5"
+            },
+            {
+              "pregunta": "z",
+              "respuesta": "10"
+            }
+          ]
         }
       ]
     },
@@ -1030,32 +1869,68 @@
         }
       ],
       "problemas": [
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 5a - b + c = 8, a + 6b - 2c = -9, -a + 2b + 7c = 11", 
-          "opciones": [ 
-            { "pregunta": "ɛa", "respuesta": "0.000483975" }, 
-            { "pregunta": "a", "respuesta": "1.000084531" }, 
-            { "pregunta": "b", "respuesta": "-1.000060191" }, 
-            { "pregunta": "c", "respuesta": "2.000029273" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 5a - b + c = 8, a + 6b - 2c = -9, -a + 2b + 7c = 11",
+          "opciones": [
+            {
+              "pregunta": "ɛa",
+              "respuesta": "0.000483975"
+            },
+            {
+              "pregunta": "a",
+              "respuesta": "1.000084531"
+            },
+            {
+              "pregunta": "b",
+              "respuesta": "-1.000060191"
+            },
+            {
+              "pregunta": "c",
+              "respuesta": "2.000029273"
+            }
+          ]
         },
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 10a - b + 2c = 15, -2a + 8b - c = 10, a + 2b + 12c = 25", 
-          "opciones": [ 
-            { "pregunta": "ɛb", "respuesta": "0.000081299" }, 
-            { "pregunta": "a", "respuesta": "1.345122396" }, 
-            { "pregunta": "b", "respuesta": "1.795289795" }, 
-            { "pregunta": "c", "respuesta": "1.672024834" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 10a - b + 2c = 15, -2a + 8b - c = 10, a + 2b + 12c = 25",
+          "opciones": [
+            {
+              "pregunta": "ɛb",
+              "respuesta": "0.000081299"
+            },
+            {
+              "pregunta": "a",
+              "respuesta": "1.345122396"
+            },
+            {
+              "pregunta": "b",
+              "respuesta": "1.795289795"
+            },
+            {
+              "pregunta": "c",
+              "respuesta": "1.672024834"
+            }
+          ]
         },
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 6a - b - c = 12, -a + 5b - c = 8, 2a - b + 7c = 15", 
-          "opciones": [ 
-            { "pregunta": "ɛc", "respuesta": "0.000201980" }, 
-            { "pregunta": "a", "respuesta": "2.701882857" }, 
-            { "pregunta": "b", "respuesta": "2.485529424" }, 
-            { "pregunta": "c", "respuesta": "1.725966244" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 6a - b - c = 12, -a + 5b - c = 8, 2a - b + 7c = 15",
+          "opciones": [
+            {
+              "pregunta": "ɛc",
+              "respuesta": "0.000201980"
+            },
+            {
+              "pregunta": "a",
+              "respuesta": "2.701882857"
+            },
+            {
+              "pregunta": "b",
+              "respuesta": "2.485529424"
+            },
+            {
+              "pregunta": "c",
+              "respuesta": "1.725966244"
+            }
+          ]
         }
       ]
     },
@@ -1076,32 +1951,68 @@
         }
       ],
       "problemas": [
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 10a - b + 2c = 17, -2a + 8b - c = 12, a - b + 5c = 6", 
-          "opciones": [ 
-            { "pregunta": "ɛa", "respuesta": "0.000371500" }, 
-            { "pregunta": "a", "respuesta": "1.650394750" }, 
-            { "pregunta": "b", "respuesta": "2.073261750" }, 
-            { "pregunta": "c", "respuesta": "1.284459250" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 10a - b + 2c = 17, -2a + 8b - c = 12, a - b + 5c = 6",
+          "opciones": [
+            {
+              "pregunta": "ɛa",
+              "respuesta": "0.000371500"
+            },
+            {
+              "pregunta": "a",
+              "respuesta": "1.650394750"
+            },
+            {
+              "pregunta": "b",
+              "respuesta": "2.073261750"
+            },
+            {
+              "pregunta": "c",
+              "respuesta": "1.284459250"
+            }
+          ]
         },
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 10a - b + c = 12, a + 8b - c = 15, -a + 2b + 10c = 20", 
-          "opciones": [ 
-            { "pregunta": "ɛb", "respuesta": "0.000273203" }, 
-            { "pregunta": "a", "respuesta": "1.220445921" }, 
-            { "pregunta": "b", "respuesta": "1.939256796" }, 
-            { "pregunta": "c", "respuesta": "1.734250281" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 10a - b + c = 12, a + 8b - c = 15, -a + 2b + 10c = 20",
+          "opciones": [
+            {
+              "pregunta": "ɛb",
+              "respuesta": "0.000273203"
+            },
+            {
+              "pregunta": "a",
+              "respuesta": "1.220445921"
+            },
+            {
+              "pregunta": "b",
+              "respuesta": "1.939256796"
+            },
+            {
+              "pregunta": "c",
+              "respuesta": "1.734250281"
+            }
+          ]
         },
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 5a - b + c = 10, a + 6b - 2c = 15, -2a + b + 8c = 25", 
-          "opciones": [ 
-            { "pregunta": "ɛc", "respuesta": "0.000683594" }, 
-            { "pregunta": "a", "respuesta": "2.003998698" }, 
-            { "pregunta": "b", "respuesta": "3.239433594" }, 
-            { "pregunta": "c", "respuesta": "3.220950521" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 5a - b + c = 10, a + 6b - 2c = 15, -2a + b + 8c = 25",
+          "opciones": [
+            {
+              "pregunta": "ɛc",
+              "respuesta": "0.000683594"
+            },
+            {
+              "pregunta": "a",
+              "respuesta": "2.003998698"
+            },
+            {
+              "pregunta": "b",
+              "respuesta": "3.239433594"
+            },
+            {
+              "pregunta": "c",
+              "respuesta": "3.220950521"
+            }
+          ]
         }
       ]
     },
@@ -1122,32 +2033,68 @@
         }
       ],
       "problemas": [
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 12, 10x + 9y + 8z = 110, x - y - z = -2", 
-          "opciones": [ 
-            { "pregunta": "Pivote Matriz 2", "respuesta": "1" }, 
-            { "pregunta": "x", "respuesta": "5" }, 
-            { "pregunta": "y", "respuesta": "4" }, 
-            { "pregunta": "z", "respuesta": "3" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 12, 10x + 9y + 8z = 110, x - y - z = -2",
+          "opciones": [
+            {
+              "pregunta": "Pivote Matriz 2",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "5"
+            },
+            {
+              "pregunta": "y",
+              "respuesta": "4"
+            },
+            {
+              "pregunta": "z",
+              "respuesta": "3"
+            }
+          ]
         },
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 6, 2x - y + 2z = 6, 3x + 2y - z = 4", 
-          "opciones": [ 
-            { "pregunta": "Pivote Matriz 2", "respuesta": "1" }, 
-            { "pregunta": "x", "respuesta": "1" }, 
-            { "pregunta": "y", "respuesta": "2" }, 
-            { "pregunta": "z", "respuesta": "3" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 6, 2x - y + 2z = 6, 3x + 2y - z = 4",
+          "opciones": [
+            {
+              "pregunta": "Pivote Matriz 2",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "y",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "z",
+              "respuesta": "3"
+            }
+          ]
         },
-        { 
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 7, 3x - y + 2z = 4, -x + 2y - z = 5", 
-          "opciones": [ 
-            { "pregunta": "Pivote Matriz 2", "respuesta": "1" }, 
-            { "pregunta": "x", "respuesta": "2" }, 
-            { "pregunta": "y", "respuesta": "4" }, 
-            { "pregunta": "z", "respuesta": "1" } 
-          ] 
+        {
+          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 7, 3x - y + 2z = 4, -x + 2y - z = 5",
+          "opciones": [
+            {
+              "pregunta": "Pivote Matriz 2",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "x",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "y",
+              "respuesta": "4"
+            },
+            {
+              "pregunta": "z",
+              "respuesta": "1"
+            }
+          ]
         }
       ]
     },
@@ -1168,32 +2115,68 @@
         }
       ],
       "problemas": [
-        { 
-          "enunciado": "Encuentra g(x) de los siguientes puntos: (1,2), (3,5), (4,7), (6,10), (8,14)", 
-          "opciones": [ 
-            { "pregunta": "∑xy", "respuesta": "217" }, 
-            { "pregunta": "a1", "respuesta": "1.70547945" }, 
-            { "pregunta": "a0", "respuesta": "0.09589042" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "0.09589042 + 1.70547945x" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x) de los siguientes puntos: (1,2), (3,5), (4,7), (6,10), (8,14)",
+          "opciones": [
+            {
+              "pregunta": "∑xy",
+              "respuesta": "217"
+            },
+            {
+              "pregunta": "a1",
+              "respuesta": "1.70547945"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "0.09589042"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "0.09589042 + 1.70547945x"
+            }
+          ]
         },
-        { 
-          "enunciado": "Encuentra g(x)de los siguientes puntos: (2,3), (4,7), (5,8), (7,11), (9,15)", 
-          "opciones": [ 
-            { "pregunta": "∑xy", "respuesta": "286" }, 
-            { "pregunta": "a1", "respuesta": "1.657534247" }, 
-            { "pregunta": "a0", "respuesta": "-0.150684932" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "-0.150684932 + 1.657534247" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x)de los siguientes puntos: (2,3), (4,7), (5,8), (7,11), (9,15)",
+          "opciones": [
+            {
+              "pregunta": "∑xy",
+              "respuesta": "286"
+            },
+            {
+              "pregunta": "a1",
+              "respuesta": "1.657534247"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "-0.150684932"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "-0.150684932 + 1.657534247"
+            }
+          ]
         },
-        { 
-          "enunciado": "Encuentra g(x)de los siguientes puntos: (1,5), (2,8), (4,12), (5,17), (7,21)", 
-          "opciones": [ 
-            { "pregunta": "∑xy", "respuesta": "301" }, 
-            { "pregunta": "a1", "respuesta": "2.701754386" }, 
-            { "pregunta": "a0", "respuesta": "2.333333333" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "2.333333333 + 2.701754386x" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x)de los siguientes puntos: (1,5), (2,8), (4,12), (5,17), (7,21)",
+          "opciones": [
+            {
+              "pregunta": "∑xy",
+              "respuesta": "301"
+            },
+            {
+              "pregunta": "a1",
+              "respuesta": "2.701754386"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "2.333333333"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "2.333333333 + 2.701754386x"
+            }
+          ]
         }
       ]
     },
@@ -1214,32 +2197,68 @@
         }
       ],
       "problemas": [
-        { 
-          "enunciado": "Encuentra g(x)de los siguientes puntos: (1,2), (2,5), (3,8), (4,15), (5,21)", 
-          "opciones": [ 
-            { "pregunta": "∑x^2y", "respuesta": "859" }, 
-            { "pregunta": "a0", "respuesta": "0.8" }, 
-            { "pregunta": "a2", "respuesta": "0.714285714" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "0.8 + 0.514285714x + 0.714285714x^2" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x)de los siguientes puntos: (1,2), (2,5), (3,8), (4,15), (5,21)",
+          "opciones": [
+            {
+              "pregunta": "∑x^2y",
+              "respuesta": "859"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "0.8"
+            },
+            {
+              "pregunta": "a2",
+              "respuesta": "0.714285714"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "0.8 + 0.514285714x + 0.714285714x^2"
+            }
+          ]
         },
-        { 
-          "enunciado": "Encuentra g(x)de los siguientes puntos: (1,5), (2,8), (4,12), (5,17), (7,21)", 
-          "opciones": [ 
-            { "pregunta": "∑x^2y", "respuesta": "3402" }, 
-            { "pregunta": "a1", "respuesta": "4.371428571" }, 
-            { "pregunta": "a2", "respuesta": "2.571428571" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "-1.8 + 4.371428571x + 2.571428571x^2" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x)de los siguientes puntos: (1,5), (2,8), (4,12), (5,17), (7,21)",
+          "opciones": [
+            {
+              "pregunta": "∑x^2y",
+              "respuesta": "3402"
+            },
+            {
+              "pregunta": "a1",
+              "respuesta": "4.371428571"
+            },
+            {
+              "pregunta": "a2",
+              "respuesta": "2.571428571"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "-1.8 + 4.371428571x + 2.571428571x^2"
+            }
+          ]
         },
-        { 
-          "enunciado": "Encuentra g(x)de los siguientes puntos: (1,5), (2,8), (4,12), (5,17), (7,21)", 
-          "opciones": [ 
-            { "pregunta": "∑x^2y", "respuesta": "9156" }, 
-            { "pregunta": "a0", "respuesta": "-1.2" }, 
-            { "pregunta": "a1", "respuesta": "0.571428571" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "-1.2 + 0.571428571x + 0.535714286x^2" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x)de los siguientes puntos: (1,5), (2,8), (4,12), (5,17), (7,21)",
+          "opciones": [
+            {
+              "pregunta": "∑x^2y",
+              "respuesta": "9156"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "-1.2"
+            },
+            {
+              "pregunta": "a1",
+              "respuesta": "0.571428571"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "-1.2 + 0.571428571x + 0.535714286x^2"
+            }
+          ]
         }
       ]
     },
@@ -1260,32 +2279,68 @@
         }
       ],
       "problemas": [
-        { 
-          "enunciado": "Encuentra g(x) de los siguientes puntos: (1,5), (2,10), (3,23), (4,50), (5,97)", 
-          "opciones": [ 
-            { "pregunta": "∑x^2y", "respuesta": "16031" }, 
-            { "pregunta": "a0", "respuesta": "2" }, 
-            { "pregunta": "a3", "respuesta": "1" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "2 + 4x - 2x^2 + x^3" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x) de los siguientes puntos: (1,5), (2,10), (3,23), (4,50), (5,97)",
+          "opciones": [
+            {
+              "pregunta": "∑x^2y",
+              "respuesta": "16031"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "a3",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "2 + 4x - 2x^2 + x^3"
+            }
+          ]
         },
-        { 
-          "enunciado": "Encuentra g(x) de los siguientes puntos: (1,2), (2,10), (3,30), (4,68), (5,130)", 
-          "opciones": [ 
-            { "pregunta": "∑x^2y", "respuesta": "21494" }, 
-            { "pregunta": "a1", "respuesta": "1" }, 
-            { "pregunta": "a2", "respuesta": "0" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "0 + x + x^3" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x) de los siguientes puntos: (1,2), (2,10), (3,30), (4,68), (5,130)",
+          "opciones": [
+            {
+              "pregunta": "∑x^2y",
+              "respuesta": "21494"
+            },
+            {
+              "pregunta": "a1",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "a2",
+              "respuesta": "0"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "0 + x + x^3"
+            }
+          ]
         },
-        { 
-          "enunciado": "Encuentra g(x) de los siguientes puntos: (1,8), (2,29), (3,80), (4,173), (5,320)", 
-          "opciones": [ 
-            { "pregunta": "∑x^2y", "respuesta": "53472" }, 
-            { "pregunta": "a1", "respuesta": "-2" }, 
-            { "pregunta": "a3", "respuesta": "2" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "5 - 2x + 3x^2 + 2x^3" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x) de los siguientes puntos: (1,8), (2,29), (3,80), (4,173), (5,320)",
+          "opciones": [
+            {
+              "pregunta": "∑x^2y",
+              "respuesta": "53472"
+            },
+            {
+              "pregunta": "a1",
+              "respuesta": "-2"
+            },
+            {
+              "pregunta": "a3",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "5 - 2x + 3x^2 + 2x^3"
+            }
+          ]
         }
       ]
     },
@@ -1306,32 +2361,68 @@
         }
       ],
       "problemas": [
-        { 
-          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=ln(x): (1, 3), (2, 5.693147181), (3, 8.098612289), (4, 10.386294361), (5, 12.609437912)", 
-          "opciones": [ 
-            { "pregunta": "∑yf(x)", "respuesta": "47.535992691" }, 
-            { "pregunta": "a1", "respuesta": "2" }, 
-            { "pregunta": "a2", "respuesta": "1" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "1 + 2x + ln(x)" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=ln(x): (1, 3), (2, 5.693147181), (3, 8.098612289), (4, 10.386294361), (5, 12.609437912)",
+          "opciones": [
+            {
+              "pregunta": "∑yf(x)",
+              "respuesta": "47.535992691"
+            },
+            {
+              "pregunta": "a1",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "a2",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "1 + 2x + ln(x)"
+            }
+          ]
         },
-        { 
-          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=e^x: (1, 6.359140914), (2, 11.694528050), (3, 21.042768462), (4, 41.299075017), (5, 91.206579551)", 
-          "opciones": [ 
-            { "pregunta": "∑yf(x)", "respuesta": "16317.435449207" }, 
-            { "pregunta": "a0", "respuesta": "2" }, 
-            { "pregunta": "a1", "respuesta": "3" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "2 + 3x + 0.5^x" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=e^x: (1, 6.359140914), (2, 11.694528050), (3, 21.042768462), (4, 41.299075017), (5, 91.206579551)",
+          "opciones": [
+            {
+              "pregunta": "∑yf(x)",
+              "respuesta": "16317.435449207"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "a1",
+              "respuesta": "3"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "2 + 3x + 0.5^x"
+            }
+          ]
         },
-        { 
-          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=sen(x): (1, 4.682941970), (2, 8.818594854), (3, 11.282240016), (4, 13.486395010), (5, 17.082151450)", 
-          "opciones": [ 
-            { "pregunta": "∑yf(x)", "respuesta": "-13.035589617" }, 
-            { "pregunta": "a0", "respuesta": "-1" }, 
-            { "pregunta": "a2", "respuesta": "2" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "-1 + 4x + 2sen(x)" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=sen(x): (1, 4.682941970), (2, 8.818594854), (3, 11.282240016), (4, 13.486395010), (5, 17.082151450)",
+          "opciones": [
+            {
+              "pregunta": "∑yf(x)",
+              "respuesta": "-13.035589617"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "-1"
+            },
+            {
+              "pregunta": "a2",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "-1 + 4x + 2sen(x)"
+            }
+          ]
         }
       ]
     },
@@ -1352,32 +2443,68 @@
         }
       ],
       "problemas": [
-        { 
-          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=e^x: (1, 7.359140914), (2, 20.694528050), (3, 44.042768462), (4, 84.299075017), (5, 160.206579551)", 
-          "opciones": [ 
-            { "pregunta": "∑x^2y", "respuesta": "5840.471858319" }, 
-            { "pregunta": "a0", "respuesta": "1" }, 
-            { "pregunta": "a3", "respuesta": "0.5" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "1 + 2x + 3x^2 + 0.5sen(x)" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=e^x: (1, 7.359140914), (2, 20.694528050), (3, 44.042768462), (4, 84.299075017), (5, 160.206579551)",
+          "opciones": [
+            {
+              "pregunta": "∑x^2y",
+              "respuesta": "5840.471858319"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "a3",
+              "respuesta": "0.5"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "1 + 2x + 3x^2 + 0.5sen(x)"
+            }
+          ]
         },
-        { 
-          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=ln(x): (1, 3), (2, 10.772588724), (3, 21.394449156), (4, 35.545177444), (5, 53.437751648)", 
-          "opciones": [ 
-            { "pregunta": "∑x^2y", "respuesta": "2143.307027604" }, 
-            { "pregunta": "a0", "respuesta": "2" }, 
-            { "pregunta": "a1", "respuesta": "-1" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "2 - x + 2x^2 + 4ln(x)" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=ln(x): (1, 3), (2, 10.772588724), (3, 21.394449156), (4, 35.545177444), (5, 53.437751648)",
+          "opciones": [
+            {
+              "pregunta": "∑x^2y",
+              "respuesta": "2143.307027604"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "a1",
+              "respuesta": "-1"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "2 - x + 2x^2 + 4ln(x)"
+            }
+          ]
         },
-        { 
-          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=sen(x): (1, 4.207354925), (2, 4.546487135), (3, -1.294399960), (4, -9.784012475), (5, -16.794621375)", 
-          "opciones": [ 
-            { "pregunta": "∑x^2y", "respuesta": "-565.666030150" }, 
-            { "pregunta": "a0", "respuesta": "-2" }, 
-            { "pregunta": "a2", "respuesta": "-1" }, 
-            { "pregunta": "Ecuación final g(x)", "respuesta": "-2 + 3x - x^2 + 5sen(x)" } 
-          ] 
+        {
+          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=sen(x): (1, 4.207354925), (2, 4.546487135), (3, -1.294399960), (4, -9.784012475), (5, -16.794621375)",
+          "opciones": [
+            {
+              "pregunta": "∑x^2y",
+              "respuesta": "-565.666030150"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "-2"
+            },
+            {
+              "pregunta": "a2",
+              "respuesta": "-1"
+            },
+            {
+              "pregunta": "Ecuación final g(x)",
+              "respuesta": "-2 + 3x - x^2 + 5sen(x)"
+            }
+          ]
         }
       ]
     },
@@ -1401,28 +2528,64 @@
         {
           "enunciado": "Calcular la integral de x^2 desde 0 hasta 2. n=4.",
           "opciones": [
-            { "pregunta": "h (tamaño de paso)", "respuesta": "0.5" },
-            { "pregunta": "f(x=0) + f(x=2)", "respuesta": "4" },
-            { "pregunta": "Suma de términos intermedios 2[f(0.5)+f(1)+f(1.5)]", "respuesta": "7" },
-            { "pregunta": "I (Resultado de la integral)", "respuesta": "2.750000000" }
+            {
+              "pregunta": "h (tamaño de paso)",
+              "respuesta": "0.5"
+            },
+            {
+              "pregunta": "f(x=0) + f(x=2)",
+              "respuesta": "4"
+            },
+            {
+              "pregunta": "Suma de términos intermedios 2[f(0.5)+f(1)+f(1.5)]",
+              "respuesta": "7"
+            },
+            {
+              "pregunta": "I (Resultado de la integral)",
+              "respuesta": "2.750000000"
+            }
           ]
         },
         {
           "enunciado": "Calcular la integral de e^x desde 0 hasta 1. n=4.",
           "opciones": [
-            { "pregunta": "h (tamaño de paso)", "respuesta": "0.25" },
-            { "pregunta": "f(x=0) + f(x=1)", "respuesta": "3.718281828" },
-            { "pregunta": "Suma de términos intermedios 2[f(0.25)+f(0.5)+f(0.75)]", "respuesta": "10.099493410" },
-            { "pregunta": "I (Resultado de la integral)", "respuesta": "1.727221905" }
+            {
+              "pregunta": "h (tamaño de paso)",
+              "respuesta": "0.25"
+            },
+            {
+              "pregunta": "f(x=0) + f(x=1)",
+              "respuesta": "3.718281828"
+            },
+            {
+              "pregunta": "Suma de términos intermedios 2[f(0.25)+f(0.5)+f(0.75)]",
+              "respuesta": "10.099493410"
+            },
+            {
+              "pregunta": "I (Resultado de la integral)",
+              "respuesta": "1.727221905"
+            }
           ]
         },
         {
           "enunciado": "Calcular la integral de 1/x desde 1 hasta 2. n=4.",
           "opciones": [
-            { "pregunta": "h (tamaño de paso)", "respuesta": "0.25" },
-            { "pregunta": "f(x=1) + f(x=2)", "respuesta": "1.5" },
-            { "pregunta": "Suma de términos intermedios 2[f(5/4)+f(6/4)+f(7/4)]", "respuesta": "4.076190476" },
-            { "pregunta": "I (Resultado de la integral)", "respuesta": "0.697023810" }
+            {
+              "pregunta": "h (tamaño de paso)",
+              "respuesta": "0.25"
+            },
+            {
+              "pregunta": "f(x=1) + f(x=2)",
+              "respuesta": "1.5"
+            },
+            {
+              "pregunta": "Suma de términos intermedios 2[f(5/4)+f(6/4)+f(7/4)]",
+              "respuesta": "4.076190476"
+            },
+            {
+              "pregunta": "I (Resultado de la integral)",
+              "respuesta": "0.697023810"
+            }
           ]
         }
       ]
@@ -1447,28 +2610,64 @@
         {
           "enunciado": "Calcular la integral de x² desde 0 hasta 2. n=2.",
           "opciones": [
-            { "pregunta": "h (tamaño de paso)", "respuesta": "1" },
-            { "pregunta": "a (constante)", "respuesta": "1/3" },
-            { "pregunta": "Sumatoria Σ wi·f(a+ih)", "respuesta": "8" },
-            { "pregunta": "I (Resultado de la integral)", "respuesta": "2.666666667" }
+            {
+              "pregunta": "h (tamaño de paso)",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "a (constante)",
+              "respuesta": "1/3"
+            },
+            {
+              "pregunta": "Sumatoria Σ wi·f(a+ih)",
+              "respuesta": "8"
+            },
+            {
+              "pregunta": "I (Resultado de la integral)",
+              "respuesta": "2.666666667"
+            }
           ]
         },
         {
           "enunciado": "Calcular la integral de x³ desde 0 hasta 3. n=3.",
           "opciones": [
-            { "pregunta": "h (tamaño de paso)", "respuesta": "1" },
-            { "pregunta": "a (constante)", "respuesta": "3/8" },
-            { "pregunta": "Sumatoria Σ wi·f(a+ih)", "respuesta": "54" },
-            { "pregunta": "I (Resultado de la integral)", "respuesta": "20.250000000" }
+            {
+              "pregunta": "h (tamaño de paso)",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "a (constante)",
+              "respuesta": "3/8"
+            },
+            {
+              "pregunta": "Sumatoria Σ wi·f(a+ih)",
+              "respuesta": "54"
+            },
+            {
+              "pregunta": "I (Resultado de la integral)",
+              "respuesta": "20.250000000"
+            }
           ]
         },
         {
           "enunciado": "Calcular la integral de (x²+1) desde 0 hasta 4. n=4.",
           "opciones": [
-            { "pregunta": "h (tamaño de paso)", "respuesta": "1" },
-            { "pregunta": "a (constante)", "respuesta": "2/45" },
-            { "pregunta": "Sumatoria Σ wi·f(a+ih)", "respuesta": "570" },
-            { "pregunta": "I (Resultado de la integral)", "respuesta": "25.333333333" }
+            {
+              "pregunta": "h (tamaño de paso)",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "a (constante)",
+              "respuesta": "2/45"
+            },
+            {
+              "pregunta": "Sumatoria Σ wi·f(a+ih)",
+              "respuesta": "570"
+            },
+            {
+              "pregunta": "I (Resultado de la integral)",
+              "respuesta": "25.333333333"
+            }
           ]
         }
       ]
@@ -1654,31 +2853,67 @@
         }
       ],
       "problemas": [
-    {
-      "enunciado": "Calcular la integral de x² desde 0 hasta 3 usando la Regla de 3/8 de Simpson con n=3.",
-      "opciones": [
-        { "pregunta": "h (tamaño de paso)", "respuesta": "1" },
-        { "pregunta": "f(a) + f(b)", "respuesta": "9" },
-        { "pregunta": "3·Σ f(intermedios)", "respuesta": "15" },
-        { "pregunta": "I (Resultado de la integral)", "respuesta": "9.000000000" }
-      ]
-    },
-    {
-      "enunciado": "Calcular la integral de x³ desde 0 hasta 3 usando la Regla de 3/8 de Simpson con n=3.",
-      "opciones": [
-        { "pregunta": "h (tamaño de paso)", "respuesta": "1" },
-        { "pregunta": "f(a) + f(b)", "respuesta": "27" },
-        { "pregunta": "3·Σ f(intermedios)", "respuesta": "27" },
-        { "pregunta": "I (Resultado de la integral)", "respuesta": "20.250000000" }
-      ]
-    },
+        {
+          "enunciado": "Calcular la integral de x² desde 0 hasta 3 usando la Regla de 3/8 de Simpson con n=3.",
+          "opciones": [
+            {
+              "pregunta": "h (tamaño de paso)",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "f(a) + f(b)",
+              "respuesta": "9"
+            },
+            {
+              "pregunta": "3·Σ f(intermedios)",
+              "respuesta": "15"
+            },
+            {
+              "pregunta": "I (Resultado de la integral)",
+              "respuesta": "9.000000000"
+            }
+          ]
+        },
+        {
+          "enunciado": "Calcular la integral de x³ desde 0 hasta 3 usando la Regla de 3/8 de Simpson con n=3.",
+          "opciones": [
+            {
+              "pregunta": "h (tamaño de paso)",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "f(a) + f(b)",
+              "respuesta": "27"
+            },
+            {
+              "pregunta": "3·Σ f(intermedios)",
+              "respuesta": "27"
+            },
+            {
+              "pregunta": "I (Resultado de la integral)",
+              "respuesta": "20.250000000"
+            }
+          ]
+        },
         {
           "enunciado": "Calcular la integral de 1/(1+x) desde 0 hasta 6 usando la Regla de 3/8 de Simpson con n=6.",
           "opciones": [
-            { "pregunta": "h (tamaño de paso)", "respuesta": "1" },
-            { "pregunta": "f(a) + f(b)", "respuesta": "1.142857143" },
-            { "pregunta": "3·Σ f(intermedios)", "respuesta": "4.350000000" },
-            { "pregunta": "I (Resultado de la integral)", "respuesta": "2.059821429" }
+            {
+              "pregunta": "h (tamaño de paso)",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "f(a) + f(b)",
+              "respuesta": "1.142857143"
+            },
+            {
+              "pregunta": "3·Σ f(intermedios)",
+              "respuesta": "4.350000000"
+            },
+            {
+              "pregunta": "I (Resultado de la integral)",
+              "respuesta": "2.059821429"
+            }
           ]
         }
       ]

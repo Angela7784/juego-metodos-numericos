@@ -206,7 +206,7 @@ def mostrar_oscilloscope(
         _chaos_level  = 1.0
         problemas = nivel.get("problemas", [])
         if problemas:
-            problema   = random.choice(problemas)
+            problema   = nivel.get("problema_seleccionado") or random.choice(problemas)
             _enunciado = problema.get("enunciado", "")
             _preguntas = problema.get("opciones", [])
         else:

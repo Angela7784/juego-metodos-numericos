@@ -170,6 +170,8 @@ def main():
             if not busy and result == "select_metodo":
                 if nivel and "opciones_mezcladas" in nivel:
                     del nivel["opciones_mezcladas"]
+                if nivel and "problema_seleccionado" in nivel:
+                    del nivel["problema_seleccionado"]
                 start_time = time.time()
                 transition.request("select_metodo")
 
@@ -191,6 +193,8 @@ def main():
                     SaveManager.guardar(game_state)
                     if nivel and "opciones_mezcladas" in nivel:
                         del nivel["opciones_mezcladas"]
+                    if nivel and "problema_seleccionado" in nivel:
+                        del nivel["problema_seleccionado"]
                     transition.request("game_over" if game_state.vidas <= 0 else "menu")
 
         # CABLES
@@ -312,6 +316,8 @@ def main():
                 if result == "select_metodo":
                     if nivel and "opciones_mezcladas" in nivel:
                         del nivel["opciones_mezcladas"]
+                    if nivel and "problema_seleccionado" in nivel:
+                        del nivel["problema_seleccionado"]
                     start_time = time.time()
                     transition.request("select_metodo")
                 elif result == "game_over":

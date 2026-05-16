@@ -77,9 +77,12 @@ def mostrar_select_metodo(
     screen.blit(font_button.render(f"Linea: {linea}", True, color_linea), (30, 20))
     screen.blit(font_button.render(f"Estacion: {nivel['estacion']}", True, WHITE), (30, 55))
 
-    # ── Enunciado del problema ─────────────────────────────────────────────
+    # ── Seleccionar problema aleatorio (una sola vez por intento) ──────────
     problemas = nivel.get("problemas", [])
-    enunciado = problemas[0]["enunciado"] if problemas else "Sin enunciado disponible."
+    if "problema_seleccionado" not in nivel and problemas:
+        nivel["problema_seleccionado"] = random.choice(problemas)
+    problema_actual = nivel.get("problema_seleccionado", problemas[0] if problemas else {})
+    enunciado = problema_actual.get("enunciado", "Sin enunciado disponible.")
 
     panel_w, panel_h = 700, 240
     panel_x = WIDTH  // 2 - panel_w // 2
@@ -92,21 +95,26 @@ def mostrar_select_metodo(
     label = font_button.render("Enunciado del problema:", True, (200, 200, 200))
     screen.blit(label, (panel_x + 20, panel_y + 15))
 
-    # Word-wrap manual
-    font_txt   = pygame.font.SysFont("Arial", 24)
-    max_chars  = panel_w - 40
-    words      = enunciado.split()
-    lines, line = [], ""
-    for word in words:
-        test = (line + " " + word).strip()
-        if font_txt.size(test)[0] <= max_chars:
-            line = test
+    # Word-wrap manual (respeta \n y preserva espacios internos si la línea cabe)
+    font_txt  = pygame.font.SysFont("Arial", 24)
+    max_chars = panel_w - 40
+    lines = []
+    for raw in enunciado.split('\n'):
+        if font_txt.size(raw)[0] <= max_chars:
+            lines.append(raw)
         else:
+            words = raw.split()
+            line  = ""
+            for word in words:
+                test = (line + " " + word).strip()
+                if font_txt.size(test)[0] <= max_chars:
+                    line = test
+                else:
+                    if line:
+                        lines.append(line)
+                    line = word
             if line:
                 lines.append(line)
-            line = word
-    if line:
-        lines.append(line)
 
     for j, ln in enumerate(lines[:6]):
         surf = font_txt.render(ln, True, WHITE)

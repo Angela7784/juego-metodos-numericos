@@ -57,19 +57,24 @@ def reset_cables() -> None:
 
 
 def _wrap_text(text, font, max_width):
-    words = text.split()
-    lines, current = [], ""
-    for word in words:
-        test = (current + " " + word).strip()
-        if font.size(test)[0] <= max_width:
-            current = test
+    result = []
+    for raw in text.split('\n'):
+        if font.size(raw)[0] <= max_width:
+            result.append(raw)
         else:
+            words = raw.split()
+            current = ""
+            for word in words:
+                test = (current + " " + word).strip()
+                if font.size(test)[0] <= max_width:
+                    current = test
+                else:
+                    if current:
+                        result.append(current)
+                    current = word
             if current:
-                lines.append(current)
-            current = word
-    if current:
-        lines.append(current)
-    return lines
+                result.append(current)
+    return result
 
 
 # ── Helpers de dibujo ──────────────────────────────────────────────────────
@@ -107,10 +112,12 @@ def _draw_sparks(screen, cx, cy, now, intensity=1.0):
         pygame.draw.line(screen, ORANGE, (sx, sy), (sx2, sy2), 1)
 
 
-def _get_layout(n, WIDTH, HEIGHT):
+def _get_layout(n, WIDTH, HEIGHT, top_y=260):
     """Devuelve listas de coordenadas (x,y) para terminales izquierdos y derechos."""
-    spacing = min(130, (HEIGHT - 260) // max(n, 1))
-    start_y = HEIGHT // 2 - (n - 1) * spacing // 2
+    available = HEIGHT - top_y - 80
+    spacing   = min(130, available // max(n, 1))
+    mid_y     = (top_y + HEIGHT - 80) // 2
+    start_y   = mid_y - (n - 1) * spacing // 2
     lx = WIDTH // 4
     rx = 3 * WIDTH // 4
     left_ports  = [(lx, start_y + i * spacing) for i in range(n)]
@@ -160,7 +167,7 @@ def mostrar_cables(
         _wrong_flash   = {}
         problemas = nivel.get("problemas", [])
         if problemas:
-            problema   = random.choice(problemas)
+            problema   = nivel.get("problema_seleccionado") or random.choice(problemas)
             _enunciado = problema.get("enunciado", "")
             _preguntas = problema.get("opciones", [])
         else:
@@ -182,7 +189,12 @@ def mostrar_cables(
     # Limpiar destellos expirados
     _wrong_flash = {k: v for k, v in _wrong_flash.items() if now < v}
 
-    left_ports, right_ports = _get_layout(n, WIDTH, HEIGHT)
+    # Calcular fondo del panel del enunciado para que los terminales no se encimen
+    _font_enun_tmp = pygame.font.SysFont("Arial", 23)
+    _enun_lines    = len(_wrap_text(_enunciado, _font_enun_tmp, WIDTH - 160)) if _enunciado else 0
+    enun_bottom    = 175 + _enun_lines * 30 + 18 + 20 if _enunciado else 195
+
+    left_ports, right_ports = _get_layout(n, WIDTH, HEIGHT, top_y=enun_bottom)
 
     # ── Procesar eventos ───────────────────────────────────────────────────
     locked_left  = set(_conexiones.keys())
