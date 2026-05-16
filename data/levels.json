@@ -640,7 +640,7 @@
       ],
       "problemas": [
         {
-          "enunciado": "f(x) = 3x^2 + 2x - 1 = 0\ng(x) = 1 / (3x + 2)\nx0 = 0",
+          "enunciado": "f(x) = 3x² + 2x - 1 = 0\nx0 = 0",
           "opciones": [
             {
               "pregunta": "x1",
@@ -655,13 +655,13 @@
               "respuesta": "0.35"
             },
             {
-              "pregunta": "raiz",
-              "respuesta": "0.3333"
+              "pregunta": "error",
+              "respuesta": "0.00001"
             }
           ]
         },
         {
-          "enunciado": "f(x) = 2x^2 - 5x + 2 = 0\ng(x) = (2x^2 + 2) / 5\nx0 = 0",
+          "enunciado": "f(x) = 2x² - 5x + 2 = 0\nx0 = 0",
           "opciones": [
             {
               "pregunta": "x1",
@@ -676,13 +676,13 @@
               "respuesta": "0.4861"
             },
             {
-              "pregunta": "raiz",
-              "respuesta": "0.5"
+              "pregunta": "error",
+              "respuesta": "0.00001"
             }
           ]
         },
         {
-          "enunciado": "f(x) = x^2 - 2x - 3 = 0\ng(x) = sqrt(2x + 3)\nx0 = 1",
+          "enunciado": "f(x) = x² - 2x - 3 = 0\nx0 = 1",
           "opciones": [
             {
               "pregunta": "x1",
@@ -697,8 +697,8 @@
               "respuesta": "2.9098"
             },
             {
-              "pregunta": "raiz",
-              "respuesta": "3.0"
+              "pregunta": "error",
+              "respuesta": "0.00001"
             }
           ]
         }
@@ -708,79 +708,91 @@
       "id": 8,
       "linea": "1",
       "estacion": "Hospital",
-      "tipo": "osciloscopio",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "osciloscopio",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_hospital.png",
       "seleccion_metodo": [
         {
-          "correcto": "Bisectriz",
-          "incorrecto1": "Montante",
-          "incorrecto2": "Regla de Simpson 1/3",
-          "incorrecto3": "Gauss - Jordan"
+          "correcto": "Newton-Raphson",
+          "incorrecto1": "Bisectriz",
+          "incorrecto2": "Lagrange",
+          "incorrecto3": "Diferencias Divididas"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Obtener g(x) para la función:  y = x^4 - 3x^2 + x - 1",
+          "enunciado": "f(x) = 0.6x² + x - 4\nx0 = 1",
           "opciones": [
             {
-              "pregunta": "a final",
-              "respuesta": "1.661438"
+              "pregunta": "x1",
+              "respuesta": "2.090909091"
             },
             {
-              "pregunta": "b final",
-              "respuesta": "1.661499"
+              "pregunta": "x2",
+              "respuesta": "1.887423457"
             },
             {
-              "pregunta": "x",
-              "respuesta": "1.661438"
+              "pregunta": "x3",
+              "respuesta": "1.879814103"
             },
             {
-              "pregunta": "ε",
-              "respuesta": "0.000061"
+              "pregunta": "x4",
+              "respuesta": "1.879803433"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.0000107"
             }
           ]
         },
         {
-          "enunciado": "Obtener g(x) para la función:  y = 2x^3 - 9x^2 + 3",
+          "enunciado": "f(x) = 2x² - 9x + 4\nx0 = 0",
           "opciones": [
             {
-              "pregunta": "a final",
-              "respuesta": "0.621887"
+              "pregunta": "x1",
+              "respuesta": "0.444444444"
             },
             {
-              "pregunta": "b final",
-              "respuesta": "0.621948"
+              "pregunta": "x2",
+              "respuesta": "0.499145299"
             },
             {
-              "pregunta": "x",
-              "respuesta": "0.621887"
+              "pregunta": "x3",
+              "respuesta": "0.499999791"
             },
             {
-              "pregunta": "ε",
-              "respuesta": "0.000061"
+              "pregunta": "x4",
+              "respuesta": "0.5"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000000209"
             }
           ]
         },
         {
-          "enunciado": "Obtener g(x) para la función:  y = x^3 - 4x^2 + 2",
+          "enunciado": "f(x) = x³ + 3x² + 8x - 18\nx0 = 1",
           "opciones": [
             {
-              "pregunta": "a final",
-              "respuesta": "3.86615"
+              "pregunta": "x1",
+              "respuesta": "1.352941176"
             },
             {
-              "pregunta": "b final",
-              "respuesta": "3.866211"
+              "pregunta": "x2",
+              "respuesta": "1.316318938"
             },
             {
-              "pregunta": "x",
-              "respuesta": "3.86615"
+              "pregunta": "x3",
+              "respuesta": "1.315872498"
             },
             {
-              "pregunta": "ε",
-              "respuesta": "0.000061"
+              "pregunta": "x4",
+              "respuesta": "1.315872432"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000000066"
             }
           ]
         }
@@ -790,79 +802,91 @@
       "id": 9,
       "linea": "1",
       "estacion": "Edison",
-      "tipo": "osciloscopio",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "osciloscopio",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_edison.png",
       "seleccion_metodo": [
         {
           "correcto": "Falsa Posición",
           "incorrecto1": "Lagrange",
           "incorrecto2": "Montante",
-          "incorrecto3": "Cuadrática con Función"
+          "incorrecto3": "Cuadrática cúbica"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Calcule la raíz real de la función f(x) = x^2 - 3",
+          "enunciado": "f(x) = x² - 4x - 5\na = 4,    b = 6",
           "opciones": [
             {
-              "pregunta": "f(b)",
-              "respuesta": "1"
+              "pregunta": "x1",
+              "respuesta": "4.833333333"
             },
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "4"
+              "pregunta": "x2",
+              "respuesta": "4.975609756"
             },
             {
-              "pregunta": "x",
-              "respuesta": "1.732026144"
+              "pregunta": "x3",
+              "respuesta": "4.996503497"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000318827"
+              "pregunta": "x4",
+              "respuesta": "4.99950025"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.002996753"
             }
           ]
         },
         {
-          "enunciado": "Calcule la raíz real de la función f(x) = x^3 - 2x - 5",
+          "enunciado": "f(x) = x² - 5\na = 2,    b = 3",
           "opciones": [
             {
-              "pregunta": "f(b)",
-              "respuesta": "16"
+              "pregunta": "x1",
+              "respuesta": "2.2"
             },
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "6"
+              "pregunta": "x2",
+              "respuesta": "2.230769231"
             },
             {
-              "pregunta": "x",
-              "respuesta": "2.094305"
+              "pregunta": "x3",
+              "respuesta": "2.235294118"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000421"
+              "pregunta": "x4",
+              "respuesta": "2.235955056"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000660939"
             }
           ]
         },
         {
-          "enunciado": "Calcule la raíz real de la función f(x) = e^x - 3x",
+          "enunciado": "f(x) = x² - x - 1\na = 1,    b = 2",
           "opciones": [
             {
-              "pregunta": "f(b)",
-              "respuesta": "1.389056099"
+              "pregunta": "x1",
+              "respuesta": "1.5"
             },
             {
-              "pregunta": "Número Última Iteración",
-              "respuesta": "10"
+              "pregunta": "x2",
+              "respuesta": "1.6"
             },
             {
-              "pregunta": "x",
-              "respuesta": "1.511608"
+              "pregunta": "x3",
+              "respuesta": "1.615384615"
             },
             {
-              "pregunta": "Є",
-              "respuesta": "0.000615"
+              "pregunta": "x4",
+              "respuesta": "1.617647059"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.002262443"
             }
           ]
         }
@@ -886,7 +910,7 @@
       ],
       "problemas": [
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = x^3 - 4x + 1",
+          "enunciado": "Calcule la raíz de la ecuación f(x) = x³ - 4x + 1",
           "opciones": [
             {
               "pregunta": "Número Última Iteración",
@@ -928,7 +952,7 @@
           ]
         },
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = x^3 + 2x^2 - x - 1",
+          "enunciado": "Calcule la raíz de la ecuación f(x) = x³ + 2x² - x - 1",
           "opciones": [
             {
               "pregunta": "Número Última Iteración",
@@ -968,7 +992,7 @@
       ],
       "problemas": [
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = x^4 - x - 10",
+          "enunciado": "Calcule la raíz de la ecuación f(x) = x⁴ - x - 10",
           "opciones": [
             {
               "pregunta": "f'(x)",
@@ -1010,7 +1034,7 @@
           ]
         },
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = x^3 - 5x + 3",
+          "enunciado": "Calcule la raíz de la ecuación f(x) = x³ - 5x + 3",
           "opciones": [
             {
               "pregunta": "f'(x)",
@@ -1378,7 +1402,7 @@
       ],
       "problemas": [
         {
-          "enunciado": "Calcule la raíz real de la función f(x) = x^3 - x - 1",
+          "enunciado": "Calcule la raíz real de la función f(x) = x³ - x - 1",
           "opciones": [
             {
               "pregunta": "f(b)",
@@ -1460,7 +1484,7 @@
       ],
       "problemas": [
         {
-          "enunciado": "Calcule la raíz de la ecuación f(x) = x^3 - 4x^2 + 1",
+          "enunciado": "Calcule la raíz de la ecuación f(x) = x³ - 4x² + 1",
           "opciones": [
             {
               "pregunta": "f'(x)",
@@ -1542,7 +1566,7 @@
       ],
       "problemas": [
         {
-          "enunciado": "Obtener g(x) para la función:  y = 3x^3 - 7x + 2",
+          "enunciado": "Obtener g(x) para la función:  y = 3x³ - 7x + 2",
           "opciones": [
             {
               "pregunta": "a final",
@@ -1563,7 +1587,7 @@
           ]
         },
         {
-          "enunciado": "Obtener g(x) para la función:  y = x^3 - 2x^2 - 4x + 5",
+          "enunciado": "Obtener g(x) para la función:  y = x³ - 2x² - 4x + 5",
           "opciones": [
             {
               "pregunta": "a final",
@@ -1584,7 +1608,7 @@
           ]
         },
         {
-          "enunciado": "Obtener g(x) para la función:  y = x^4 - 6x^2 - 2",
+          "enunciado": "Obtener g(x) para la función:  y = x⁴ - 6x² - 2",
           "opciones": [
             {
               "pregunta": "a final",
@@ -2201,7 +2225,7 @@
           "enunciado": "Encuentra g(x)de los siguientes puntos: (1,2), (2,5), (3,8), (4,15), (5,21)",
           "opciones": [
             {
-              "pregunta": "∑x^2y",
+              "pregunta": "∑x²y",
               "respuesta": "859"
             },
             {
@@ -2222,7 +2246,7 @@
           "enunciado": "Encuentra g(x)de los siguientes puntos: (1,5), (2,8), (4,12), (5,17), (7,21)",
           "opciones": [
             {
-              "pregunta": "∑x^2y",
+              "pregunta": "∑x²y",
               "respuesta": "3402"
             },
             {
@@ -2243,7 +2267,7 @@
           "enunciado": "Encuentra g(x)de los siguientes puntos: (1,5), (2,8), (4,12), (5,17), (7,21)",
           "opciones": [
             {
-              "pregunta": "∑x^2y",
+              "pregunta": "∑x²y",
               "respuesta": "9156"
             },
             {
@@ -2283,7 +2307,7 @@
           "enunciado": "Encuentra g(x) de los siguientes puntos: (1,5), (2,10), (3,23), (4,50), (5,97)",
           "opciones": [
             {
-              "pregunta": "∑x^2y",
+              "pregunta": "∑x²y",
               "respuesta": "16031"
             },
             {
@@ -2304,7 +2328,7 @@
           "enunciado": "Encuentra g(x) de los siguientes puntos: (1,2), (2,10), (3,30), (4,68), (5,130)",
           "opciones": [
             {
-              "pregunta": "∑x^2y",
+              "pregunta": "∑x²y",
               "respuesta": "21494"
             },
             {
@@ -2325,7 +2349,7 @@
           "enunciado": "Encuentra g(x) de los siguientes puntos: (1,8), (2,29), (3,80), (4,173), (5,320)",
           "opciones": [
             {
-              "pregunta": "∑x^2y",
+              "pregunta": "∑x²y",
               "respuesta": "53472"
             },
             {
@@ -2447,7 +2471,7 @@
           "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=e^x: (1, 7.359140914), (2, 20.694528050), (3, 44.042768462), (4, 84.299075017), (5, 160.206579551)",
           "opciones": [
             {
-              "pregunta": "∑x^2y",
+              "pregunta": "∑x²y",
               "respuesta": "5840.471858319"
             },
             {
@@ -2468,7 +2492,7 @@
           "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=ln(x): (1, 3), (2, 10.772588724), (3, 21.394449156), (4, 35.545177444), (5, 53.437751648)",
           "opciones": [
             {
-              "pregunta": "∑x^2y",
+              "pregunta": "∑x²y",
               "respuesta": "2143.307027604"
             },
             {
@@ -2489,7 +2513,7 @@
           "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=sen(x): (1, 4.207354925), (2, 4.546487135), (3, -1.294399960), (4, -9.784012475), (5, -16.794621375)",
           "opciones": [
             {
-              "pregunta": "∑x^2y",
+              "pregunta": "∑x²y",
               "respuesta": "-565.666030150"
             },
             {
@@ -2526,7 +2550,7 @@
       ],
       "problemas": [
         {
-          "enunciado": "Calcular la integral de x^2 desde 0 hasta 2. n=4.",
+          "enunciado": "Calcular la integral de x² desde 0 hasta 2. n=4.",
           "opciones": [
             {
               "pregunta": "h (tamaño de paso)",
