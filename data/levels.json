@@ -61,7 +61,7 @@
         },
         {
           "enunciado": "Estimar Ln(9) usando los intervalos Ln(6) y Ln(12).",
-          "opciones": [
+          "opciones" : [
             {
               "pregunta": "f(a) = Ln(6)",
               "respuesta": "1.791759469"
@@ -321,7 +321,7 @@
             },
             {
               "pregunta": "D1[1]",
-              "respuesta": "0.9778"
+              "respuesta": "0.9777777778"
             },
             {
               "pregunta": "D1[2]",
@@ -329,11 +329,11 @@
             },
             {
               "pregunta": "D2[1]",
-              "respuesta": "0.1266"
+              "respuesta": "0.1266339869"
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "2.8947"
+              "respuesta": "2.894738562"
             }
           ]
         },
@@ -354,7 +354,7 @@
             },
             {
               "pregunta": "D2[1]",
-              "respuesta": "0.0583"
+              "respuesta": "0.05833333333"
             },
             {
               "pregunta": "g(x)",
@@ -394,11 +394,11 @@
             },
             {
               "pregunta": "L3(x)",
-              "respuesta": "-0.3438"
+              "respuesta": "-0.34375"
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "2.2812"
+              "respuesta": "2.28125"
             }
           ]
         },
@@ -407,19 +407,19 @@
           "opciones": [
             {
               "pregunta": "L1(x)",
-              "respuesta": "0.7467"
+              "respuesta": "0.746666667"
             },
             {
               "pregunta": "L2(x)",
-              "respuesta": "3.6867"
+              "respuesta": "3.686666667"
             },
             {
               "pregunta": "L3(x)",
-              "respuesta": "-0.6269"
+              "respuesta": "-0.6269090909"
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "3.8065"
+              "respuesta": "3.806424242"
             }
           ]
         },
@@ -428,7 +428,7 @@
           "opciones": [
             {
               "pregunta": "L1(x)",
-              "respuesta": "0.2473"
+              "respuesta": "0.2472727273"
             },
             {
               "pregunta": "L2(x)",
@@ -436,11 +436,11 @@
             },
             {
               "pregunta": "L3(x)",
-              "respuesta": "-0.1336"
+              "respuesta": "-0.1336363636"
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "1.0097"
+              "respuesta": "1.009636364"
             }
           ]
         }
@@ -476,15 +476,15 @@
             },
             {
               "pregunta": "D1[2]",
-              "respuesta": "0.7429"
+              "respuesta": "0.7428571429"
             },
             {
               "pregunta": "D2[1]",
-              "respuesta": "0.0453"
+              "respuesta": "0.04523809524"
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "1.6128"
+              "respuesta": "1.612761905"
             }
           ]
         },
@@ -501,15 +501,15 @@
             },
             {
               "pregunta": "D1[2]",
-              "respuesta": "0.8429"
+              "respuesta": "0.8428571429"
             },
             {
               "pregunta": "D2[1]",
-              "respuesta": "0.1203"
+              "respuesta": "0.1202380952"
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "-2.8968"
+              "respuesta": "-2.896785714"
             }
           ]
         },
@@ -522,7 +522,7 @@
             },
             {
               "pregunta": "D1[1]",
-              "respuesta": "-1.2429"
+              "respuesta": "-1.242857143"
             },
             {
               "pregunta": "D1[2]",
@@ -530,11 +530,11 @@
             },
             {
               "pregunta": "D2[1]",
-              "respuesta": "0.1536"
+              "respuesta": "0.1535714286"
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "4.3044"
+              "respuesta": "4.304428571"
             }
           ]
         }
@@ -562,7 +562,7 @@
           "opciones": [
             {
               "pregunta": "L1(x)",
-              "respuesta": "-0.2812"
+              "respuesta": "-0.28125"
             },
             {
               "pregunta": "L2(x)",
@@ -574,7 +574,7 @@
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "-0.5437"
+              "respuesta": "-0.54375"
             }
           ]
         },
@@ -583,7 +583,7 @@
           "opciones": [
             {
               "pregunta": "L1(x)",
-              "respuesta": "-0.5236"
+              "respuesta": "-0.5236363636"
             },
             {
               "pregunta": "L2(x)",
@@ -591,11 +591,11 @@
             },
             {
               "pregunta": "L3(x)",
-              "respuesta": "0.6545"
+              "respuesta": "0.6545454545"
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "6.5109"
+              "respuesta": "6.510909091"
             }
           ]
         },
@@ -604,7 +604,7 @@
           "opciones": [
             {
               "pregunta": "L1(x)",
-              "respuesta": "1.0364"
+              "respuesta": "1.036363636"
             },
             {
               "pregunta": "L2(x)",
@@ -612,11 +612,11 @@
             },
             {
               "pregunta": "L3(x)",
-              "respuesta": "-0.5678"
+              "respuesta": "-0.5678181818"
             },
             {
               "pregunta": "g(x)",
-              "respuesta": "2.9806"
+              "respuesta": "2.980545455"
             }
           ]
         }
@@ -648,7 +648,7 @@
             },
             {
               "pregunta": "x2",
-              "respuesta": "0.2857"
+              "respuesta": "0.285714286"
             },
             {
               "pregunta": "x3",
@@ -656,7 +656,7 @@
             },
             {
               "pregunta": "error",
-              "respuesta": "0.00001"
+              "respuesta": "0.000009293"
             }
           ]
         },
@@ -673,11 +673,11 @@
             },
             {
               "pregunta": "x3",
-              "respuesta": "0.4861"
+              "respuesta": "0.486120"
             },
             {
               "pregunta": "error",
-              "respuesta": "0.00001"
+              "respuesta": "0.000005"
             }
           ]
         },
@@ -686,19 +686,19 @@
           "opciones": [
             {
               "pregunta": "x1",
-              "respuesta": "2.2361"
+              "respuesta": "2.236068"
             },
             {
               "pregunta": "x2",
-              "respuesta": "2.7335"
+              "respuesta": "2.729759"
             },
             {
               "pregunta": "x3",
-              "respuesta": "2.9098"
+              "respuesta": "2.909118"
             },
             {
               "pregunta": "error",
-              "respuesta": "0.00001"
+              "respuesta": "0.000009"
             }
           ]
         }
@@ -742,7 +742,7 @@
             },
             {
               "pregunta": "error",
-              "respuesta": "0.0000107"
+              "respuesta": "0.000000000"
             }
           ]
         },
@@ -840,7 +840,7 @@
             },
             {
               "pregunta": "error",
-              "respuesta": "0.000428352"
+              "respuesta": "0.000061198"
             }
           ]
         },
@@ -865,7 +865,7 @@
             },
             {
               "pregunta": "error",
-              "respuesta": "0.000660939"
+              "respuesta": "0.000096446"
             }
           ]
         },
@@ -894,7 +894,7 @@
             },
             {
               "pregunta": "error",
-              "respuesta": "0.000330469"
+              "respuesta": "0.000048223"
             }
           ]
         }
@@ -938,7 +938,7 @@
             },
             {
               "pregunta": "error",
-              "respuesta": "0.00053004"
+              "respuesta": "0.000003294"
             }
           ]
         },
@@ -967,7 +967,7 @@
             },
             {
               "pregunta": "error",
-              "respuesta": "0.0000565"
+              "respuesta": "0.000056528"
             }
           ]
         },
@@ -992,7 +992,7 @@
             },
             {
               "pregunta": "error",
-              "respuesta": "0.000221055"
+              "respuesta": "0.000221054"
             }
           ]
         }
@@ -1028,15 +1028,15 @@
             },
             {
               "pregunta": "x3",
-              "respuesta": "0.343114140"
+              "respuesta": "0.343110828"
             },
             {
               "pregunta": "raiz",
-              "respuesta": "0.343145750"
+              "respuesta": "0.343140578"
             },
             {
               "pregunta": "error",
-              "respuesta": "0.000000006"
+              "respuesta": "0.000001710"
             }
           ]
         },
@@ -1053,15 +1053,15 @@
             },
             {
               "pregunta": "x3",
-              "respuesta": "-0.361818151"
+              "respuesta": "-0.361827163"
             },
             {
               "pregunta": "raiz",
-              "respuesta": "-0.362541391"
+              "respuesta": "-0.362554362"
             },
             {
               "pregunta": "error",
-              "respuesta": "0.000000002"
+              "respuesta": "0.000000002545"
             }
           ]
         },
@@ -1074,19 +1074,19 @@
             },
             {
               "pregunta": "x2",
-              "respuesta": "0.286250939"
+              "respuesta": "0.286240695"
             },
             {
               "pregunta": "x3",
-              "respuesta": "0.287625382"
+              "respuesta": "0.287144951"
             },
             {
               "pregunta": "raiz",
-              "respuesta": "0.287785549"
+              "respuesta": "0.287210029"
             },
             {
               "pregunta": "error",
-              "respuesta": "0.000000002"
+              "respuesta": "0.0000004112"
             }
           ]
         }
@@ -1168,7 +1168,7 @@
           "opciones": [
             {
               "pregunta": "x1",
-              "respuesta": "1.750000000"
+              "respuesta": "1.75"
             },
             {
               "pregunta": "x2",
@@ -1237,7 +1237,7 @@
           "opciones": [
             {
               "pregunta": "x2",
-              "respuesta": "0.800000000"
+              "respuesta": "0.8"
             },
             {
               "pregunta": "x3",
@@ -1262,7 +1262,7 @@
           "opciones": [
             {
               "pregunta": "x2",
-              "respuesta": "3.400000000"
+              "respuesta": "3.4"
             },
             {
               "pregunta": "x3",
