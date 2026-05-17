@@ -121,7 +121,7 @@ def mostrar_select_metodo(
         screen.blit(surf, (panel_x + 20, panel_y + 55 + j * 30))
 
     # ── Pregunta de selección ──────────────────────────────────────────────
-    titulo = font_title.render("Que metodo aplica para este problema?", True, WHITE)
+    titulo = font_title.render("¿Qué método aplica para este problema?", True, WHITE)
     screen.blit(titulo, titulo.get_rect(center=(WIDTH // 2, 430)))
 
     # Mezclar opciones solo una vez por nivel
