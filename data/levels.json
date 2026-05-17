@@ -1762,85 +1762,85 @@
       "minijuego": "semaforo",
       "seleccion_metodo": [
         {
-          "correcto": "Línea Recta",
-          "incorrecto1": "Lagrange",
-          "incorrecto2": "Montante",
+          "correcto": "Eliminación Gaussiana",
+          "incorrecto1": "Línea Recta",
+          "incorrecto2": "Cuadrática",
           "incorrecto3": "Interpolación Lineal"
         }
       ],
       "problemas": [
         {
-          "enunciado": "n=5\nx: 1  2  4  6  8\ny: 3.0  4.5  7.2  10.1  12.9",
+          "enunciado": "x - y + 2z = 7\n2x + y - z = 2\nx + 3y + z = 8",
           "opciones": [
             {
-              "pregunta": "Sx",
-              "respuesta": "21"
+              "pregunta": "P2",
+              "respuesta": "3"
             },
             {
-              "pregunta": "Sy",
-              "respuesta": "37.7"
+              "pregunta": "P3",
+              "respuesta": "5.666667"
             },
             {
-              "pregunta": "Sx2",
-              "respuesta": "121"
+              "pregunta": "x3",
+              "respuesta": "3"
             },
             {
-              "pregunta": "a1",
-              "respuesta": "1.410366"
+              "pregunta": "x2",
+              "respuesta": "1"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "1.616463"
+              "pregunta": "x1",
+              "respuesta": "2"
             }
           ]
         },
         {
-          "enunciado": "n=5\nx: 2  4  6  8  10\ny: 5.1  8.3  11.4  14.9  18.2",
+          "enunciado": "x - y + 2z = 3\n3x + y - z = 10\n2x + 3y + z = 13",
           "opciones": [
             {
-              "pregunta": "Sx",
-              "respuesta": "30"
+              "pregunta": "P2",
+              "respuesta": "4"
             },
             {
-              "pregunta": "Sy",
-              "respuesta": "57.9"
+              "pregunta": "P3",
+              "respuesta": "5.75"
             },
             {
-              "pregunta": "Sx2",
-              "respuesta": "220"
+              "pregunta": "x3",
+              "respuesta": "1"
             },
             {
-              "pregunta": "a1",
-              "respuesta": "1.64"
+              "pregunta": "x2",
+              "respuesta": "2"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "1.74"
+              "pregunta": "x1",
+              "respuesta": "3"
             }
           ]
         },
         {
-          "enunciado": "n=5\nx: 1  3  5  7  9\ny: 4.2  8.1  12.0  15.8  20.1",
+          "enunciado": "x + y - z = 2\n2x - y + 3z = 5\nx + 4y + z = 15",
           "opciones": [
             {
-              "pregunta": "Sx",
-              "respuesta": "25"
+              "pregunta": "P2",
+              "respuesta": "-3"
             },
             {
-              "pregunta": "Sy",
-              "respuesta": "60.2"
+              "pregunta": "P3",
+              "respuesta": "7"
             },
             {
-              "pregunta": "Sx2",
-              "respuesta": "165"
+              "pregunta": "x3",
+              "respuesta": "2"
             },
             {
-              "pregunta": "a1",
-              "respuesta": "1.975"
+              "pregunta": "x2",
+              "respuesta": "3"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "2.165"
+              "pregunta": "x1",
+              "respuesta": "1"
             }
           ]
         }
@@ -1853,22 +1853,25 @@
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_tapia.png",
       "seleccion_metodo": [
         {
-          "correcto": "Gauss-Jordan",
-          "incorrecto1": "Newton Hacia Adelante",
-          "incorrecto2": "Ajuste Cúbico",
-          "incorrecto3": "Lagrange"
+          "correcto": "Gauss-Jordán",
+          "incorrecto1": "Euler Hacia Adelante",
+          "incorrecto2": "Newton Hacia Atrás",
+          "incorrecto3": "Regla de 1/3 Simpson"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 6, 2x - y + 3z = 9, -x + 2y + z = 6",
+          "enunciado": "x + y - z = 0\nx + 4y + z = 12\n2x - y + z = 3",
           "opciones": [
             {
-              "pregunta": "Pivote Matriz 2",
-              "respuesta": "1"
+              "pregunta": "P2",
+              "respuesta": "3"
+            },
+            {
+              "pregunta": "P3",
+              "respuesta": "5"
             },
             {
               "pregunta": "x",
@@ -1885,19 +1888,23 @@
           ]
         },
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 0, 2x - y + z = 5, x - 2y - z = 4",
+          "enunciado": "x + 2y - z = 7\nx - y + 4z = 3\n2x + y + z = 8",
           "opciones": [
             {
-              "pregunta": "Pivote Matriz 2",
-              "respuesta": "1"
+              "pregunta": "P2",
+              "respuesta": "-3"
+            },
+            {
+              "pregunta": "P3",
+              "respuesta": "-2"
             },
             {
               "pregunta": "x",
-              "respuesta": "1"
+              "respuesta": "2"
             },
             {
               "pregunta": "y",
-              "respuesta": "-2"
+              "respuesta": "3"
             },
             {
               "pregunta": "z",
@@ -1906,23 +1913,27 @@
           ]
         },
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + 2y - z = 6, 2x - y + 3z = -13, 3x - 2y + z = 14",
+          "enunciado": "x + y - z = 2\nx + 5y - z = 6\n3x - y + 2z = 12",
           "opciones": [
             {
-              "pregunta": "Pivote Matriz 2",
-              "respuesta": "1"
+              "pregunta": "P2",
+              "respuesta": "4"
+            },
+            {
+              "pregunta": "P3",
+              "respuesta": "5"
             },
             {
               "pregunta": "x",
-              "respuesta": "-2"
-            },
-            {
-              "pregunta": "y",
               "respuesta": "3"
             },
             {
+              "pregunta": "y",
+              "respuesta": "1"
+            },
+            {
               "pregunta": "z",
-              "respuesta": "-2"
+              "respuesta": "2"
             }
           ]
         }
@@ -1938,73 +1949,85 @@
       "tabla_img": "assets/tablas/tabla_sannicolas.png",
       "seleccion_metodo": [
         {
-          "correcto": "Eliminación Gaussiana",
+          "correcto": "Jacobi",
           "incorrecto1": "Regla de 3/8 de Simpson",
-          "incorrecto2": "Ajuste Cuadrático",
+          "incorrecto2": "Lineal con función",
           "incorrecto3": "Newton hacia atrás"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + 2y + z = 2, 3x + 8y + z = 12, x + 3y + 2z = 11",
+          "enunciado": "(ε ≤ 0.001)\n   10x  -  y  +  z = 11\n    x  + 8y  +  z = 20\n    x  +  y  + 9z = 30",
           "opciones": [
             {
-              "pregunta": "Valor final de posición 3,3",
-              "respuesta": "-4"
+              "pregunta": "x1",
+              "respuesta": "1.100000"
             },
             {
-              "pregunta": "x",
-              "respuesta": "-13"
+              "pregunta": "y1",
+              "respuesta": "2.250000"
             },
             {
-              "pregunta": "y",
-              "respuesta": "6"
+              "pregunta": "z1",
+              "respuesta": "3.111111"
             },
             {
-              "pregunta": "z",
-              "respuesta": "3"
+              "pregunta": "ex",
+              "respuesta": "0.000157986"
+            },
+            {
+              "pregunta": "ey",
+              "respuesta": "0.000368924"
             }
           ]
         },
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 90, 2x + 3y - z = 110, x - 2y + 2z = 60",
+          "enunciado": "(ε ≤ 0.001)\n   9x  +  y  -  z = 16\n    x  + 7y  +  z = 12\n   -x  +  y  + 8z = 23",
           "opciones": [
             {
-              "pregunta": "Valor final de posición 3,3",
-              "respuesta": "-8"
+              "pregunta": "x1",
+              "respuesta": "1.777778"
             },
             {
-              "pregunta": "x",
-              "respuesta": "40"
+              "pregunta": "y1",
+              "respuesta": "1.428571"
             },
             {
-              "pregunta": "y",
-              "respuesta": "20"
+              "pregunta": "z1",
+              "respuesta": "2.875000"
             },
             {
-              "pregunta": "z",
-              "respuesta": "30"
+              "pregunta": "ex",
+              "respuesta": "0.000697744"
+            },
+            {
+              "pregunta": "ey",
+              "respuesta": "0.000894207"
             }
           ]
         },
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 17, 3x + 2y + z = 26, 2x - y + 3z = 29",
+          "enunciado": "(ε ≤ 0.001)\n   8x  +  y  -  z = 25\n   -x  + 9y  +  z = 16\n    x  +  y  + 6z = 11",
           "opciones": [
             {
-              "pregunta": "Valor final de posición 3,3",
-              "respuesta": "7"
+              "pregunta": "x1",
+              "respuesta": "3.125000"
             },
             {
-              "pregunta": "x",
-              "respuesta": "2"
+              "pregunta": "y1",
+              "respuesta": "1.777778"
             },
             {
-              "pregunta": "y",
-              "respuesta": "5"
+              "pregunta": "z1",
+              "respuesta": "1.500000"
             },
             {
-              "pregunta": "z",
-              "respuesta": "10"
+              "pregunta": "ex",
+              "respuesta": "0.000534758"
+            },
+            {
+              "pregunta": "ey",
+              "respuesta": "0.000125252"
             }
           ]
         }
@@ -2020,73 +2043,85 @@
       "tabla_img": "assets/tablas/tabla_anahuac.png",
       "seleccion_metodo": [
         {
-          "correcto": "Gauss-Seidel",
-          "incorrecto1": "Interpolación Lineal",
-          "incorrecto2": "Euler hacia adelante",
-          "incorrecto3": "Ajuste Cúbico "
+          "correcto": "Línea Recta",
+          "incorrecto1": "Jacobi",
+          "incorrecto2": "Montante",
+          "incorrecto3": "Interpolación Lineal"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 5a - b + c = 8, a + 6b - 2c = -9, -a + 2b + 7c = 11",
+          "enunciado": "  x |     y\n  1 |   3.0\n  2 |   4.5\n  4 |   7.2\n  6 |  10.1\n  8 |  12.9",
           "opciones": [
             {
-              "pregunta": "ɛa",
-              "respuesta": "0.000483975"
+              "pregunta": "Σx",
+              "respuesta": "21"
             },
             {
-              "pregunta": "a",
-              "respuesta": "1.000084531"
+              "pregunta": "Σy",
+              "respuesta": "37.7"
             },
             {
-              "pregunta": "b",
-              "respuesta": "-1.000060191"
+              "pregunta": "Σx²",
+              "respuesta": "121"
             },
             {
-              "pregunta": "c",
-              "respuesta": "2.000029273"
+              "pregunta": "a1",
+              "respuesta": "1.410366"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "1.616463"
             }
           ]
         },
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 10a - b + 2c = 15, -2a + 8b - c = 10, a + 2b + 12c = 25",
+          "enunciado": "  x |     y\n  2 |   5.1\n  4 |   8.3\n  6 |  11.4\n  8 |  14.9\n 10 |  18.2",
           "opciones": [
             {
-              "pregunta": "ɛb",
-              "respuesta": "0.000081299"
+              "pregunta": "Σx",
+              "respuesta": "30"
             },
             {
-              "pregunta": "a",
-              "respuesta": "1.345122396"
+              "pregunta": "Σy",
+              "respuesta": "57.9"
             },
             {
-              "pregunta": "b",
-              "respuesta": "1.795289795"
+              "pregunta": "Σx²",
+              "respuesta": "220"
             },
             {
-              "pregunta": "c",
-              "respuesta": "1.672024834"
+              "pregunta": "a1",
+              "respuesta": "1.64"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "1.74"
             }
           ]
         },
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 6a - b - c = 12, -a + 5b - c = 8, 2a - b + 7c = 15",
+          "enunciado": "  x |     y\n  1 |   4.2\n  3 |   8.1\n  5 |  12.0\n  7 |  15.8\n  9 |  20.1",
           "opciones": [
             {
-              "pregunta": "ɛc",
-              "respuesta": "0.000201980"
+              "pregunta": "Σx",
+              "respuesta": "25"
             },
             {
-              "pregunta": "a",
-              "respuesta": "2.701882857"
+              "pregunta": "Σy",
+              "respuesta": "60.2"
             },
             {
-              "pregunta": "b",
-              "respuesta": "2.485529424"
+              "pregunta": "Σx²",
+              "respuesta": "165"
             },
             {
-              "pregunta": "c",
-              "respuesta": "1.725966244"
+              "pregunta": "a1",
+              "respuesta": "1.975"
+            },
+            {
+              "pregunta": "a0",
+              "respuesta": "2.165"
             }
           ]
         }
@@ -2102,73 +2137,85 @@
       "tabla_img": "assets/tablas/tabla_universidad.png",
       "seleccion_metodo": [
         {
-          "correcto": "Jacobi",
-          "incorrecto1": "Lagrange",
-          "incorrecto2": "Punto Fijo",
-          "incorrecto3": "Secante"
+          "correcto": "Cuadrática",
+          "incorrecto1": "Eliminación Gaussiana",
+          "incorrecto2": "Gauss-Seidel",
+          "incorrecto3": "Gauss-Jordán"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 10a - b + 2c = 17, -2a + 8b - c = 12, a - b + 5c = 6",
+          "enunciado": "  x |     y\n  1 |   5.5\n  2 |  10.0\n  3 |  15.5\n  4 |  22.0\n  5 |  29.5",
           "opciones": [
             {
-              "pregunta": "ɛa",
-              "respuesta": "0.000371500"
+              "pregunta": "Σx²",
+              "respuesta": "55"
             },
             {
-              "pregunta": "a",
-              "respuesta": "1.650394750"
+              "pregunta": "Σx³",
+              "respuesta": "225"
             },
             {
-              "pregunta": "b",
-              "respuesta": "2.073261750"
+              "pregunta": "Σx²y",
+              "respuesta": "1274.5"
             },
             {
-              "pregunta": "c",
-              "respuesta": "1.284459250"
+              "pregunta": "a1",
+              "respuesta": "3"
+            },
+            {
+              "pregunta": "a2",
+              "respuesta": "0.5"
             }
           ]
         },
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 10a - b + c = 12, a + 8b - c = 15, -a + 2b + 10c = 20",
+          "enunciado": "  x |     y\n  0 |   3.0\n  1 |   6.0\n  2 |  13.0\n  3 |  24.0\n  4 |  39.0",
           "opciones": [
             {
-              "pregunta": "ɛb",
-              "respuesta": "0.000273203"
+              "pregunta": "Σx²",
+              "respuesta": "30"
             },
             {
-              "pregunta": "a",
-              "respuesta": "1.220445921"
+              "pregunta": "Σx³",
+              "respuesta": "100"
             },
             {
-              "pregunta": "b",
-              "respuesta": "1.939256796"
+              "pregunta": "Σx²y",
+              "respuesta": "898"
             },
             {
-              "pregunta": "c",
-              "respuesta": "1.734250281"
+              "pregunta": "a1",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "a2",
+              "respuesta": "2"
             }
           ]
         },
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: 5a - b + c = 10, a + 6b - 2c = 15, -2a + b + 8c = 25",
+          "enunciado": "  x |     y\n  2 |   5.0\n  3 |   8.5\n  4 |  13.0\n  5 |  18.5\n  6 |  25.0",
           "opciones": [
             {
-              "pregunta": "ɛc",
-              "respuesta": "0.000683594"
+              "pregunta": "Σx²",
+              "respuesta": "90"
             },
             {
-              "pregunta": "a",
-              "respuesta": "2.003998698"
+              "pregunta": "Σx³",
+              "respuesta": "440"
             },
             {
-              "pregunta": "b",
-              "respuesta": "3.239433594"
+              "pregunta": "Σx²y",
+              "respuesta": "1667"
             },
             {
-              "pregunta": "c",
-              "respuesta": "3.220950521"
+              "pregunta": "a1",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "a2",
+              "respuesta": "0.5"
             }
           ]
         }
@@ -2181,76 +2228,87 @@
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_ninosheroes.png",
       "seleccion_metodo": [
         {
-          "correcto": "Gauss-Jordan",
-          "incorrecto1": "Secante",
-          "incorrecto2": "Newton - Raphson",
-          "incorrecto3": "Punto Fijo"
+          "correcto": "Cúbica",
+          "incorrecto1": "Montante",
+          "incorrecto2": "Gauss-Jordán",
+          "incorrecto3": "Eliminación Gaussiana"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 12, 10x + 9y + 8z = 110, x - y - z = -2",
+          "enunciado": "  x |     y\n  0 |     1\n  1 |     3\n  2 |     9\n  3 |    25\n  4 |    57",
           "opciones": [
             {
-              "pregunta": "Pivote Matriz 2",
-              "respuesta": "1"
+              "pregunta": "Σx³",
+              "respuesta": "100"
             },
             {
-              "pregunta": "x",
-              "respuesta": "5"
+              "pregunta": "Σx⁴",
+              "respuesta": "354"
             },
             {
-              "pregunta": "y",
-              "respuesta": "4"
+              "pregunta": "Σx³y",
+              "respuesta": "4398"
             },
             {
-              "pregunta": "z",
-              "respuesta": "3"
+              "pregunta": "a2",
+              "respuesta": "-1.000000"
+            },
+            {
+              "pregunta": "a3",
+              "respuesta": "1.000000"
             }
           ]
         },
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 6, 2x - y + 2z = 6, 3x + 2y - z = 4",
+          "enunciado": "  x |     y\n  1 |     5\n  2 |    16\n  3 |    41\n  4 |    86\n  5 |   157",
           "opciones": [
             {
-              "pregunta": "Pivote Matriz 2",
-              "respuesta": "1"
+              "pregunta": "Σx³",
+              "respuesta": "225"
             },
             {
-              "pregunta": "x",
-              "respuesta": "1"
+              "pregunta": "Σx⁴",
+              "respuesta": "979"
             },
             {
-              "pregunta": "y",
-              "respuesta": "2"
+              "pregunta": "Σx³y",
+              "respuesta": "26369"
             },
             {
-              "pregunta": "z",
-              "respuesta": "3"
+              "pregunta": "a2",
+              "respuesta": "1.000000"
+            },
+            {
+              "pregunta": "a3",
+              "respuesta": "1.000000"
             }
           ]
         },
         {
-          "enunciado": "Resuelve el siguiente sistema de ecuaciones: x + y + z = 7, 3x - y + 2z = 4, -x + 2y - z = 5",
+          "enunciado": "  x |     y\n  0 |     1\n  1 |     7\n  2 |    23\n  3 |    55",
           "opciones": [
             {
-              "pregunta": "Pivote Matriz 2",
-              "respuesta": "1"
+              "pregunta": "Σx³",
+              "respuesta": "36"
             },
             {
-              "pregunta": "x",
-              "respuesta": "2"
+              "pregunta": "Σx⁴",
+              "respuesta": "98"
             },
             {
-              "pregunta": "y",
-              "respuesta": "4"
+              "pregunta": "Σx³y",
+              "respuesta": "1676"
             },
             {
-              "pregunta": "z",
-              "respuesta": "1"
+              "pregunta": "a2",
+              "respuesta": "2.000000"
+            },
+            {
+              "pregunta": "a3",
+              "respuesta": "1.000000"
             }
           ]
         }
@@ -2263,76 +2321,87 @@
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_regina.png",
       "seleccion_metodo": [
         {
-          "correcto": "Ajuste lineal",
-          "incorrecto1": "Lagrange",
-          "incorrecto2": "Punto Fijo",
-          "incorrecto3": "Newton con Diferencias Divididas"
+          "correcto": "Lineal con función",
+          "incorrecto1": "Jacobi",
+          "incorrecto2": "Gauss-Seidel",
+          "incorrecto3": "Gráfico"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Encuentra g(x) de los siguientes puntos: (1,2), (3,5), (4,7), (6,10), (8,14)",
+          "enunciado": "    x | f(x)=eˣ |          y\n    1 |              |     4.7183\n    2 |              |    10.3891\n    3 |              |    24.0855\n    4 |              |    59.5982\n    5 |              |   154.4132",
           "opciones": [
             {
-              "pregunta": "∑xy",
-              "respuesta": "217"
+              "pregunta": "Σf(x)",
+              "respuesta": "233.204184"
+            },
+            {
+              "pregunta": "Σxf(x)",
+              "respuesta": "1038.211400"
+            },
+            {
+              "pregunta": "Σf(x)²",
+              "respuesta": "25472.839781"
             },
             {
               "pregunta": "a1",
-              "respuesta": "1.70547945"
+              "respuesta": "1.000000"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "0.09589042"
-            },
-            {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "0.09589042 + 1.70547945x"
+              "pregunta": "a2",
+              "respuesta": "1.000000"
             }
           ]
         },
         {
-          "enunciado": "Encuentra g(x)de los siguientes puntos: (2,3), (4,7), (5,8), (7,11), (9,15)",
+          "enunciado": "    x | f(x)=ln(x) |          y\n    1 |              |     4.0000\n    2 |              |     8.0794\n    3 |              |    11.2958\n    4 |              |    14.1589\n    5 |              |    16.8283",
           "opciones": [
             {
-              "pregunta": "∑xy",
-              "respuesta": "286"
+              "pregunta": "Σf(x)",
+              "respuesta": "4.787492"
+            },
+            {
+              "pregunta": "Σxf(x)",
+              "respuesta": "18.274498"
+            },
+            {
+              "pregunta": "Σf(x)²",
+              "respuesta": "6.199504"
             },
             {
               "pregunta": "a1",
-              "respuesta": "1.657534247"
+              "respuesta": "2.000000"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "-0.150684932"
-            },
-            {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "-0.150684932 + 1.657534247"
+              "pregunta": "a2",
+              "respuesta": "3.000000"
             }
           ]
         },
         {
-          "enunciado": "Encuentra g(x)de los siguientes puntos: (1,5), (2,8), (4,12), (5,17), (7,21)",
+          "enunciado": "    x | f(x)=sen(x°) |          y\n   10 |              |    21.6946\n   20 |              |    42.3681\n   30 |              |    63.0000\n   40 |              |    83.5712\n   50 |              |   104.0642",
           "opciones": [
             {
-              "pregunta": "∑xy",
-              "respuesta": "301"
+              "pregunta": "Σf(x)",
+              "respuesta": "2.424500"
+            },
+            {
+              "pregunta": "Σxf(x)",
+              "respuesta": "87.590611"
+            },
+            {
+              "pregunta": "Σf(x)²",
+              "respuesta": "1.397131"
             },
             {
               "pregunta": "a1",
-              "respuesta": "2.701754386"
+              "respuesta": "2.000000"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "2.333333333"
-            },
-            {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "2.333333333 + 2.701754386x"
+              "pregunta": "a2",
+              "respuesta": "4.000000"
             }
           ]
         }
@@ -2348,7 +2417,7 @@
       "tabla_img": "assets/tablas/tabla_generalanaya.png",
       "seleccion_metodo": [
         {
-          "correcto": "Ajuste Cuadrático",
+          "correcto": "Cuadrática con función",
           "incorrecto1": "Bisectriz",
           "incorrecto2": "Montante",
           "incorrecto3": "Newton hacia atrás"
@@ -2356,65 +2425,77 @@
       ],
       "problemas": [
         {
-          "enunciado": "Encuentra g(x)de los siguientes puntos: (1,2), (2,5), (3,8), (4,15), (5,21)",
+          "enunciado": "    x | f(x)=eˣ |          y\n    1 |              |     5.7183\n    2 |              |    14.3891\n    3 |              |    33.0855\n    4 |              |    75.5982\n    5 |              |   179.4132",
           "opciones": [
             {
-              "pregunta": "∑x²y",
-              "respuesta": "859"
+              "pregunta": "Σx²f(x)",
+              "respuesta": "4796.943717"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "0.8"
+              "pregunta": "Σf(x)²",
+              "respuesta": "25472.839781"
+            },
+            {
+              "pregunta": "Σyf(x)",
+              "respuesta": "31541.199083"
             },
             {
               "pregunta": "a2",
-              "respuesta": "0.714285714"
+              "respuesta": "1.000000"
             },
             {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "0.8 + 0.514285714x + 0.714285714x^2"
+              "pregunta": "a3",
+              "respuesta": "1.000000"
             }
           ]
         },
         {
-          "enunciado": "Encuentra g(x)de los siguientes puntos: (1,5), (2,8), (4,12), (5,17), (7,21)",
+          "enunciado": "    x | f(x)=ln(x) |          y\n    1 |              |     5.0000\n    2 |              |    14.0794\n    3 |              |    26.2958\n    4 |              |    42.1589\n    5 |              |    61.8283",
           "opciones": [
             {
-              "pregunta": "∑x²y",
-              "respuesta": "3402"
+              "pregunta": "Σx²f(x)",
+              "respuesta": "75.076757"
             },
             {
-              "pregunta": "a1",
-              "respuesta": "4.371428571"
+              "pregunta": "Σf(x)²",
+              "respuesta": "6.199504"
+            },
+            {
+              "pregunta": "Σyf(x)",
+              "respuesta": "196.601509"
             },
             {
               "pregunta": "a2",
-              "respuesta": "2.571428571"
+              "respuesta": "2.000000"
             },
             {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "-1.8 + 4.371428571x + 2.571428571x^2"
+              "pregunta": "a3",
+              "respuesta": "3.000000"
             }
           ]
         },
         {
-          "enunciado": "Encuentra g(x)de los siguientes puntos: (1,5), (2,8), (4,12), (5,17), (7,21)",
+          "enunciado": "    x | f(x)=sen(x°) |          y\n   10 |              |   121.3473\n   20 |              |   441.6840\n   30 |              |   962.0000\n   40 |              |  1682.2856\n   50 |              |  2602.5321",
           "opciones": [
             {
-              "pregunta": "∑x²y",
-              "respuesta": "9156"
+              "pregunta": "Σx²f(x)",
+              "respuesta": "3547.744158"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "-1.2"
+              "pregunta": "Σf(x)²",
+              "respuesta": "1.397131"
             },
             {
-              "pregunta": "a1",
-              "respuesta": "0.571428571"
+              "pregunta": "Σyf(x)",
+              "respuesta": "3728.144144"
             },
             {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "-1.2 + 0.571428571x + 0.535714286x^2"
+              "pregunta": "a2",
+              "respuesta": "1.000000"
+            },
+            {
+              "pregunta": "a3",
+              "respuesta": "2.000000"
             }
           ]
         }
@@ -2430,73 +2511,85 @@
       "tabla_img": "assets/tablas/tabla_cuauhtemoc.png",
       "seleccion_metodo": [
         {
-          "correcto": "Ajuste Cúbico",
-          "incorrecto1": "Newton-Raphson",
-          "incorrecto2": "Lagrange",
-          "incorrecto3": "Gauss - Jordan"
+          "correcto": "Cuadrática",
+          "incorrecto1": "Eliminación Gaussiana",
+          "incorrecto2": "Lineal con función",
+          "incorrecto3": "Cuadrática con función"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Encuentra g(x) de los siguientes puntos: (1,5), (2,10), (3,23), (4,50), (5,97)",
+          "enunciado": "  x |      y\n  1 |    5.0\n  2 |   10.0\n  3 |   17.0\n  4 |   26.0\n  5 |   37.0",
           "opciones": [
             {
-              "pregunta": "∑x²y",
-              "respuesta": "16031"
+              "pregunta": "Σx²",
+              "respuesta": "55"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "2"
+              "pregunta": "Σx³",
+              "respuesta": "225"
             },
             {
-              "pregunta": "a3",
-              "respuesta": "1"
-            },
-            {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "2 + 4x - 2x^2 + x^3"
-            }
-          ]
-        },
-        {
-          "enunciado": "Encuentra g(x) de los siguientes puntos: (1,2), (2,10), (3,30), (4,68), (5,130)",
-          "opciones": [
-            {
-              "pregunta": "∑x²y",
-              "respuesta": "21494"
+              "pregunta": "Σx²y",
+              "respuesta": "1539"
             },
             {
               "pregunta": "a1",
-              "respuesta": "1"
+              "respuesta": "2.000000"
             },
             {
               "pregunta": "a2",
-              "respuesta": "0"
-            },
-            {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "0 + x + x^3"
+              "respuesta": "1.000000"
             }
           ]
         },
         {
-          "enunciado": "Encuentra g(x) de los siguientes puntos: (1,8), (2,29), (3,80), (4,173), (5,320)",
+          "enunciado": "  x |      y\n  0 |    1.0\n  1 |    6.0\n  2 |   13.0\n  3 |   22.0\n  4 |   33.0",
           "opciones": [
             {
-              "pregunta": "∑x²y",
-              "respuesta": "53472"
+              "pregunta": "Σx²",
+              "respuesta": "30"
+            },
+            {
+              "pregunta": "Σx³",
+              "respuesta": "100"
+            },
+            {
+              "pregunta": "Σx²y",
+              "respuesta": "784"
             },
             {
               "pregunta": "a1",
-              "respuesta": "-2"
+              "respuesta": "4.000000"
             },
             {
-              "pregunta": "a3",
-              "respuesta": "2"
+              "pregunta": "a2",
+              "respuesta": "1.000000"
+            }
+          ]
+        },
+        {
+          "enunciado": "  x |      y\n  2 |   17.0\n  3 |   34.0\n  4 |   57.0\n  5 |   86.0\n  6 |  121.0",
+          "opciones": [
+            {
+              "pregunta": "Σx²",
+              "respuesta": "90"
             },
             {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "5 - 2x + 3x^2 + 2x^3"
+              "pregunta": "Σx³",
+              "respuesta": "440"
+            },
+            {
+              "pregunta": "Σx²y",
+              "respuesta": "7792"
+            },
+            {
+              "pregunta": "a1",
+              "respuesta": "2.000000"
+            },
+            {
+              "pregunta": "a2",
+              "respuesta": "3.000000"
             }
           ]
         }
@@ -2506,79 +2599,91 @@
       "id": 28,
       "linea": "2",
       "estacion": "Alameda",
-      "tipo": "curvas",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "curvas",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_alameda.png",
       "seleccion_metodo": [
         {
-          "correcto": "Ajuste lineal con funciones base",
+          "correcto": "Regla Trapezoidal",
           "incorrecto1": "Interpolación Lineal",
-          "incorrecto2": "Regla de Simpson 3/8",
+          "incorrecto2": "Jacobi",
           "incorrecto3": "Lagrange"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=ln(x): (1, 3), (2, 5.693147181), (3, 8.098612289), (4, 10.386294361), (5, 12.609437912)",
+          "enunciado": " 2\n ∫  (1/x) dx,   n = 4\n 1",
           "opciones": [
             {
-              "pregunta": "∑yf(x)",
-              "respuesta": "47.535992691"
+              "pregunta": "h",
+              "respuesta": "0.250000000"
             },
             {
-              "pregunta": "a1",
-              "respuesta": "2"
+              "pregunta": "f(a)",
+              "respuesta": "1.000000000"
             },
             {
-              "pregunta": "a2",
-              "respuesta": "1"
+              "pregunta": "f(b)",
+              "respuesta": "0.500000000"
             },
             {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "1 + 2x + ln(x)"
+              "pregunta": "Suma",
+              "respuesta": "5.576190476"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "0.697023810"
             }
           ]
         },
         {
-          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=e^x: (1, 6.359140914), (2, 11.694528050), (3, 21.042768462), (4, 41.299075017), (5, 91.206579551)",
+          "enunciado": " 2\n ∫  (x² + 1) dx,   n = 4\n 0",
           "opciones": [
             {
-              "pregunta": "∑yf(x)",
-              "respuesta": "16317.435449207"
+              "pregunta": "h",
+              "respuesta": "0.500000000"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "2"
+              "pregunta": "f(a)",
+              "respuesta": "1.000000000"
             },
             {
-              "pregunta": "a1",
-              "respuesta": "3"
+              "pregunta": "f(b)",
+              "respuesta": "5.000000000"
             },
             {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "2 + 3x + 0.5^x"
+              "pregunta": "Suma",
+              "respuesta": "19.000000000"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "4.750000000"
             }
           ]
         },
         {
-          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=sen(x): (1, 4.682941970), (2, 8.818594854), (3, 11.282240016), (4, 13.486395010), (5, 17.082151450)",
+          "enunciado": " 1\n ∫  eˣ dx,   n = 4\n 0",
           "opciones": [
             {
-              "pregunta": "∑yf(x)",
-              "respuesta": "-13.035589617"
+              "pregunta": "h",
+              "respuesta": "0.250000000"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "-1"
+              "pregunta": "f(a)",
+              "respuesta": "1.000000000"
             },
             {
-              "pregunta": "a2",
-              "respuesta": "2"
+              "pregunta": "f(b)",
+              "respuesta": "2.718281828"
             },
             {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "-1 + 4x + 2sen(x)"
+              "pregunta": "Suma",
+              "respuesta": "13.817775236"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "1.727221905"
             }
           ]
         }
@@ -2588,13 +2693,13 @@
       "id": 29,
       "linea": "2",
       "estacion": "Fundadores",
-      "tipo": "curvas",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "curvas",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_fundadores.png",
       "seleccion_metodo": [
         {
-          "correcto": "Ajuste Cuadrático con funciones base",
+          "correcto": "Regla de 1/3 Simpson",
           "incorrecto1": "Bisectriz",
           "incorrecto2": "Secante",
           "incorrecto3": "Punto Fijo"
@@ -2602,65 +2707,77 @@
       ],
       "problemas": [
         {
-          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=e^x: (1, 7.359140914), (2, 20.694528050), (3, 44.042768462), (4, 84.299075017), (5, 160.206579551)",
+          "enunciado": " 2\n ∫  x³ dx,   n = 4\n 1",
           "opciones": [
             {
-              "pregunta": "∑x²y",
-              "respuesta": "5840.471858319"
+              "pregunta": "h",
+              "respuesta": "0.250000000"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "1"
+              "pregunta": "f(a)",
+              "respuesta": "1.000000000"
             },
             {
-              "pregunta": "a3",
-              "respuesta": "0.5"
+              "pregunta": "f(b)",
+              "respuesta": "8.000000000"
             },
             {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "1 + 2x + 3x^2 + 0.5sen(x)"
+              "pregunta": "Suma",
+              "respuesta": "45.000000000"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "3.750000000"
             }
           ]
         },
         {
-          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=ln(x): (1, 3), (2, 10.772588724), (3, 21.394449156), (4, 35.545177444), (5, 53.437751648)",
+          "enunciado": " 1\n ∫  (x³ + 2) dx,   n = 4\n 0",
           "opciones": [
             {
-              "pregunta": "∑x²y",
-              "respuesta": "2143.307027604"
+              "pregunta": "h",
+              "respuesta": "0.250000000"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "2"
+              "pregunta": "f(a)",
+              "respuesta": "2.000000000"
             },
             {
-              "pregunta": "a1",
-              "respuesta": "-1"
+              "pregunta": "f(b)",
+              "respuesta": "3.000000000"
             },
             {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "2 - x + 2x^2 + 4ln(x)"
+              "pregunta": "Suma",
+              "respuesta": "27.000000000"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "2.250000000"
             }
           ]
         },
         {
-          "enunciado": "Encuentra g(x)de los siguientes puntos utilizando la función f(x)=sen(x): (1, 4.207354925), (2, 4.546487135), (3, -1.294399960), (4, -9.784012475), (5, -16.794621375)",
+          "enunciado": " 3\n ∫  (1/x²) dx,   n = 4\n 1",
           "opciones": [
             {
-              "pregunta": "∑x²y",
-              "respuesta": "-565.666030150"
+              "pregunta": "h",
+              "respuesta": "0.500000000"
             },
             {
-              "pregunta": "a0",
-              "respuesta": "-2"
+              "pregunta": "f(a)",
+              "respuesta": "1.000000000"
             },
             {
-              "pregunta": "a2",
-              "respuesta": "-1"
+              "pregunta": "f(b)",
+              "respuesta": "0.111111111"
             },
             {
-              "pregunta": "Ecuación final g(x)",
-              "respuesta": "-2 + 3x - x^2 + 5sen(x)"
+              "pregunta": "Suma",
+              "respuesta": "4.028888889"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "0.671481481"
             }
           ]
         }
@@ -2670,79 +2787,91 @@
       "id": 30,
       "linea": "2",
       "estacion": "Padre Mier",
-      "tipo": "curvas",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "curvas",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_padremier.png",
       "seleccion_metodo": [
         {
-          "correcto": "Regla trapezoidal",
-          "incorrecto1": "Simpson 1/3",
-          "incorrecto2": "Simpson 3/8",
-          "incorrecto3": "Romberg"
+          "correcto": "Regla de 3/8 Simpson",
+          "incorrecto1": "Montante",
+          "incorrecto2": "Newton hacia atrás",
+          "incorrecto3": "Gauss-Jordán"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Calcular la integral de x² desde 0 hasta 2. n=4.",
+          "enunciado": " 1\n ∫  1/(1+x²) dx,   n = 3\n 0",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "0.5"
+              "pregunta": "h",
+              "respuesta": "0.333333333"
             },
             {
-              "pregunta": "f(x=0) + f(x=2)",
-              "respuesta": "4"
+              "pregunta": "f(a)",
+              "respuesta": "1.000000000"
             },
             {
-              "pregunta": "Suma de términos intermedios 2[f(0.5)+f(1)+f(1.5)]",
-              "respuesta": "7"
+              "pregunta": "f(b)",
+              "respuesta": "0.500000000"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "2.750000000"
+              "pregunta": "Suma",
+              "respuesta": "6.276923077"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "0.784615385"
             }
           ]
         },
         {
-          "enunciado": "Calcular la integral de e^x desde 0 hasta 1. n=4.",
+          "enunciado": " 2\n ∫  eˣ dx,   n = 3\n 1",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "0.25"
+              "pregunta": "h",
+              "respuesta": "0.333333333"
             },
             {
-              "pregunta": "f(x=0) + f(x=1)",
-              "respuesta": "3.718281828"
+              "pregunta": "f(a)",
+              "respuesta": "2.718281828"
             },
             {
-              "pregunta": "Suma de términos intermedios 2[f(0.25)+f(0.5)+f(0.75)]",
-              "respuesta": "10.099493410"
+              "pregunta": "f(b)",
+              "respuesta": "7.389056099"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "1.727221905"
+              "pregunta": "Suma",
+              "respuesta": "37.371811763"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "4.671476470"
             }
           ]
         },
         {
-          "enunciado": "Calcular la integral de 1/x desde 1 hasta 2. n=4.",
+          "enunciado": " 3\n ∫  (x² + 2x) dx,   n = 3\n 0",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "0.25"
+              "pregunta": "h",
+              "respuesta": "1.000000000"
             },
             {
-              "pregunta": "f(x=1) + f(x=2)",
-              "respuesta": "1.5"
+              "pregunta": "f(a)",
+              "respuesta": "0.000000000"
             },
             {
-              "pregunta": "Suma de términos intermedios 2[f(5/4)+f(6/4)+f(7/4)]",
-              "respuesta": "4.076190476"
+              "pregunta": "f(b)",
+              "respuesta": "15.000000000"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "0.697023810"
+              "pregunta": "Suma",
+              "respuesta": "48.000000000"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "18.000000000"
             }
           ]
         }
@@ -2752,79 +2881,91 @@
       "id": 31,
       "linea": "2",
       "estacion": "General I. Zaragoza",
-      "tipo": "curvas",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "curvas",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_zaragoza.png",
       "seleccion_metodo": [
         {
-          "correcto": "Fórmulas de Newton-Cotes cerradas",
-          "incorrecto1": "Newton-Cotes abiertas",
-          "incorrecto2": "Cuadratura de Gauss",
-          "incorrecto3": "Regla del Trapecio"
+          "correcto": "Newton - Cotes Abiertas",
+          "incorrecto1": "Línea Recta",
+          "incorrecto2": "Lineal con función",
+          "incorrecto3": "Cúbica"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Calcular la integral de x² desde 0 hasta 2. n=2.",
+          "enunciado": " 2\n ∫  (x² + 1) dx,   n = 4\n 0",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "1"
+              "pregunta": "h",
+              "respuesta": "0.333333333"
             },
             {
-              "pregunta": "a (constante)",
-              "respuesta": "1/3"
+              "pregunta": "f(a+h)",
+              "respuesta": "1.111111111"
             },
             {
-              "pregunta": "Sumatoria Σ wi·f(a+ih)",
-              "respuesta": "8"
+              "pregunta": "f(a+3h)",
+              "respuesta": "2.000000000"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "2.666666667"
+              "pregunta": "Suma",
+              "respuesta": "46.666666667"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "4.666666667"
             }
           ]
         },
         {
-          "enunciado": "Calcular la integral de x³ desde 0 hasta 3. n=3.",
+          "enunciado": " 3\n ∫  (1/x) dx,   n = 4\n 1",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "1"
+              "pregunta": "h",
+              "respuesta": "0.333333333"
             },
             {
-              "pregunta": "a (constante)",
-              "respuesta": "3/8"
+              "pregunta": "f(a+h)",
+              "respuesta": "0.750000000"
             },
             {
-              "pregunta": "Sumatoria Σ wi·f(a+ih)",
-              "respuesta": "54"
+              "pregunta": "f(a+3h)",
+              "respuesta": "0.500000000"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "20.250000000"
+              "pregunta": "Suma",
+              "respuesta": "10.975000000"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "1.097500000"
             }
           ]
         },
         {
-          "enunciado": "Calcular la integral de (x²+1) desde 0 hasta 4. n=4.",
+          "enunciado": " 3\n ∫  (x³ - x) dx,   n = 4\n 0",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "1"
+              "pregunta": "h",
+              "respuesta": "0.500000000"
             },
             {
-              "pregunta": "a (constante)",
-              "respuesta": "2/45"
+              "pregunta": "f(a+h)",
+              "respuesta": "-0.375000000"
             },
             {
-              "pregunta": "Sumatoria Σ wi·f(a+ih)",
-              "respuesta": "570"
+              "pregunta": "f(a+3h)",
+              "respuesta": "1.875000000"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "25.333333333"
+              "pregunta": "Suma",
+              "respuesta": "105.000000000"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "15.750000000"
             }
           ]
         }

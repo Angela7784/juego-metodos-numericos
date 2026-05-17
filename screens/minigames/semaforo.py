@@ -26,6 +26,20 @@ AMBER      = (255, 160,   0)
 
 FEEDBACK_MS = 800
 
+# Fuente con soporte completo de superíndices Unicode (²  ³  ⁴  …)
+_label_font_cache: dict = {}
+
+def _get_label_font(size: int):
+    if size not in _label_font_cache:
+        for name in ("Menlo", "DejaVu Sans", "Courier New", "Arial Unicode MS"):
+            f = pygame.font.SysFont(name, size)
+            if f.size("⁴")[0] > 8:   # glifo real, no caja vacía
+                _label_font_cache[size] = f
+                break
+        else:
+            _label_font_cache[size] = pygame.font.SysFont(None, size)
+    return _label_font_cache[size]
+
 
 # ── Estado del módulo ──────────────────────────────────────────────────────
 _nivel_id      = None
@@ -254,7 +268,7 @@ def mostrar_semaforo(
     # ── Enunciado del problema ─────────────────────────────────────────────
     enun_bottom = 148
     if _enunciado:
-        font_enun = pygame.font.SysFont("Arial", 23)
+        font_enun = pygame.font.SysFont("Courier New", 21)
         lines = _wrap_text(_enunciado, font_enun, WIDTH - 160)
         panel_h = len(lines) * 30 + 18
         panel_rect = pygame.Rect(60, 150, WIDTH - 120, panel_h)
@@ -273,7 +287,7 @@ def mostrar_semaforo(
     for i in range(total_pasos):
         sx = start_sem + i * spacing
         label_txt = _preguntas[i]["pregunta"]
-        label_surf = font_button.render(label_txt, True, CYAN)
+        label_surf = _get_label_font(font_button.size("A")[1]).render(label_txt, True, CYAN)
 
         if i in _resueltas:
             estado = "verde"
@@ -285,14 +299,16 @@ def mostrar_semaforo(
         _draw_semaforo(screen, sx, sem_cy, estado, label_surf, font_button, parpadeo=(i == _paso_actual))
 
     # ── Variable actual ────────────────────────────────────────────────────
+    resuelve_y = max(545, sem_cy + 80 + 38 + 60)   # 60 px below labels
+    field_y    = max(620, resuelve_y + 80)
     if _paso_actual < total_pasos:
         var_txt  = _preguntas[_paso_actual]["pregunta"]
         var_surf = font_title.render(f"Resuelve:  {var_txt}", True, WHITE)
-        screen.blit(var_surf, var_surf.get_rect(center=(center_x, 545)))
+        screen.blit(var_surf, var_surf.get_rect(center=(center_x, resuelve_y)))
 
     # ── Campo de texto ─────────────────────────────────────────────────────
     field_rect = pygame.Rect(0, 0, 480, 66)
-    field_rect.center = (center_x, 620)
+    field_rect.center = (center_x, field_y)
 
     if _feedback == "correcto":
         bg_col, border_col = (18, 120, 50), GREEN
