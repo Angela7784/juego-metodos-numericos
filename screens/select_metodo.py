@@ -150,7 +150,11 @@ def mostrar_select_metodo(
 
         color = (70, 70, 70) if btn.collidepoint(mouse_pos) else (45, 45, 45)
         pygame.draw.rect(screen, color, btn, border_radius=12)
-        font_opcion = pygame.font.SysFont("Arial", 21, bold=True)
+        font_size = 21
+        font_opcion = pygame.font.SysFont("Arial", font_size, bold=True)
+        while font_opcion.size(opcion)[0] > btn.width - 16 and font_size > 11:
+            font_size -= 1
+            font_opcion = pygame.font.SysFont("Arial", font_size, bold=True)
         texto = font_opcion.render(opcion, True, WHITE)
         screen.blit(texto, texto.get_rect(center=btn.center))
 

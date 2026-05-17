@@ -1855,100 +1855,6 @@
       "minijuego": "semaforo",
       "seleccion_metodo": [
         {
-          "correcto": "Gauss-Jordán",
-          "incorrecto1": "Euler Hacia Adelante",
-          "incorrecto2": "Newton Hacia Atrás",
-          "incorrecto3": "Regla de 1/3 Simpson"
-        }
-      ],
-      "problemas": [
-        {
-          "enunciado": "x + y - z = 0\nx + 4y + z = 12\n2x - y + z = 3",
-          "opciones": [
-            {
-              "pregunta": "P2",
-              "respuesta": "3"
-            },
-            {
-              "pregunta": "P3",
-              "respuesta": "5"
-            },
-            {
-              "pregunta": "x",
-              "respuesta": "1"
-            },
-            {
-              "pregunta": "y",
-              "respuesta": "2"
-            },
-            {
-              "pregunta": "z",
-              "respuesta": "3"
-            }
-          ]
-        },
-        {
-          "enunciado": "x + 2y - z = 7\nx - y + 4z = 3\n2x + y + z = 8",
-          "opciones": [
-            {
-              "pregunta": "P2",
-              "respuesta": "-3"
-            },
-            {
-              "pregunta": "P3",
-              "respuesta": "-2"
-            },
-            {
-              "pregunta": "x",
-              "respuesta": "2"
-            },
-            {
-              "pregunta": "y",
-              "respuesta": "3"
-            },
-            {
-              "pregunta": "z",
-              "respuesta": "1"
-            }
-          ]
-        },
-        {
-          "enunciado": "x + y - z = 2\nx + 5y - z = 6\n3x - y + 2z = 12",
-          "opciones": [
-            {
-              "pregunta": "P2",
-              "respuesta": "4"
-            },
-            {
-              "pregunta": "P3",
-              "respuesta": "5"
-            },
-            {
-              "pregunta": "x",
-              "respuesta": "3"
-            },
-            {
-              "pregunta": "y",
-              "respuesta": "1"
-            },
-            {
-              "pregunta": "z",
-              "respuesta": "2"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 21,
-      "linea": "2",
-      "estacion": "San Nicolás",
-      "tipo": "semaforo",
-      "puntos": 1000,
-      "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_sannicolas.png",
-      "seleccion_metodo": [
-        {
           "correcto": "Jacobi",
           "incorrecto1": "Regla de 3/8 de Simpson",
           "incorrecto2": "Lineal con función",
@@ -2034,13 +1940,13 @@
       ]
     },
     {
-      "id": 22,
+      "id": 21,
       "linea": "2",
-      "estacion": "Anáhuac",
+      "estacion": "San Nicolás",
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_anahuac.png",
+      "tabla_img": "assets/tablas/tabla_sannicolas.png",
       "seleccion_metodo": [
         {
           "correcto": "Línea Recta",
@@ -2128,13 +2034,13 @@
       ]
     },
     {
-      "id": 23,
+      "id": 22,
       "linea": "2",
-      "estacion": "Universidad",
+      "estacion": "Anáhuac",
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_universidad.png",
+      "tabla_img": "assets/tablas/tabla_anahuac.png",
       "seleccion_metodo": [
         {
           "correcto": "Cuadrática",
@@ -2222,12 +2128,13 @@
       ]
     },
     {
-      "id": 24,
+      "id": 23,
       "linea": "2",
-      "estacion": "Niños Héroes",
+      "estacion": "Universidad",
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
+      "tabla_img": "assets/tablas/tabla_universidad.png",
       "seleccion_metodo": [
         {
           "correcto": "Cúbica",
@@ -2315,9 +2222,9 @@
       ]
     },
     {
-      "id": 25,
+      "id": 24,
       "linea": "2",
-      "estacion": "Regina",
+      "estacion": "Niños Héroes",
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
@@ -2408,13 +2315,12 @@
       ]
     },
     {
-      "id": 26,
+      "id": 25,
       "linea": "2",
-      "estacion": "General Anaya",
+      "estacion": "Regina",
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_generalanaya.png",
       "seleccion_metodo": [
         {
           "correcto": "Cuadrática con función",
@@ -2502,13 +2408,13 @@
       ]
     },
     {
-      "id": 27,
+      "id": 26,
       "linea": "2",
-      "estacion": "Cuauhtémoc",
+      "estacion": "General Anaya",
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_cuauhtemoc.png",
+      "tabla_img": "assets/tablas/tabla_generalanaya.png",
       "seleccion_metodo": [
         {
           "correcto": "Cuadrática",
@@ -2596,13 +2502,13 @@
       ]
     },
     {
-      "id": 28,
+      "id": 27,
       "linea": "2",
-      "estacion": "Alameda",
+      "estacion": "Cuauhtémoc",
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_alameda.png",
+      "tabla_img": "assets/tablas/tabla_cuauhtemoc.png",
       "seleccion_metodo": [
         {
           "correcto": "Regla Trapezoidal",
@@ -2690,13 +2596,13 @@
       ]
     },
     {
-      "id": 29,
+      "id": 28,
       "linea": "2",
-      "estacion": "Fundadores",
+      "estacion": "Alameda",
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_fundadores.png",
+      "tabla_img": "assets/tablas/tabla_alameda.png",
       "seleccion_metodo": [
         {
           "correcto": "Regla de 1/3 Simpson",
@@ -2784,13 +2690,13 @@
       ]
     },
     {
-      "id": 30,
+      "id": 29,
       "linea": "2",
-      "estacion": "Padre Mier",
+      "estacion": "Fundadores",
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_padremier.png",
+      "tabla_img": "assets/tablas/tabla_fundadores.png",
       "seleccion_metodo": [
         {
           "correcto": "Regla de 3/8 Simpson",
@@ -2878,13 +2784,13 @@
       ]
     },
     {
-      "id": 31,
+      "id": 30,
       "linea": "2",
-      "estacion": "General I. Zaragoza",
+      "estacion": "Padre Mier",
       "tipo": "semaforo",
       "puntos": 1000,
       "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_zaragoza.png",
+      "tabla_img": "assets/tablas/tabla_padremier.png",
       "seleccion_metodo": [
         {
           "correcto": "Newton - Cotes Abiertas",
@@ -2972,16 +2878,110 @@
       ]
     },
     {
+      "id": 31,
+      "linea": "2",
+      "estacion": "General I. Zaragoza",
+      "tipo": "semaforo",
+      "puntos": 1000,
+      "minijuego": "semaforo",
+      "tabla_img": "assets/tablas/tabla_zaragoza.png",
+      "seleccion_metodo": [
+        {
+          "correcto": "Newton - Cotes Cerradas",
+          "incorrecto1": "Lagrange",
+          "incorrecto2": "Bisectriz",
+          "incorrecto3": "Secante"
+        }
+      ],
+      "problemas": [
+        {
+          "enunciado": " 3\n ∫  x² dx,   n = 4\n 0",
+          "opciones": [
+            {
+              "pregunta": "h",
+              "respuesta": "0.750000000"
+            },
+            {
+              "pregunta": "f(a)",
+              "respuesta": "0.000000000"
+            },
+            {
+              "pregunta": "f(a+2h)",
+              "respuesta": "2.250000000"
+            },
+            {
+              "pregunta": "Suma",
+              "respuesta": "270.000000000"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "9.000000000"
+            }
+          ]
+        },
+        {
+          "enunciado": " 2\n ∫  1/(1+x²) dx,   n = 4\n 0",
+          "opciones": [
+            {
+              "pregunta": "h",
+              "respuesta": "0.500000000"
+            },
+            {
+              "pregunta": "f(a)",
+              "respuesta": "1.000000000"
+            },
+            {
+              "pregunta": "f(a+2h)",
+              "respuesta": "0.500000000"
+            },
+            {
+              "pregunta": "Suma",
+              "respuesta": "49.846153846"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "1.107692308"
+            }
+          ]
+        },
+        {
+          "enunciado": " 2\n ∫  eˣ dx,   n = 4\n 0",
+          "opciones": [
+            {
+              "pregunta": "h",
+              "respuesta": "0.500000000"
+            },
+            {
+              "pregunta": "f(a)",
+              "respuesta": "1.000000000"
+            },
+            {
+              "pregunta": "f(a+2h)",
+              "respuesta": "2.718281828"
+            },
+            {
+              "pregunta": "Suma",
+              "respuesta": "287.515905547"
+            },
+            {
+              "pregunta": "I",
+              "respuesta": "6.389242345"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": 32,
       "linea": "3",
       "estacion": "Hospital Metropolitano",
-      "tipo": "cables",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "cables",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_hospitalmetropolitano.png",
       "seleccion_metodo": [
         {
-          "correcto": "Lagrange",
+          "correcto": "Euler Hacia Adelante",
           "incorrecto1": "Interpolación Lineal",
           "incorrecto2": "Gráfico",
           "incorrecto3": "Gauss - Jordan"
@@ -2989,65 +2989,77 @@
       ],
       "problemas": [
         {
-          "enunciado": "Calcular la integral de x² desde 0 hasta 3 usando Newton-Cotes Abiertas con n=1.",
+          "enunciado": "2y' - 3yt + 2 = 0\ny0 = 1,  h = 0.1\nEncuentra y2",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "1"
+              "pregunta": "f(y0,t0)",
+              "respuesta": "-1.0000000000"
             },
             {
-              "pregunta": "a (constante)",
-              "respuesta": "3/2"
+              "pregunta": "y1",
+              "respuesta": "0.9000000000"
             },
             {
-              "pregunta": "Sumatoria Σ wi·f(a+ih)",
-              "respuesta": "5"
+              "pregunta": "t1",
+              "respuesta": "0.1000000000"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "7.500000000"
+              "pregunta": "f(y1,t1)",
+              "respuesta": "-0.8650000000"
+            },
+            {
+              "pregunta": "y2",
+              "respuesta": "0.8135000000"
             }
           ]
         },
         {
-          "enunciado": "Calcular la integral de x³ desde 0 hasta 4 usando Newton-Cotes Abiertas con n=2.",
+          "enunciado": "4y' + 2yt - 3 = 0\ny0 = 3,  h = 0.2\nEncuentra y2",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "1"
+              "pregunta": "f(y0,t0)",
+              "respuesta": "0.7500000000"
             },
             {
-              "pregunta": "α (constante)",
-              "respuesta": "4/3"
+              "pregunta": "y1",
+              "respuesta": "3.1500000000"
             },
             {
-              "pregunta": "Sumatoria Σ wi·f(a+ih)",
-              "respuesta": "48"
+              "pregunta": "t1",
+              "respuesta": "0.2000000000"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "64.000000000"
+              "pregunta": "f(y1,t1)",
+              "respuesta": "0.4350000000"
+            },
+            {
+              "pregunta": "y2",
+              "respuesta": "3.2370000000"
             }
           ]
         },
         {
-          "enunciado": "Calcular la integral de (x²+2) desde 0 hasta 5 usando Newton-Cotes Abiertas con n=3.",
+          "enunciado": "2y' - 4y + t = 0\ny0 = 1,  h = 0.1\nEncuentra y2",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "1"
+              "pregunta": "f(y0,t0)",
+              "respuesta": "2.0000000000"
             },
             {
-              "pregunta": "α (constante)",
-              "respuesta": "5/24"
+              "pregunta": "y1",
+              "respuesta": "1.2000000000"
             },
             {
-              "pregunta": "Sumatoria Σ wi·f(a+ih)",
-              "respuesta": "248"
+              "pregunta": "t1",
+              "respuesta": "0.1000000000"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "51.666666667"
+              "pregunta": "f(y1,t1)",
+              "respuesta": "2.3500000000"
+            },
+            {
+              "pregunta": "y2",
+              "respuesta": "1.4350000000"
             }
           ]
         }
@@ -3057,79 +3069,91 @@
       "id": 33,
       "linea": "3",
       "estacion": "Los Ángeles",
-      "tipo": "cables",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "cables",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_losangeles.png",
       "seleccion_metodo": [
         {
-          "correcto": "Lagrange",
-          "incorrecto1": "Interpolación Lineal",
-          "incorrecto2": "Gráfico",
-          "incorrecto3": "Gauss - Jordan"
+          "correcto": "Euler Hacia Atrás",
+          "incorrecto1": "Secante",
+          "incorrecto2": "Montante",
+          "incorrecto3": "Diferencias Divididas"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Calcular la integral de x² desde 0 hasta 2 usando la Regla de 1/3 de Simpson con n=2.",
+          "enunciado": "y' + 2y = 0\ny0 = 1,  h = 0.1\nEncuentra y2",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "1"
+              "pregunta": "t1",
+              "respuesta": "0.1000000000"
             },
             {
-              "pregunta": "f(a) + f(b)",
-              "respuesta": "4"
+              "pregunta": "y1",
+              "respuesta": "0.8333333333"
             },
             {
-              "pregunta": "4·Σ f(impares) + 2·Σ f(pares)",
-              "respuesta": "4"
+              "pregunta": "f(y1,t1)",
+              "respuesta": "-1.6666666667"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "2.666666667"
+              "pregunta": "t2",
+              "respuesta": "0.2000000000"
+            },
+            {
+              "pregunta": "y2",
+              "respuesta": "0.6944444444"
             }
           ]
         },
         {
-          "enunciado": "Calcular la integral de x³ desde 0 hasta 4 usando la Regla de 1/3 de Simpson con n=4.",
+          "enunciado": "y' + y = 1\ny0 = 2,  h = 0.1\nEncuentra y2",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "1"
+              "pregunta": "t1",
+              "respuesta": "0.1000000000"
             },
             {
-              "pregunta": "f(a) + f(b)",
-              "respuesta": "64"
+              "pregunta": "y1",
+              "respuesta": "1.9090909091"
             },
             {
-              "pregunta": "4·Σ f(impares) + 2·Σ f(pares)",
-              "respuesta": "128"
+              "pregunta": "f(y1,t1)",
+              "respuesta": "-0.9090909091"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "64.000000000"
+              "pregunta": "t2",
+              "respuesta": "0.2000000000"
+            },
+            {
+              "pregunta": "y2",
+              "respuesta": "1.8264462810"
             }
           ]
         },
         {
-          "enunciado": "Calcular la integral de 1/x desde 1 hasta 3 usando la Regla de 1/3 de Simpson con n=4.",
+          "enunciado": "y' - 3y + t = 0\ny0 = 1,  h = 0.1\nEncuentra y2",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "0.5"
+              "pregunta": "t1",
+              "respuesta": "0.1000000000"
             },
             {
-              "pregunta": "f(a) + f(b)",
-              "respuesta": "1.333333333"
+              "pregunta": "y1",
+              "respuesta": "1.4142857143"
             },
             {
-              "pregunta": "4·Σ f(impares) + 2·Σ f(pares)",
-              "respuesta": "5.266666667"
+              "pregunta": "f(y1,t1)",
+              "respuesta": "4.1428571429"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "1.100000000"
+              "pregunta": "t2",
+              "respuesta": "0.2000000000"
+            },
+            {
+              "pregunta": "y2",
+              "respuesta": "1.9918367347"
             }
           ]
         }
@@ -3139,79 +3163,573 @@
       "id": 34,
       "linea": "3",
       "estacion": "Ruiz Cortines",
-      "tipo": "cables",
+      "tipo": "semaforo",
       "puntos": 1000,
-      "minijuego": "cables",
+      "minijuego": "semaforo",
       "tabla_img": "assets/tablas/tabla_ruizcortines.png",
       "seleccion_metodo": [
         {
-          "correcto": "Lagrange",
-          "incorrecto1": "Interpolación Lineal",
-          "incorrecto2": "Gráfico",
-          "incorrecto3": "Gauss - Jordan"
+          "correcto": "Euler Modificado",
+          "incorrecto1": "Jacobi",
+          "incorrecto2": "Lineal con Función",
+          "incorrecto3": "Regla Trapezoidal"
         }
       ],
       "problemas": [
         {
-          "enunciado": "Calcular la integral de x² desde 0 hasta 3 usando la Regla de 3/8 de Simpson con n=3.",
+          "enunciado": "2y' + yt + y = 0\ny0 = 2,  h = 0.2\nEncuentra y'1",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "1"
+              "pregunta": "t1",
+              "respuesta": "0.2000000000"
             },
             {
-              "pregunta": "f(a) + f(b)",
-              "respuesta": "9"
+              "pregunta": "f(y0,t0)",
+              "respuesta": "-1.0000000000"
             },
             {
-              "pregunta": "3·Σ f(intermedios)",
-              "respuesta": "15"
+              "pregunta": "y1",
+              "respuesta": "1.8000000000"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "9.000000000"
+              "pregunta": "f(y1,t1)",
+              "respuesta": "-1.0800000000"
+            },
+            {
+              "pregunta": "y'1",
+              "respuesta": "1.7920000000"
             }
           ]
         },
         {
-          "enunciado": "Calcular la integral de x³ desde 0 hasta 3 usando la Regla de 3/8 de Simpson con n=3.",
+          "enunciado": "4y' - 2yt + 1 = 0\ny0 = 1,  h = 0.2\nEncuentra y'1",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "1"
+              "pregunta": "t1",
+              "respuesta": "0.2000000000"
             },
             {
-              "pregunta": "f(a) + f(b)",
-              "respuesta": "27"
+              "pregunta": "f(y0,t0)",
+              "respuesta": "-0.2500000000"
             },
             {
-              "pregunta": "3·Σ f(intermedios)",
-              "respuesta": "27"
+              "pregunta": "y1",
+              "respuesta": "0.9500000000"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "20.250000000"
+              "pregunta": "f(y1,t1)",
+              "respuesta": "-0.1550000000"
+            },
+            {
+              "pregunta": "y'1",
+              "respuesta": "0.9595000000"
             }
           ]
         },
         {
-          "enunciado": "Calcular la integral de 1/(1+x) desde 0 hasta 6 usando la Regla de 3/8 de Simpson con n=6.",
+          "enunciado": "2y' + 4yt - 3 = 0\ny0 = 1.5,  h = 0.3\nEncuentra y'1",
           "opciones": [
             {
-              "pregunta": "h (tamaño de paso)",
-              "respuesta": "1"
+              "pregunta": "t1",
+              "respuesta": "0.3000000000"
             },
             {
-              "pregunta": "f(a) + f(b)",
-              "respuesta": "1.142857143"
+              "pregunta": "f(y0,t0)",
+              "respuesta": "1.5000000000"
             },
             {
-              "pregunta": "3·Σ f(intermedios)",
-              "respuesta": "4.350000000"
+              "pregunta": "y1",
+              "respuesta": "1.9500000000"
             },
             {
-              "pregunta": "I (Resultado de la integral)",
-              "respuesta": "2.059821429"
+              "pregunta": "f(y1,t1)",
+              "respuesta": "0.3300000000"
+            },
+            {
+              "pregunta": "y'1",
+              "respuesta": "1.7745000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "linea": "3",
+      "estacion": "Metalúrgicos",
+      "tipo": "semaforo",
+      "puntos": 1000,
+      "minijuego": "semaforo",
+      "tabla_img": "assets/tablas/tabla_metalurgicos.png",
+      "seleccion_metodo": [
+        {
+          "correcto": "Runge - Kutta de 2º orden",
+          "incorrecto1": "Lagrange",
+          "incorrecto2": "Gauss-Seidel",
+          "incorrecto3": "Cuadrática"
+        }
+      ],
+      "problemas": [
+        {
+          "enunciado": "y' + 2yt - 1 = 0\ny0 = 1,  h = 0.5\nEncuentra y2",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "0.5000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "-0.2500000000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "1.1250000000"
+            },
+            {
+              "pregunta": "k1'",
+              "respuesta": "-0.0625000000"
+            },
+            {
+              "pregunta": "y2",
+              "respuesta": "0.8125000000"
+            }
+          ]
+        },
+        {
+          "enunciado": "y' - 5yt + 2 = 0\ny0 = 1,  h = 0.2\nEncuentra y2",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "-0.4000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "-0.2800000000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "0.6600000000"
+            },
+            {
+              "pregunta": "k1'",
+              "respuesta": "-0.2680000000"
+            },
+            {
+              "pregunta": "y2",
+              "respuesta": "0.4044000000"
+            }
+          ]
+        },
+        {
+          "enunciado": "y' + 4yt - 2 = 0\ny0 = 1,  h = 0.4\nEncuentra y2",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "0.8000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "-0.3520000000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "1.2240000000"
+            },
+            {
+              "pregunta": "k1'",
+              "respuesta": "0.0166400000"
+            },
+            {
+              "pregunta": "y2",
+              "respuesta": "0.8383104000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "linea": "3",
+      "estacion": "Félix U. Gómez",
+      "tipo": "semaforo",
+      "puntos": 1000,
+      "minijuego": "semaforo",
+      "tabla_img": "assets/tablas/tabla_felixugomez.png",
+      "seleccion_metodo": [
+        {
+          "correcto": "Runge - Kutta de 3er. Orden",
+          "incorrecto1": "Punto Fijo",
+          "incorrecto2": "Falsa Posición",
+          "incorrecto3": "Newton Hacia Adelante"
+        }
+      ],
+      "problemas": [
+        {
+          "enunciado": "y' + 3yt - 1 = 0\ny0 = 1,  h = 0.2\nEncuentra y2",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "0.2000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "0.1340000000"
+            },
+            {
+              "pregunta": "k3",
+              "respuesta": "0.0718400000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "1.1346400000"
+            },
+            {
+              "pregunta": "y2",
+              "respuesta": "1.1299260000"
+            }
+          ]
+        },
+        {
+          "enunciado": "y' - 4yt + 2 = 0\ny0 = 1,  h = 0.2\nEncuentra y2",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "-0.4000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "-0.3360000000"
+            },
+            {
+              "pregunta": "k3",
+              "respuesta": "-0.2835200000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "0.6620800000"
+            },
+            {
+              "pregunta": "y2",
+              "respuesta": "0.3836560000"
+            }
+          ]
+        },
+        {
+          "enunciado": "y' + yt - 2 = 0\ny0 = 2,  h = 0.2\nEncuentra y2",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "0.4000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "0.3560000000"
+            },
+            {
+              "pregunta": "k3",
+              "respuesta": "0.3075200000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "2.3552530000"
+            },
+            {
+              "pregunta": "y2",
+              "respuesta": "2.6052460000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "linea": "3",
+      "estacion": "Colonia Obrera",
+      "tipo": "semaforo",
+      "puntos": 1000,
+      "minijuego": "semaforo",
+      "tabla_img": "assets/tablas/tabla_coloniaobrera.png",
+      "seleccion_metodo": [
+        {
+          "correcto": "Kutta de 4to. Orden por 1/3 de Simpson",
+          "incorrecto1": "Gráfico",
+          "incorrecto2": "Bisectriz",
+          "incorrecto3": "Secante"
+        }
+      ],
+      "problemas": [
+        {
+          "enunciado": "y' - 3yt + 1 = 0\ny0 = 1,  h = 0.2\nEncuentra y1",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "-0.2000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "-0.1460000000"
+            },
+            {
+              "pregunta": "k3",
+              "respuesta": "-0.1443800000"
+            },
+            {
+              "pregunta": "k4",
+              "respuesta": "-0.0973256000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "0.8536524000"
+            }
+          ]
+        },
+        {
+          "enunciado": "y' + 2yt - 3 = 0\ny0 = 2,  h = 0.2\nEncuentra y1",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "0.6000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "0.5080000000"
+            },
+            {
+              "pregunta": "k3",
+              "respuesta": "0.5098400000"
+            },
+            {
+              "pregunta": "k4",
+              "respuesta": "0.3992128000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "2.5058155000"
+            }
+          ]
+        },
+        {
+          "enunciado": "y' - 2yt - 1 = 0\ny0 = 1,  h = 0.2\nEncuentra y1",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "0.2000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "0.2440000000"
+            },
+            {
+              "pregunta": "k3",
+              "respuesta": "0.2448800000"
+            },
+            {
+              "pregunta": "k4",
+              "respuesta": "0.2995904000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "1.2462251000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "linea": "3",
+      "estacion": "Santa Lucía",
+      "tipo": "semaforo",
+      "puntos": 1000,
+      "minijuego": "semaforo",
+      "tabla_img": "assets/tablas/tabla_santalucia.png",
+      "seleccion_metodo": [
+        {
+          "correcto": "Kutta de 4to. Orden por 3/8 de Simpson",
+          "incorrecto1": "Regla Trapezoidal",
+          "incorrecto2": "Punto Fijo",
+          "incorrecto3": "Newton Hacia Atrás"
+        }
+      ],
+      "problemas": [
+        {
+          "enunciado": "y' + yt + 1 = 0\ny0 = 1,  h = 0.3\nEncuentra y1",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "-0.3000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "-0.3270000000"
+            },
+            {
+              "pregunta": "k3",
+              "respuesta": "-0.3474600000"
+            },
+            {
+              "pregunta": "k4",
+              "respuesta": "-0.3611586000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "0.6644327000"
+            }
+          ]
+        },
+        {
+          "enunciado": "y' - 3yt - 2 = 0\ny0 = 1,  h = 0.3\nEncuentra y1",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "0.6000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "0.7080000000"
+            },
+            {
+              "pregunta": "k3",
+              "respuesta": "0.8584800000"
+            },
+            {
+              "pregunta": "k4",
+              "respuesta": "1.0726296000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "1.7965087000"
+            }
+          ]
+        },
+        {
+          "enunciado": "y' + 2yt + 1 = 0\ny0 = 2,  h = 0.3\nEncuentra y1",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "-0.3000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "-0.4140000000"
+            },
+            {
+              "pregunta": "k3",
+              "respuesta": "-0.5114400000"
+            },
+            {
+              "pregunta": "k4",
+              "respuesta": "-0.5884608000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "1.5418999000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "linea": "3",
+      "estacion": "General Zaragoza",
+      "tipo": "semaforo",
+      "puntos": 1000,
+      "minijuego": "semaforo",
+      "tabla_img": "assets/tablas/tabla_generalzaragoza.png",
+      "seleccion_metodo": [
+        {
+          "correcto": "Kutta de Orden Superior",
+          "incorrecto1": "Cuadrática con Función",
+          "incorrecto2": "Newton - Raphson",
+          "incorrecto3": "Interpolación Lineal"
+        }
+      ],
+      "problemas": [
+        {
+          "enunciado": "y'' - 3y't + y = 0\ny0 = 1,  y'0 = 1,  h = 0.2\nEncuentra y1 e y'1",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "0.2000000000"
+            },
+            {
+              "pregunta": "m1",
+              "respuesta": "-0.2000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "0.1600000000"
+            },
+            {
+              "pregunta": "m2",
+              "respuesta": "-0.1440000000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "1.1800000000"
+            },
+            {
+              "pregunta": "y'1",
+              "respuesta": "0.8280000000"
+            }
+          ]
+        },
+        {
+          "enunciado": "y'' - 2y't - y = 0\ny0 = 1,  y'0 = 2,  h = 0.3\nEncuentra y1 e y'1",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "0.6000000000"
+            },
+            {
+              "pregunta": "m1",
+              "respuesta": "0.3000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "0.6900000000"
+            },
+            {
+              "pregunta": "m2",
+              "respuesta": "0.8940000000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "1.6450000000"
+            },
+            {
+              "pregunta": "y'1",
+              "respuesta": "2.5970000000"
+            }
+          ]
+        },
+        {
+          "enunciado": "y'' - 2y't - 2y = 0\ny0 = 2,  y'0 = 1,  h = 0.2\nEncuentra y1 e y'1",
+          "opciones": [
+            {
+              "pregunta": "k1",
+              "respuesta": "0.2000000000"
+            },
+            {
+              "pregunta": "m1",
+              "respuesta": "0.8000000000"
+            },
+            {
+              "pregunta": "k2",
+              "respuesta": "0.3600000000"
+            },
+            {
+              "pregunta": "m2",
+              "respuesta": "1.0240000000"
+            },
+            {
+              "pregunta": "y1",
+              "respuesta": "2.2800000000"
+            },
+            {
+              "pregunta": "y'1",
+              "respuesta": "1.9120000000"
             }
           ]
         }
