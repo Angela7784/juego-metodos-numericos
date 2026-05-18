@@ -203,23 +203,23 @@ def _draw_graph(screen, rect, progress_ratio, font_small):
             gx = _X_MIN + (x_end - _X_MIN) * k / steps
             gy = _SLOPE * gx + _INTERCEPT
             sx, sy = to_px(gx, gy)
-            if inner.left - 4 <= sx <= inner.right + 4:
-                pts_line.append((sx, max(inner.top, min(inner.bottom, sy))))
+            pts_line.append((sx, sy))
 
         if len(pts_line) >= 2:
-            # Sombra de la línea
+            screen.set_clip(inner)
             shadow_pts = [(p[0] + 2, p[1] + 2) for p in pts_line]
             pygame.draw.lines(screen, (0, 60, 20), False, shadow_pts, 4)
-            # Línea principal
             pygame.draw.lines(screen, GREEN, False, pts_line, 3)
-            # Línea brillante encima (más fina, más clara)
             pygame.draw.lines(screen, (180, 255, 200), False, pts_line, 1)
+            screen.set_clip(None)
 
         # Punta parpadeante
         if pts_line:
             now = pygame.time.get_ticks()
             pulse = abs(math.sin(now / 300)) * 4
             px, py = pts_line[-1]
+            px = max(inner.left, min(inner.right,  px))
+            py = max(inner.top,  min(inner.bottom, py))
             pygame.draw.circle(screen, YELLOW, (px, py), int(8 + pulse))
             pygame.draw.circle(screen, WHITE,  (px, py), 5)
 
@@ -282,6 +282,16 @@ def mostrar_curve_fit(
     if remaining <= 0:
         return "tiempo_agotado"
 
+    # ── Pre-calcular posición del botón Confirmar ──────────────────────────
+    _enun_lines_n   = len(_enunciado.split('\n')) if _enunciado else 0
+    _pre_enun_bot   = 135 + _enun_lines_n * 26 + 14 if _enun_lines_n else 135
+    _pre_graph_bot  = _pre_enun_bot + 10 + 255
+    _pre_bar_bot    = _pre_graph_bot + 10 + 12 + 4
+    _pre_dot_y      = _pre_bar_bot + 80
+    _pre_field_cy   = _pre_dot_y + 55
+    _confirm_rect   = pygame.Rect(0, 0, 260, 50)
+    _confirm_rect.center = (center_x, _pre_field_cy + 30 + 38)
+
     # ── Transición tras feedback ───────────────────────────────────────────
     if _feedback is not None:
         if now - _feedback_tick >= FEEDBACK_MS:
@@ -313,9 +323,7 @@ def mostrar_curve_fit(
                     _input_text += ev.unicode
 
             elif ev.type == pygame.MOUSEBUTTONDOWN:
-                btn = pygame.Rect(0, 0, 240, 52)
-                btn.center = (center_x, HEIGHT - 90)
-                if btn.collidepoint(mouse_pos) and _input_text.strip():
+                if _confirm_rect.collidepoint(mouse_pos) and _input_text.strip():
                     correcta = _preguntas[_paso_actual]["respuesta"]
                     if _comparar(_input_text, correcta):
                         _feedback = "correcto"
@@ -342,33 +350,38 @@ def mostrar_curve_fit(
         screen.blit(font_button.render(f"Vidas: {game_state.vidas}", True, WHITE),
                     (WIDTH - 200, 20))
 
-    # Timer HUD
-    timer_col = RED if remaining <= 10 else (YELLOW if remaining <= 30 else WHITE)
-    screen.blit(font_button.render(f"{remaining // 60:02}:{remaining % 60:02}", True, timer_col),
-                (WIDTH - 305, 55))
+    # Timer HUD (a la izquierda de los corazones)
+    timer_col  = RED if remaining <= 10 else (YELLOW if remaining <= 30 else WHITE)
+    timer_surf = font_button.render(f"{remaining // 60:02}:{remaining % 60:02}", True, timer_col)
+    hearts_left_x = WIDTH - 45 - (max(game_state.vidas, 1) - 1) * 38
+    timer_rect = timer_surf.get_rect(right=hearts_left_x - 15, centery=37)
+    screen.blit(timer_surf, timer_rect)
 
     # ── Título ─────────────────────────────────────────────────────────────
     title = font_title.render("Ajuste de Curvas", True, ORANGE)
     screen.blit(title, title.get_rect(center=(center_x, 110)))
 
     # ── Enunciado del problema ─────────────────────────────────────────────
+    enun_top    = 135
+    enun_bottom = enun_top
     if _enunciado:
-        font_enun = pygame.font.SysFont("Arial", 23)
-        lines = _wrap_text(_enunciado, font_enun, WIDTH - 160)
-        panel_h = len(lines) * 30 + 18
-        panel_rect = pygame.Rect(60, 147, WIDTH - 120, panel_h)
+        font_enun = pygame.font.SysFont("Courier New", 21)
+        lines     = _enunciado.split('\n')
+        line_h    = 26
+        panel_h   = len(lines) * line_h + 14
+        panel_rect = pygame.Rect(80, enun_top, WIDTH - 160, panel_h)
         pygame.draw.rect(screen, (18, 20, 28), panel_rect, border_radius=8)
         pygame.draw.rect(screen, ORANGE, panel_rect, 1, border_radius=8)
         for i, line in enumerate(lines):
             lsurf = font_enun.render(line, True, (255, 220, 180))
-            screen.blit(lsurf, lsurf.get_rect(center=(center_x, 156 + i * 30 + 6)))
+            screen.blit(lsurf, lsurf.get_rect(center=(center_x, enun_top + 7 + i * line_h + line_h // 2)))
+        enun_bottom = enun_top + panel_h
 
     # ── Gráfico ────────────────────────────────────────────────────────────
     font_small = pygame.font.SysFont("Courier New", 18)
-    graph_rect = pygame.Rect(100, 230, WIDTH - 200, 365)
+    graph_top  = enun_bottom + 10
+    graph_rect = pygame.Rect(80, graph_top, WIDTH - 160, 255)
 
-    # Progreso: cuánta línea mostrar
-    # Durante el feedback "correcto" del paso i, mostramos (i+1)/total
     if _feedback == "correcto":
         ratio = (_paso_actual + 1) / total_pasos
     else:
@@ -377,39 +390,42 @@ def mostrar_curve_fit(
     _draw_graph(screen, graph_rect, ratio, font_small)
 
     # ── Barra de progreso de ajuste ────────────────────────────────────────
-    bar_rect  = pygame.Rect(100, graph_rect.bottom + 18, WIDTH - 200, 14)
-    pygame.draw.rect(screen, PANEL, bar_rect, border_radius=7)
-    fill_w    = int(bar_rect.width * ratio)
+    bar_y    = graph_rect.bottom + 10
+    bar_rect = pygame.Rect(80, bar_y, WIDTH - 160, 12)
+    pygame.draw.rect(screen, PANEL, bar_rect, border_radius=6)
+    fill_w   = int(bar_rect.width * ratio)
     if fill_w > 0:
         pygame.draw.rect(screen, GREEN,
                          pygame.Rect(bar_rect.left, bar_rect.top, fill_w, bar_rect.height),
-                         border_radius=7)
+                         border_radius=6)
     pct_surf = font_small.render(f"Ajuste: {int(ratio * 100)}%", True, GREEN)
-    screen.blit(pct_surf, (bar_rect.left, bar_rect.bottom + 6))
+    screen.blit(pct_surf, (bar_rect.left, bar_rect.bottom + 4))
+
+    base_y = bar_rect.bottom + 4   # referencia para los elementos inferiores
 
     # ── Paso actual ────────────────────────────────────────────────────────
     if _paso_actual < total_pasos:
-        paso_txt = _preguntas[_paso_actual]["pregunta"]
+        paso_txt  = _preguntas[_paso_actual]["pregunta"]
         paso_surf = font_title.render(f"Calcula:  {paso_txt}", True, WHITE)
-        screen.blit(paso_surf, paso_surf.get_rect(center=(center_x, 680)))
+        screen.blit(paso_surf, paso_surf.get_rect(center=(center_x, base_y + 42)))
 
     # ── Bolitas de progreso ────────────────────────────────────────────────
+    dot_y       = base_y + 80
     dot_gap     = 44
     dot_start_x = center_x - (total_pasos * dot_gap) // 2 + dot_gap // 2
     for i in range(total_pasos):
         dx = dot_start_x + i * dot_gap
-        dy = 720
         if i < _paso_actual:
-            pygame.draw.circle(screen, GREEN, (dx, dy), 10)
-            pygame.draw.circle(screen, WHITE, (dx, dy), 10, 2)
+            pygame.draw.circle(screen, GREEN, (dx, dot_y), 10)
+            pygame.draw.circle(screen, WHITE, (dx, dot_y), 10, 2)
         elif i == _paso_actual:
-            pygame.draw.circle(screen, WHITE, (dx, dy), 10)
+            pygame.draw.circle(screen, WHITE, (dx, dot_y), 10)
         else:
-            pygame.draw.circle(screen, LIGHT_GREY, (dx, dy), 8)
+            pygame.draw.circle(screen, LIGHT_GREY, (dx, dot_y), 8)
 
     # ── Campo de texto ─────────────────────────────────────────────────────
-    field_rect = pygame.Rect(0, 0, 480, 66)
-    field_rect.center = (center_x, 780)
+    field_rect = pygame.Rect(0, 0, 480, 60)
+    field_rect.center = (center_x, dot_y + 55)
 
     bg_col     = (18, 120, 50) if _feedback == "correcto" else PANEL
     border_col = GREEN if _feedback == "correcto" else ORANGE
@@ -425,13 +441,11 @@ def mostrar_curve_fit(
 
     # ── Botón Confirmar ────────────────────────────────────────────────────
     if _feedback is None:
-        btn = pygame.Rect(0, 0, 240, 52)
-        btn.center = (center_x, HEIGHT - 90)
-        bc = (55, 60, 45) if btn.collidepoint(mouse_pos) else PANEL
-        pygame.draw.rect(screen, bc,     btn, border_radius=10)
-        pygame.draw.rect(screen, ORANGE, btn, 1, border_radius=10)
-        screen.blit(font_button.render("Confirmar  [Enter]", True, WHITE),
-                    font_button.render("Confirmar  [Enter]", True, WHITE).get_rect(center=btn.center))
+        bc = (55, 60, 45) if _confirm_rect.collidepoint(mouse_pos) else PANEL
+        pygame.draw.rect(screen, bc,          _confirm_rect, border_radius=10)
+        pygame.draw.rect(screen, ORANGE,      _confirm_rect, 1, border_radius=10)
+        lbl = font_button.render("Confirmar", True, WHITE)
+        screen.blit(lbl, lbl.get_rect(center=_confirm_rect.center))
 
     # ── Flash feedback ─────────────────────────────────────────────────────
     if _feedback == "correcto":

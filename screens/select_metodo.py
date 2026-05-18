@@ -15,6 +15,12 @@ LINEA_COLORES = {
 _animador: BackgroundAnimator | None = None
 _linea_cargada: str = ""
 
+# Feedback visual de selección
+_seleccion_opcion: str | None = None
+_seleccion_correcta: bool | None = None
+_seleccion_tick: int = 0
+FEEDBACK_MS = 700
+
 
 def mostrar_select_metodo(
     screen,
@@ -39,8 +45,17 @@ def mostrar_select_metodo(
       None               -> sin acción este frame
     """
     global _animador, _linea_cargada
+    global _seleccion_opcion, _seleccion_correcta, _seleccion_tick
 
+    now   = pygame.time.get_ticks()
     linea = nivel.get("linea", "1")
+
+    # ── Resolver feedback pendiente ────────────────────────────────────────
+    if _seleccion_opcion is not None and now - _seleccion_tick >= FEEDBACK_MS:
+        resultado = "metodo_correcto" if _seleccion_correcta else "incorrecto"
+        _seleccion_opcion   = None
+        _seleccion_correcta = None
+        return resultado
 
     # ── Fondo animado ──────────────────────────────────────────────────────
     if linea != _linea_cargada or _animador is None:
@@ -148,7 +163,12 @@ def mostrar_select_metodo(
             start_y + (i // 2) * 100,
         )
 
-        color = (70, 70, 70) if btn.collidepoint(mouse_pos) else (45, 45, 45)
+        if _seleccion_opcion == opcion:
+            color = (30, 160, 60) if _seleccion_correcta else (190, 35, 35)
+        elif btn.collidepoint(mouse_pos) and _seleccion_opcion is None:
+            color = (70, 70, 70)
+        else:
+            color = (45, 45, 45)
         pygame.draw.rect(screen, color, btn, border_radius=12)
         font_size = 21
         font_opcion = pygame.font.SysFont("Arial", font_size, bold=True)
@@ -158,8 +178,12 @@ def mostrar_select_metodo(
         texto = font_opcion.render(opcion, True, WHITE)
         screen.blit(texto, texto.get_rect(center=btn.center))
 
-        if event.type == pygame.MOUSEBUTTONDOWN and btn.collidepoint(mouse_pos):
-            return "metodo_correcto" if opcion == correct_option else "incorrecto"
+        if (event.type == pygame.MOUSEBUTTONDOWN
+                and btn.collidepoint(mouse_pos)
+                and _seleccion_opcion is None):
+            _seleccion_opcion   = opcion
+            _seleccion_correcta = (opcion == correct_option)
+            _seleccion_tick     = now
 
     # ── Botón Volver al mapa ───────────────────────────────────────────────
     font_back  = pygame.font.SysFont("Arial", 22, bold=True)

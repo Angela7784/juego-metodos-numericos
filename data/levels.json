@@ -61,7 +61,7 @@
         },
         {
           "enunciado": "Estimar Ln(9) usando los intervalos Ln(6) y Ln(12).",
-          "opciones" : [
+          "opciones": [
             {
               "pregunta": "f(a) = Ln(6)",
               "respuesta": "1.791759469"
@@ -1943,9 +1943,9 @@
       "id": 21,
       "linea": "2",
       "estacion": "San Nicolás",
-      "tipo": "semaforo",
+      "tipo": "curvas",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "curvas",
       "tabla_img": "assets/tablas/tabla_sannicolas.png",
       "seleccion_metodo": [
         {
@@ -2037,9 +2037,9 @@
       "id": 22,
       "linea": "2",
       "estacion": "Anáhuac",
-      "tipo": "semaforo",
+      "tipo": "curvas",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "curvas",
       "tabla_img": "assets/tablas/tabla_anahuac.png",
       "seleccion_metodo": [
         {
@@ -2131,9 +2131,9 @@
       "id": 23,
       "linea": "2",
       "estacion": "Universidad",
-      "tipo": "semaforo",
+      "tipo": "curvas",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "curvas",
       "tabla_img": "assets/tablas/tabla_universidad.png",
       "seleccion_metodo": [
         {
@@ -2225,9 +2225,9 @@
       "id": 24,
       "linea": "2",
       "estacion": "Niños Héroes",
-      "tipo": "semaforo",
+      "tipo": "curvas",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "curvas",
       "seleccion_metodo": [
         {
           "correcto": "Lineal con función",
@@ -2318,9 +2318,9 @@
       "id": 25,
       "linea": "2",
       "estacion": "Regina",
-      "tipo": "semaforo",
+      "tipo": "curvas",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "curvas",
       "seleccion_metodo": [
         {
           "correcto": "Cuadrática con función",
@@ -2411,9 +2411,9 @@
       "id": 26,
       "linea": "2",
       "estacion": "General Anaya",
-      "tipo": "semaforo",
+      "tipo": "curvas",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "curvas",
       "tabla_img": "assets/tablas/tabla_generalanaya.png",
       "seleccion_metodo": [
         {
@@ -2505,9 +2505,9 @@
       "id": 27,
       "linea": "2",
       "estacion": "Cuauhtémoc",
-      "tipo": "semaforo",
+      "tipo": "bateria",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "bateria",
       "tabla_img": "assets/tablas/tabla_cuauhtemoc.png",
       "seleccion_metodo": [
         {
@@ -2599,9 +2599,9 @@
       "id": 28,
       "linea": "2",
       "estacion": "Alameda",
-      "tipo": "semaforo",
+      "tipo": "bateria",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "bateria",
       "tabla_img": "assets/tablas/tabla_alameda.png",
       "seleccion_metodo": [
         {
@@ -2693,9 +2693,9 @@
       "id": 29,
       "linea": "2",
       "estacion": "Fundadores",
-      "tipo": "semaforo",
+      "tipo": "bateria",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "bateria",
       "tabla_img": "assets/tablas/tabla_fundadores.png",
       "seleccion_metodo": [
         {
@@ -2787,9 +2787,9 @@
       "id": 30,
       "linea": "2",
       "estacion": "Padre Mier",
-      "tipo": "semaforo",
+      "tipo": "bateria",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "bateria",
       "tabla_img": "assets/tablas/tabla_padremier.png",
       "seleccion_metodo": [
         {
@@ -2881,9 +2881,9 @@
       "id": 31,
       "linea": "2",
       "estacion": "General I. Zaragoza",
-      "tipo": "semaforo",
+      "tipo": "bateria",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "bateria",
       "tabla_img": "assets/tablas/tabla_zaragoza.png",
       "seleccion_metodo": [
         {
@@ -2975,9 +2975,9 @@
       "id": 32,
       "linea": "3",
       "estacion": "Hospital Metropolitano",
-      "tipo": "semaforo",
+      "tipo": "tren",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "tren",
       "tabla_img": "assets/tablas/tabla_hospitalmetropolitano.png",
       "seleccion_metodo": [
         {
@@ -3069,9 +3069,9 @@
       "id": 33,
       "linea": "3",
       "estacion": "Los Ángeles",
-      "tipo": "semaforo",
+      "tipo": "tren",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "tren",
       "tabla_img": "assets/tablas/tabla_losangeles.png",
       "seleccion_metodo": [
         {
@@ -3163,9 +3163,9 @@
       "id": 34,
       "linea": "3",
       "estacion": "Ruiz Cortines",
-      "tipo": "semaforo",
+      "tipo": "tren",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "tren",
       "tabla_img": "assets/tablas/tabla_ruizcortines.png",
       "seleccion_metodo": [
         {
@@ -3257,9 +3257,9 @@
       "id": 35,
       "linea": "3",
       "estacion": "Metalúrgicos",
-      "tipo": "semaforo",
+      "tipo": "tren",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "tren",
       "tabla_img": "assets/tablas/tabla_metalurgicos.png",
       "seleccion_metodo": [
         {
@@ -3351,9 +3351,9 @@
       "id": 36,
       "linea": "3",
       "estacion": "Félix U. Gómez",
-      "tipo": "semaforo",
+      "tipo": "tren",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "tren",
       "tabla_img": "assets/tablas/tabla_felixugomez.png",
       "seleccion_metodo": [
         {
@@ -3445,9 +3445,9 @@
       "id": 37,
       "linea": "3",
       "estacion": "Colonia Obrera",
-      "tipo": "semaforo",
+      "tipo": "tren",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "tren",
       "tabla_img": "assets/tablas/tabla_coloniaobrera.png",
       "seleccion_metodo": [
         {
@@ -3539,9 +3539,9 @@
       "id": 38,
       "linea": "3",
       "estacion": "Santa Lucía",
-      "tipo": "semaforo",
+      "tipo": "tren",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "tren",
       "tabla_img": "assets/tablas/tabla_santalucia.png",
       "seleccion_metodo": [
         {
@@ -3633,9 +3633,9 @@
       "id": 39,
       "linea": "3",
       "estacion": "General Zaragoza",
-      "tipo": "semaforo",
+      "tipo": "tren",
       "puntos": 1000,
-      "minijuego": "semaforo",
+      "minijuego": "tren",
       "tabla_img": "assets/tablas/tabla_generalzaragoza.png",
       "seleccion_metodo": [
         {

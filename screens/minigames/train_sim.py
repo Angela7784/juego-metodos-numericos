@@ -263,6 +263,10 @@ def mostrar_train_sim(
     if remaining <= 0:
         return "tiempo_agotado"
 
+    # -- Pre-calcular posición del botón Confirmar ---------------------------
+    _confirm_rect = pygame.Rect(0, 0, 240, 50)
+    _confirm_rect.center = (center_x, 840)
+
     # -- Suavizado de movimiento del tren ------------------------------------
     _train_x += (_train_x_target - _train_x) * TRAIN_EASE
 
@@ -302,9 +306,7 @@ def mostrar_train_sim(
                     _input_text += ev.unicode
 
             elif ev.type == pygame.MOUSEBUTTONDOWN:
-                btn = pygame.Rect(0, 0, 240, 52)
-                btn.center = (center_x, HEIGHT - 90)
-                if btn.collidepoint(mouse_pos) and _input_text.strip():
+                if _confirm_rect.collidepoint(mouse_pos) and _input_text.strip():
                     correcta = _preguntas[_paso_actual]["respuesta"]
                     if _comparar(_input_text, correcta):
                         _feedback = "correcto"
@@ -331,10 +333,12 @@ def mostrar_train_sim(
         screen.blit(font_button.render(f"Vidas: {game_state.vidas}", True, WHITE),
                     (WIDTH - 200, 20))
 
-    # Timer HUD
-    timer_col = RED if remaining <= 10 else (YELLOW if remaining <= 30 else WHITE)
-    screen.blit(font_button.render(f"{remaining // 60:02}:{remaining % 60:02}", True, timer_col),
-                (WIDTH - 305, 55))
+    # Timer HUD (a la izquierda de los corazones)
+    timer_col  = RED if remaining <= 10 else (YELLOW if remaining <= 30 else WHITE)
+    timer_surf = font_button.render(f"{remaining // 60:02}:{remaining % 60:02}", True, timer_col)
+    hearts_left_x = WIDTH - 45 - (max(game_state.vidas, 1) - 1) * 38
+    timer_rect = timer_surf.get_rect(right=hearts_left_x - 15, centery=37)
+    screen.blit(timer_surf, timer_rect)
 
     # -- Titulo ---------------------------------------------------------------
     title = font_title.render("Simulador de Velocidad", True, ORANGE)
@@ -342,15 +346,16 @@ def mostrar_train_sim(
 
     # -- Enunciado del problema -----------------------------------------------
     if _enunciado:
-        font_enun = pygame.font.SysFont("Arial", 23)
-        lines = _wrap_text(_enunciado, font_enun, WIDTH - 160)
-        panel_h = len(lines) * 30 + 18
-        panel_rect = pygame.Rect(60, 147, WIDTH - 120, panel_h)
+        font_enun = pygame.font.SysFont("Courier New", 22)
+        lines     = _enunciado.split('\n')
+        line_h    = 28
+        panel_h   = len(lines) * line_h + 14
+        panel_rect = pygame.Rect(80, 143, WIDTH - 160, panel_h)
         pygame.draw.rect(screen, (18, 20, 30), panel_rect, border_radius=8)
         pygame.draw.rect(screen, ORANGE, panel_rect, 1, border_radius=8)
         for i, line in enumerate(lines):
             lsurf = font_enun.render(line, True, (255, 220, 180))
-            screen.blit(lsurf, lsurf.get_rect(center=(center_x, 156 + i * 30 + 6)))
+            screen.blit(lsurf, lsurf.get_rect(center=(center_x, 143 + 7 + i * line_h + line_h // 2)))
 
     # -- Grafico RK (parte superior) -----------------------------------------
     font_small = pygame.font.SysFont("Courier New", 18)
@@ -370,14 +375,14 @@ def mostrar_train_sim(
     if _paso_actual < total_pasos:
         paso_txt  = _preguntas[_paso_actual]["pregunta"]
         paso_surf = font_title.render(f"Calcula:  {paso_txt}", True, WHITE)
-        screen.blit(paso_surf, paso_surf.get_rect(center=(center_x, 665)))
+        screen.blit(paso_surf, paso_surf.get_rect(center=(center_x, 658)))
 
     # -- Bolitas de progreso --------------------------------------------------
     dot_gap     = 44
     dot_start_x = center_x - (total_pasos * dot_gap) // 2 + dot_gap // 2
     for i in range(total_pasos):
         dx = dot_start_x + i * dot_gap
-        dy = 705
+        dy = 696
         if i < _paso_actual:
             pygame.draw.circle(screen, GREEN, (dx, dy), 10)
             pygame.draw.circle(screen, WHITE, (dx, dy), 10, 2)
@@ -387,8 +392,8 @@ def mostrar_train_sim(
             pygame.draw.circle(screen, LIGHT_GREY, (dx, dy), 8)
 
     # -- Campo de texto -------------------------------------------------------
-    field_rect = pygame.Rect(0, 0, 480, 66)
-    field_rect.center = (center_x, 775)
+    field_rect = pygame.Rect(0, 0, 460, 58)
+    field_rect.center = (center_x, 756)
 
     bg_col     = (18, 120, 50) if _feedback == "correcto" else PANEL
     border_col = GREEN if _feedback == "correcto" else ORANGE
@@ -404,13 +409,11 @@ def mostrar_train_sim(
 
     # -- Boton Confirmar ------------------------------------------------------
     if _feedback is None and _paso_actual < total_pasos:
-        btn = pygame.Rect(0, 0, 240, 52)
-        btn.center = (center_x, HEIGHT - 88)
-        bc = (55, 50, 28) if btn.collidepoint(mouse_pos) else PANEL
-        pygame.draw.rect(screen, bc,     btn, border_radius=10)
-        pygame.draw.rect(screen, ORANGE, btn, 1, border_radius=10)
-        lbl = font_button.render("Confirmar  [Enter]", True, WHITE)
-        screen.blit(lbl, lbl.get_rect(center=btn.center))
+        bc = (55, 50, 28) if _confirm_rect.collidepoint(mouse_pos) else PANEL
+        pygame.draw.rect(screen, bc,          _confirm_rect, border_radius=10)
+        pygame.draw.rect(screen, ORANGE,      _confirm_rect, 1, border_radius=10)
+        lbl = font_button.render("Confirmar", True, WHITE)
+        screen.blit(lbl, lbl.get_rect(center=_confirm_rect.center))
 
     # -- Flash feedback -------------------------------------------------------
     if _feedback == "correcto":

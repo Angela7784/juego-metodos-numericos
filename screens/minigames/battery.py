@@ -239,6 +239,15 @@ def mostrar_battery(
     if remaining <= 0:
         return "tiempo_agotado"
 
+    # ── Pre-calcular posición del botón Confirmar ──────────────────────────
+    _enun_lines_n  = len(_enunciado.split('\n')) if _enunciado else 0
+    _pre_enun_bot  = 135 + _enun_lines_n * 30 + 14 if _enun_lines_n else 135
+    _pre_graph_bot = _pre_enun_bot + 10 + 240
+    _pre_dot_y     = _pre_graph_bot + 30 + 38 + 40
+    _pre_field_cy  = _pre_dot_y + 50
+    _confirm_rect  = pygame.Rect(0, 0, 240, 50)
+    _confirm_rect.center = (center_x, _pre_field_cy + 58)
+
     # ── Transición tras feedback ───────────────────────────────────────────
     if _feedback is not None:
         if now - _feedback_tick >= FEEDBACK_MS:
@@ -270,9 +279,7 @@ def mostrar_battery(
                     _input_text += ev.unicode
 
             elif ev.type == pygame.MOUSEBUTTONDOWN:
-                btn = pygame.Rect(0, 0, 240, 52)
-                btn.center = (center_x, HEIGHT - 90)
-                if btn.collidepoint(mouse_pos) and _input_text.strip():
+                if _confirm_rect.collidepoint(mouse_pos) and _input_text.strip():
                     correcta = _preguntas[_paso_actual]["respuesta"]
                     if _comparar(_input_text, correcta):
                         _feedback = "correcto"
@@ -287,7 +294,7 @@ def mostrar_battery(
     screen.fill(DARK_GREY)
 
     # ── HUD ───────────────────────────────────────────────────────────────
-    linea = nivel.get("linea", "3")
+    linea = nivel.get("linea", "2")
     screen.blit(font_button.render(f"Linea: {linea}", True, WHITE), (30, 20))
     screen.blit(font_button.render(f"Estacion: {nivel['estacion']}", True, WHITE), (30, 55))
     try:
@@ -299,26 +306,32 @@ def mostrar_battery(
         screen.blit(font_button.render(f"Vidas: {game_state.vidas}", True, WHITE),
                     (WIDTH - 200, 20))
 
-    # Timer HUD
-    timer_col = RED if remaining <= 10 else (YELLOW if remaining <= 30 else WHITE)
-    screen.blit(font_button.render(f"{remaining // 60:02}:{remaining % 60:02}", True, timer_col),
-                (WIDTH - 305, 55))
+    # Timer HUD (a la izquierda de los corazones)
+    timer_col  = RED if remaining <= 10 else (YELLOW if remaining <= 30 else WHITE)
+    timer_surf = font_button.render(f"{remaining // 60:02}:{remaining % 60:02}", True, timer_col)
+    hearts_left_x = WIDTH - 45 - (max(game_state.vidas, 1) - 1) * 38
+    timer_rect = timer_surf.get_rect(right=hearts_left_x - 15, centery=37)
+    screen.blit(timer_surf, timer_rect)
 
     # ── Título ─────────────────────────────────────────────────────────────
     title = font_title.render("Carga de Energía", True, GREEN)
-    screen.blit(title, title.get_rect(center=(center_x, 110)))
+    screen.blit(title, title.get_rect(center=(center_x, 108)))
 
     # ── Enunciado del problema ─────────────────────────────────────────────
+    enun_top    = 133
+    enun_bottom = enun_top
     if _enunciado:
-        font_enun = pygame.font.SysFont("Arial", 23)
-        lines = _wrap_text(_enunciado, font_enun, WIDTH - 160)
-        panel_h = len(lines) * 30 + 18
-        panel_rect = pygame.Rect(60, 147, WIDTH - 120, panel_h)
+        font_enun = pygame.font.SysFont("Courier New", 24)
+        lines     = _enunciado.split('\n')
+        line_h    = 30
+        panel_h   = len(lines) * line_h + 14
+        panel_rect = pygame.Rect(80, enun_top, WIDTH - 160, panel_h)
         pygame.draw.rect(screen, (15, 22, 35), panel_rect, border_radius=8)
         pygame.draw.rect(screen, GREEN, panel_rect, 1, border_radius=8)
         for i, line in enumerate(lines):
             lsurf = font_enun.render(line, True, (200, 240, 210))
-            screen.blit(lsurf, lsurf.get_rect(center=(center_x, 156 + i * 30 + 6)))
+            screen.blit(lsurf, lsurf.get_rect(center=(center_x, enun_top + 7 + i * line_h + line_h // 2)))
+        enun_bottom = enun_top + panel_h
 
     # ── Ratio de llenado ───────────────────────────────────────────────────
     if _feedback == "correcto":
@@ -327,40 +340,43 @@ def mostrar_battery(
         ratio = _paso_actual / total_pasos
 
     # ── Gráfico de la curva (izquierda) ────────────────────────────────────
-    font_small  = pygame.font.SysFont("Courier New", 18)
-    graph_rect  = pygame.Rect(60, 230, WIDTH - 260, 370)
+    font_small = pygame.font.SysFont("Courier New", 18)
+    graph_top  = enun_bottom + 10
+    graph_w    = WIDTH - 240
+    graph_rect = pygame.Rect(60, graph_top, graph_w, 240)
     _draw_curve_graph(screen, graph_rect, ratio, font_small)
 
-    # ── Batería (derecha) ───────────────────────────────────────────────────
-    bat_x  = WIDTH - 155
-    bat_y  = 235
-    bat_w  = 80
-    bat_h  = 320
+    # ── Batería (derecha) ──────────────────────────────────────────────────
+    bat_w = 70
+    bat_h = 200
+    bat_x = graph_rect.right + 30
+    bat_y = graph_top + 20
     _draw_battery(screen, bat_x, bat_y, bat_w, bat_h, ratio)
 
     # ── Paso actual ────────────────────────────────────────────────────────
+    base_y = graph_rect.bottom + 18
     if _paso_actual < total_pasos:
         paso_txt  = _preguntas[_paso_actual]["pregunta"]
         paso_surf = font_title.render(f"Calcula:  {paso_txt}", True, WHITE)
-        screen.blit(paso_surf, paso_surf.get_rect(center=(center_x - 60, 675)))
+        screen.blit(paso_surf, paso_surf.get_rect(center=(center_x, base_y + 22)))
 
     # ── Bolitas ────────────────────────────────────────────────────────────
+    dot_y       = base_y + 62
     dot_gap     = 44
-    dot_start_x = (center_x - 60) - (total_pasos * dot_gap) // 2 + dot_gap // 2
+    dot_start_x = center_x - (total_pasos * dot_gap) // 2 + dot_gap // 2
     for i in range(total_pasos):
         dx = dot_start_x + i * dot_gap
-        dy = 715
         if i < _paso_actual:
-            pygame.draw.circle(screen, GREEN, (dx, dy), 10)
-            pygame.draw.circle(screen, WHITE, (dx, dy), 10, 2)
+            pygame.draw.circle(screen, GREEN, (dx, dot_y), 10)
+            pygame.draw.circle(screen, WHITE, (dx, dot_y), 10, 2)
         elif i == _paso_actual:
-            pygame.draw.circle(screen, WHITE, (dx, dy), 10)
+            pygame.draw.circle(screen, WHITE, (dx, dot_y), 10)
         else:
-            pygame.draw.circle(screen, LIGHT_GREY, (dx, dy), 8)
+            pygame.draw.circle(screen, LIGHT_GREY, (dx, dot_y), 8)
 
     # ── Campo de texto ─────────────────────────────────────────────────────
-    field_rect = pygame.Rect(0, 0, 480, 66)
-    field_rect.center = (center_x - 60, 785)
+    field_rect = pygame.Rect(0, 0, 460, 58)
+    field_rect.center = (center_x, dot_y + 52)
 
     bg_col     = (18, 120, 50) if _feedback == "correcto" else PANEL
     border_col = GREEN if _feedback == "correcto" else CYAN
@@ -376,13 +392,11 @@ def mostrar_battery(
 
     # ── Botón Confirmar ────────────────────────────────────────────────────
     if _feedback is None:
-        btn = pygame.Rect(0, 0, 240, 52)
-        btn.center = (center_x - 60, HEIGHT - 90)
-        bc = (30, 55, 40) if btn.collidepoint(mouse_pos) else PANEL
-        pygame.draw.rect(screen, bc,    btn, border_radius=10)
-        pygame.draw.rect(screen, GREEN, btn, 1, border_radius=10)
-        screen.blit(font_button.render("Confirmar  [Enter]", True, WHITE),
-                    font_button.render("Confirmar  [Enter]", True, WHITE).get_rect(center=btn.center))
+        bc = (30, 55, 40) if _confirm_rect.collidepoint(mouse_pos) else PANEL
+        pygame.draw.rect(screen, bc,          _confirm_rect, border_radius=10)
+        pygame.draw.rect(screen, GREEN,       _confirm_rect, 1, border_radius=10)
+        lbl = font_button.render("Confirmar", True, WHITE)
+        screen.blit(lbl, lbl.get_rect(center=_confirm_rect.center))
 
     # ── Flash feedback ─────────────────────────────────────────────────────
     if _feedback == "correcto":
@@ -390,12 +404,12 @@ def mostrar_battery(
         fb.fill((0, 200, 80, 32))
         screen.blit(fb, (0, 0))
         msg = font_title.render("Energia Acumulada!", True, GREEN)
-        screen.blit(msg, msg.get_rect(center=(center_x - 60, HEIGHT - 38)))
+        screen.blit(msg, msg.get_rect(center=(center_x, HEIGHT - 38)))
     elif _feedback == "incorrecto":
         fb = pygame.Surface((WIDTH, HEIGHT), pygame.SRCALPHA)
         fb.fill((200, 0, 0, 40))
         screen.blit(fb, (0, 0))
         msg = font_title.render("Valor Incorrecto...", True, RED)
-        screen.blit(msg, msg.get_rect(center=(center_x - 60, HEIGHT - 38)))
+        screen.blit(msg, msg.get_rect(center=(center_x, HEIGHT - 38)))
 
     return None
