@@ -112,15 +112,14 @@ def mostrar_instrucciones(screen, WIDTH, HEIGHT, font_title, font_button, event,
                      (center_x + 210, 80), 2)
 
     # ── Distribución de columnas ───────────────────────────────────────────
-    # Tres columnas de igual ancho con margen lateral
-    margen   = 30
-    gap      = 20
-    col_w    = (WIDTH - margen * 2 - gap * 2) // 3   # ~360 px
-    col_y    = 105
+    # Dos columnas centradas
+    margen = 40
+    gap    = 30
+    col_w  = (WIDTH - margen * 2 - gap) // 2
+    col_y  = 105
 
     col1_x = margen
     col2_x = col1_x + col_w + gap
-    col3_x = col2_x + col_w + gap
 
     # ── Sección 1: Cómo jugar ──────────────────────────────────────────────
     como_jugar = [
@@ -156,27 +155,6 @@ def mostrar_instrucciones(screen, WIDTH, HEIGHT, font_title, font_button, event,
     _dibujar_seccion(screen, font_button, font_small,
                      "Vidas y puntos", vidas_info,
                      GREEN, col2_x, col_y, col_w)
-
-    # ── Sección 3: Métodos numéricos ───────────────────────────────────────
-    metodos_info = [
-        "Interpolacion Lineal:",
-        "  Estima entre dos puntos dados.",
-        "",
-        "Diferencias Divididas:",
-        "  Tabla de Newton con intervalos",
-        "  irregulares.",
-        "",
-        "Lagrange:",
-        "  Polinomio que pasa por todos",
-        "  los puntos dados.",
-        "",
-        "Newton Hacia Atras:",
-        "  Diferencias finitas con paso h",
-        "  constante desde el ultimo punto.",
-    ]
-    _dibujar_seccion(screen, font_button, font_small,
-                     "Metodos numericos", metodos_info,
-                     ORANGE, col3_x, col_y, col_w)
 
     # ── Botón Entendido ────────────────────────────────────────────────────
     btn = pygame.Rect(0, 0, 260, 65)

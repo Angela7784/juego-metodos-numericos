@@ -188,6 +188,10 @@ def main():
                     game_state.vidas -= 1
                     SaveManager.guardar(game_state)
                     transition.request("game_over" if game_state.vidas <= 0 else "incorrecto")
+                elif result == "tiempo_agotado":
+                    game_state.vidas -= 1
+                    SaveManager.guardar(game_state)
+                    transition.request("game_over" if game_state.vidas <= 0 else "incorrecto")
                 elif result == "volver_menu":
                     game_state.vidas -= 1
                     SaveManager.guardar(game_state)

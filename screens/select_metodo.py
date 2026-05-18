@@ -50,6 +50,12 @@ def mostrar_select_metodo(
     now   = pygame.time.get_ticks()
     linea = nivel.get("linea", "1")
 
+    # ── Tiempo agotado ─────────────────────────────────────────────────────
+    elapsed   = int(time.time() - start_time)
+    remaining = max(0, 1800 - elapsed)
+    if remaining <= 0:
+        return "tiempo_agotado"
+
     # ── Resolver feedback pendiente ────────────────────────────────────────
     if _seleccion_opcion is not None and now - _seleccion_tick >= FEEDBACK_MS:
         resultado = "metodo_correcto" if _seleccion_correcta else "incorrecto"
@@ -80,8 +86,6 @@ def mostrar_select_metodo(
         screen.blit(font_title.render(str(game_state.vidas), True, WHITE), (WIDTH - 125, 25))
 
     # ── HUD: temporizador (a la izquierda de los corazones) ───────────────
-    elapsed    = int(time.time() - start_time)
-    remaining  = max(0, 1800 - elapsed)
     timer_surf = font_title.render(f"{remaining // 60:02}:{remaining % 60:02}", True, WHITE)
     hearts_left_x = WIDTH - 45 - (max(game_state.vidas, 1) - 1) * 42
     timer_rect = timer_surf.get_rect(right=hearts_left_x - 18, centery=38)
