@@ -3091,11 +3091,11 @@
             },
             {
               "pregunta": "y1",
-              "respuesta": "0.8333333333"
+              "respuesta": "0.8000000000"
             },
             {
               "pregunta": "f(y1,t1)",
-              "respuesta": "-1.6666666667"
+              "respuesta": "-1.6000000000"
             },
             {
               "pregunta": "t2",
@@ -3103,7 +3103,7 @@
             },
             {
               "pregunta": "y2",
-              "respuesta": "0.6944444444"
+              "respuesta": "0.6400000000"
             }
           ]
         },
@@ -3116,11 +3116,11 @@
             },
             {
               "pregunta": "y1",
-              "respuesta": "1.9090909091"
+              "respuesta": "1.9000000000"
             },
             {
               "pregunta": "f(y1,t1)",
-              "respuesta": "-0.9090909091"
+              "respuesta": "-0.9000000000"
             },
             {
               "pregunta": "t2",
@@ -3128,7 +3128,7 @@
             },
             {
               "pregunta": "y2",
-              "respuesta": "1.8264462810"
+              "respuesta": "1.8100000000"
             }
           ]
         },
@@ -3141,11 +3141,11 @@
             },
             {
               "pregunta": "y1",
-              "respuesta": "1.4142857143"
+              "respuesta": "1.3000000000"
             },
             {
               "pregunta": "f(y1,t1)",
-              "respuesta": "4.1428571429"
+              "respuesta": "3.8000000000"
             },
             {
               "pregunta": "t2",
@@ -3153,7 +3153,7 @@
             },
             {
               "pregunta": "y2",
-              "respuesta": "1.9918367347"
+              "respuesta": "1.6800000000"
             }
           ]
         }
@@ -3189,15 +3189,15 @@
             },
             {
               "pregunta": "y1",
-              "respuesta": "1.8000000000"
+              "respuesta": "2.0000000000"
             },
             {
               "pregunta": "f(y1,t1)",
-              "respuesta": "-1.0800000000"
+              "respuesta": "-1.2000000000"
             },
             {
               "pregunta": "y'1",
-              "respuesta": "1.7920000000"
+              "respuesta": "1.7800000000"
             }
           ]
         },
@@ -3214,15 +3214,15 @@
             },
             {
               "pregunta": "y1",
-              "respuesta": "0.9500000000"
+              "respuesta": "1.0000000000"
             },
             {
               "pregunta": "f(y1,t1)",
-              "respuesta": "-0.1550000000"
+              "respuesta": "-0.1500000000"
             },
             {
               "pregunta": "y'1",
-              "respuesta": "0.9595000000"
+              "respuesta": "0.9600000000"
             }
           ]
         },
@@ -3239,15 +3239,15 @@
             },
             {
               "pregunta": "y1",
-              "respuesta": "1.9500000000"
+              "respuesta": "1.5000000000"
             },
             {
               "pregunta": "f(y1,t1)",
-              "respuesta": "0.3300000000"
+              "respuesta": "0.6000000000"
             },
             {
               "pregunta": "y'1",
-              "respuesta": "1.7745000000"
+              "respuesta": "1.8150000000"
             }
           ]
         }
