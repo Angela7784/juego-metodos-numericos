@@ -2786,8 +2786,8 @@
       "seleccion_metodo": [
         {
           "correcto": "Regla de 3/8 Simpson",
-          "incorrecto1": "Montante",
-          "incorrecto2": "Newton hacia atrás",
+          "incorrecto1": "Newton - Cotes Cerradas",
+          "incorrecto2": "Regla de 1/3 Simpson",
           "incorrecto3": "Newton - Cotes Abiertas"
         }
       ],
@@ -2880,9 +2880,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Newton - Cotes Abiertas",
-          "incorrecto1": "Línea Recta",
-          "incorrecto2": "Lineal con función",
-          "incorrecto3": "Cúbica"
+          "incorrecto1": "Regla Trapezoidal",
+          "incorrecto2": "Newton - Cotes Cerradas",
+          "incorrecto3": "Regla de 1/3 Simpson"
         }
       ],
       "problemas": [
@@ -2974,9 +2974,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Newton - Cotes Cerradas",
-          "incorrecto1": "Lagrange",
-          "incorrecto2": "Bisectriz",
-          "incorrecto3": "Secante"
+          "incorrecto1": "Regla de 1/3 Simpson",
+          "incorrecto2": "Regla de 1/3 Simpson",
+          "incorrecto3": "Newton - Cotes Abiertas"
         }
       ],
       "problemas": [
@@ -3068,9 +3068,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Euler Hacia Adelante",
-          "incorrecto1": "Interpolación Lineal",
-          "incorrecto2": "Gráfico",
-          "incorrecto3": "Gauss - Jordan"
+          "incorrecto1": "Euler Hacia Atrás",
+          "incorrecto2": "Euler Modificado",
+          "incorrecto3": "Runge - Kutta de 2º orden"
         }
       ],
       "problemas": [
@@ -3162,9 +3162,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Euler Hacia Atrás",
-          "incorrecto1": "Secante",
-          "incorrecto2": "Montante",
-          "incorrecto3": "Diferencias Divididas"
+          "incorrecto1": "Runge - Kutta de 2º orden",
+          "incorrecto2": "Euler Hacia Adelante",
+          "incorrecto3": "Runge - Kutta de 3er. Orden"
         }
       ],
       "problemas": [
@@ -3256,9 +3256,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Euler Modificado",
-          "incorrecto1": "Jacobi",
-          "incorrecto2": "Lineal con Función",
-          "incorrecto3": "Regla Trapezoidal"
+          "incorrecto1": "Kutta de 4to. Orden por 1/3 de Simpson",
+          "incorrecto2": "Euler Hacia Adelante",
+          "incorrecto3": "Kutta de 4to. Orden por 3/8 de Simpson"
         }
       ],
       "problemas": [
@@ -3350,9 +3350,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Runge - Kutta de 2º orden",
-          "incorrecto1": "Lagrange",
-          "incorrecto2": "Gauss-Seidel",
-          "incorrecto3": "Cuadrática"
+          "incorrecto1": "Runge - Kutta de 3er. Orden",
+          "incorrecto2": "Kutta de 4to. Orden por 1/3 de Simpson",
+          "incorrecto3": "Kutta de 4to. Orden por 3/8 de Simpson"
         }
       ],
       "problemas": [
@@ -3444,9 +3444,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Runge - Kutta de 3er. Orden",
-          "incorrecto1": "Punto Fijo",
-          "incorrecto2": "Falsa Posición",
-          "incorrecto3": "Newton Hacia Adelante"
+          "incorrecto1": "Runge - Kutta de 2º orden",
+          "incorrecto2": "Kutta de Orden Superior",
+          "incorrecto3": "Euler Hacia Atrás"
         }
       ],
       "problemas": [
@@ -3538,9 +3538,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Kutta de 4to. Orden por 1/3 de Simpson",
-          "incorrecto1": "Gráfico",
-          "incorrecto2": "Bisectriz",
-          "incorrecto3": "Secante"
+          "incorrecto1": "Kutta de 4to. Orden por 3/8 de Simpson",
+          "incorrecto2": "Euler Modificado",
+          "incorrecto3": "Euler Hacia Adelante"
         }
       ],
       "problemas": [
@@ -3632,9 +3632,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Kutta de 4to. Orden por 3/8 de Simpson",
-          "incorrecto1": "Regla Trapezoidal",
-          "incorrecto2": "Punto Fijo",
-          "incorrecto3": "Newton Hacia Atrás"
+          "incorrecto1": "Runge - Kutta de 2º orden",
+          "incorrecto2": "Kutta de 4to. Orden por 1/3 de Simpson",
+          "incorrecto3": "Kutta de Orden Superior"
         }
       ],
       "problemas": [
@@ -3726,9 +3726,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Kutta de Orden Superior",
-          "incorrecto1": "Cuadrática con Función",
-          "incorrecto2": "Newton - Raphson",
-          "incorrecto3": "Interpolación Lineal"
+          "incorrecto1": "Euler Hacia Atrás",
+          "incorrecto2": "Euler Hacia Adelante",
+          "incorrecto3": "Runge - Kutta de 2º orden"
         }
       ],
       "problemas": [
