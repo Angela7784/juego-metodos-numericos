@@ -6,6 +6,7 @@ Al hacer clic en un PDF se abre con el visor predeterminado del sistema.
 """
 
 import os
+import sys
 import subprocess
 import pygame
 
@@ -65,7 +66,12 @@ def _abrir_pdf(path: str) -> None:
     """Minimiza el juego y abre el PDF; el usuario vuelve desde el Dock."""
     try:
         pygame.display.iconify()
-        subprocess.Popen(["open", path])
+        if sys.platform == "win32":
+            os.startfile(path)
+        elif sys.platform == "darwin":
+            subprocess.Popen(["open", path])
+        else:
+            subprocess.Popen(["xdg-open", path])
     except Exception:
         pass
 
