@@ -2,6 +2,7 @@ import pygame
 import time
 import random
 from screens.bg_animator import BackgroundAnimator, fondo_por_linea
+from core.math_fmt import fmt_math
 
 WHITE = (255, 255, 255)
 
@@ -20,6 +21,9 @@ _seleccion_opcion: str | None = None
 _seleccion_correcta: bool | None = None
 _seleccion_tick: int = 0
 FEEDBACK_MS = 700
+
+# Diálogo de repaso
+_dialogo_repaso: bool = False
 
 
 def mostrar_select_metodo(
@@ -46,6 +50,7 @@ def mostrar_select_metodo(
     """
     global _animador, _linea_cargada
     global _seleccion_opcion, _seleccion_correcta, _seleccion_tick
+    global _dialogo_repaso
 
     now   = pygame.time.get_ticks()
     linea = nivel.get("linea", "1")
@@ -101,22 +106,17 @@ def mostrar_select_metodo(
     if "problema_seleccionado" not in nivel and problemas:
         nivel["problema_seleccionado"] = random.choice(problemas)
     problema_actual = nivel.get("problema_seleccionado", problemas[0] if problemas else {})
-    enunciado = problema_actual.get("enunciado", "Sin enunciado disponible.")
+    enunciado = fmt_math(problema_actual.get("enunciado", "Sin enunciado disponible."))
 
-    panel_w, panel_h = 700, 240
-    panel_x = WIDTH  // 2 - panel_w // 2
-    panel_y = 150
-    panel   = pygame.Surface((panel_w, panel_h), pygame.SRCALPHA)
-    panel.fill((20, 20, 20, 200))
-    screen.blit(panel, (panel_x, panel_y))
-    pygame.draw.rect(screen, (100, 100, 100), (panel_x, panel_y, panel_w, panel_h), 2, border_radius=10)
+    panel_w  = 740
+    panel_x  = WIDTH // 2 - panel_w // 2
+    panel_y  = 140
+    line_h   = 36
+    pad_top  = 58   # espacio bajo el label "Enunciado del problema:"
+    pad_bot  = 18
 
-    label = font_button.render("Enunciado del problema:", True, (200, 200, 200))
-    screen.blit(label, (panel_x + 20, panel_y + 15))
-
-    # Word-wrap manual (respeta \n y preserva espacios internos si la línea cabe)
     font_txt  = pygame.font.SysFont("Arial", 24)
-    max_chars = panel_w - 40
+    max_chars = panel_w - 48
     lines = []
     for raw in enunciado.split('\n'):
         if font_txt.size(raw)[0] <= max_chars:
@@ -135,13 +135,26 @@ def mostrar_select_metodo(
             if line:
                 lines.append(line)
 
-    for j, ln in enumerate(lines[:6]):
-        surf = font_txt.render(ln, True, WHITE)
-        screen.blit(surf, (panel_x + 20, panel_y + 55 + j * 30))
+    panel_h = max(pad_top + 2 * line_h + pad_bot, pad_top + len(lines) * line_h + pad_bot)
+    panel   = pygame.Surface((panel_w, panel_h), pygame.SRCALPHA)
+    panel.fill((20, 20, 20, 210))
+    screen.blit(panel, (panel_x, panel_y))
+    pygame.draw.rect(screen, (110, 110, 110), (panel_x, panel_y, panel_w, panel_h), 2, border_radius=12)
 
-    # ── Pregunta de selección ──────────────────────────────────────────────
+    label = font_button.render("Enunciado del problema:", True, (200, 200, 200))
+    screen.blit(label, (panel_x + 20, panel_y + 14))
+    pygame.draw.line(screen, (80, 80, 80), (panel_x + 16, panel_y + 46), (panel_x + panel_w - 16, panel_y + 46), 1)
+
+    for j, ln in enumerate(lines):
+        surf = font_txt.render(ln, True, WHITE)
+        screen.blit(surf, (panel_x + 24, panel_y + pad_top + j * line_h))
+
+    # ── Pregunta de selección (siempre debajo del panel) ──────────────────
+    panel_bottom = panel_y + panel_h
+    pregunta_y   = max(panel_bottom + 34, HEIGHT // 2 + 20)
+
     titulo = font_title.render("¿Qué método aplica para este problema?", True, WHITE)
-    screen.blit(titulo, titulo.get_rect(center=(WIDTH // 2, 430)))
+    screen.blit(titulo, titulo.get_rect(center=(WIDTH // 2, pregunta_y)))
 
     # Mezclar opciones solo una vez por nivel
     opciones_data = nivel["seleccion_metodo"][0]
@@ -157,7 +170,7 @@ def mostrar_select_metodo(
 
     opciones       = nivel["opciones_mezcladas"]
     correct_option = opciones_data["correcto"]
-    start_y        = 510
+    start_y        = pregunta_y + 75
 
     # ── Botones de opciones ────────────────────────────────────────────────
     for i, opcion in enumerate(opciones):
@@ -199,5 +212,61 @@ def mostrar_select_metodo(
 
     if event.type == pygame.MOUSEBUTTONDOWN and btn_back.collidepoint(mouse_pos):
         return "volver_menu"
+
+    # ── Botón "?" (repaso) ─────────────────────────────────────────────────
+    circ_cx = WIDTH - 46
+    circ_cy = HEIGHT - 46
+    circ_r  = 26
+    circ_hovering = (mouse_pos[0] - circ_cx) ** 2 + (mouse_pos[1] - circ_cy) ** 2 <= circ_r ** 2
+    circ_color    = (80, 120, 200) if circ_hovering and _dialogo_repaso is False else (50, 80, 160)
+    pygame.draw.circle(screen, circ_color, (circ_cx, circ_cy), circ_r)
+    pygame.draw.circle(screen, (150, 190, 255), (circ_cx, circ_cy), circ_r, 2)
+    font_q = pygame.font.SysFont("Arial", 28, bold=True)
+    q_surf = font_q.render("?", True, WHITE)
+    screen.blit(q_surf, q_surf.get_rect(center=(circ_cx, circ_cy)))
+
+    if (event.type == pygame.MOUSEBUTTONDOWN and circ_hovering
+            and _seleccion_opcion is None and not _dialogo_repaso):
+        _dialogo_repaso = True
+
+    # ── Diálogo de repaso ──────────────────────────────────────────────────
+    if _dialogo_repaso:
+        dlg_w, dlg_h = 420, 190
+        dlg_x = WIDTH  // 2 - dlg_w // 2
+        dlg_y = HEIGHT // 2 - dlg_h // 2
+
+        dim = pygame.Surface((WIDTH, HEIGHT), pygame.SRCALPHA)
+        dim.fill((0, 0, 0, 140))
+        screen.blit(dim, (0, 0))
+
+        dlg = pygame.Surface((dlg_w, dlg_h), pygame.SRCALPHA)
+        dlg.fill((25, 28, 45, 240))
+        screen.blit(dlg, (dlg_x, dlg_y))
+        pygame.draw.rect(screen, (100, 140, 255), (dlg_x, dlg_y, dlg_w, dlg_h), 2, border_radius=14)
+
+        font_dlg = pygame.font.SysFont("Arial", 26, bold=True)
+        txt      = font_dlg.render("¿Necesitas un repaso?", True, WHITE)
+        screen.blit(txt, txt.get_rect(center=(WIDTH // 2, dlg_y + 52)))
+
+        font_opt = pygame.font.SysFont("Arial", 23, bold=True)
+
+        btn_si = pygame.Rect(0, 0, 140, 50)
+        btn_si.center = (WIDTH // 2 - 80, dlg_y + 130)
+        si_color = (30, 160, 60) if btn_si.collidepoint(mouse_pos) else (22, 110, 44)
+        pygame.draw.rect(screen, si_color, btn_si, border_radius=10)
+        screen.blit(font_opt.render("Sí", True, WHITE), font_opt.render("Sí", True, WHITE).get_rect(center=btn_si.center))
+
+        btn_no = pygame.Rect(0, 0, 140, 50)
+        btn_no.center = (WIDTH // 2 + 80, dlg_y + 130)
+        no_color = (160, 40, 40) if btn_no.collidepoint(mouse_pos) else (110, 28, 28)
+        pygame.draw.rect(screen, no_color, btn_no, border_radius=10)
+        screen.blit(font_opt.render("No", True, WHITE), font_opt.render("No", True, WHITE).get_rect(center=btn_no.center))
+
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if btn_si.collidepoint(mouse_pos):
+                _dialogo_repaso = False
+                return "ir_repaso"
+            elif btn_no.collidepoint(mouse_pos):
+                _dialogo_repaso = False
 
     return None

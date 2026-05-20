@@ -13,6 +13,7 @@ import math
 import random
 import re
 import time
+from core.math_fmt import fmt_math
 
 WHITE      = (255, 255, 255)
 DARK_GREY  = (15,  18,  24)
@@ -224,7 +225,7 @@ def mostrar_battery(
         problemas = nivel.get("problemas", [])
         if problemas:
             problema   = nivel.get("problema_seleccionado") or random.choice(problemas)
-            _enunciado = problema.get("enunciado", "")
+            _enunciado = fmt_math(problema.get("enunciado", ""))
             _preguntas = problema.get("opciones", [])
         else:
             _enunciado = ""

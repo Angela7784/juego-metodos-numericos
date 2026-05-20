@@ -13,6 +13,7 @@ import math
 import random
 import re
 import time
+from core.math_fmt import fmt_math
 
 WHITE      = (255, 255, 255)
 DARK_GREY  = (14,  16,  22)
@@ -248,7 +249,7 @@ def mostrar_train_sim(
         problemas = nivel.get("problemas", [])
         if problemas:
             problema   = nivel.get("problema_seleccionado") or random.choice(problemas)
-            _enunciado = problema.get("enunciado", "")
+            _enunciado = fmt_math(problema.get("enunciado", ""))
             _preguntas = problema.get("opciones", [])
         else:
             _enunciado = ""
@@ -263,9 +264,23 @@ def mostrar_train_sim(
     if remaining <= 0:
         return "tiempo_agotado"
 
-    # -- Pre-calcular posición del botón Confirmar ---------------------------
-    _confirm_rect = pygame.Rect(0, 0, 240, 50)
-    _confirm_rect.center = (center_x, 840)
+    # -- Layout dinámico anclado desde abajo ----------------------------------
+    _enun_lines_n  = len(_enunciado.split('\n')) if _enunciado else 0
+    _enun_bottom   = 143 + _enun_lines_n * 28 + 14 if _enun_lines_n else 143
+    _confirm_cy    = HEIGHT - 35
+    _field_cy      = _confirm_cy - 66     # confirm_half(25)+gap(12)+field_half(29)
+    _dot_y         = _field_cy   - 51     # field_half(29)+gap(12)+dot_r(10)
+    _calcula_y     = _dot_y      - 50     # dot_r(10)+gap(14)+calcula_half(26)
+    _progreso_y    = _calcula_y  - 58     # calcula_half(26)+gap(14)+progreso_half(18)
+    _track_h       = 60
+    _track_bottom  = _progreso_y - 34     # progreso_half(18)+gap(16)
+    _track_top     = _track_bottom - _track_h
+    _graph_bottom  = _track_top  - 10
+    _graph_h       = max(80, _graph_bottom - (_enun_bottom + 10))
+    _graph_top     = _enun_bottom + 10
+
+    _confirm_rect  = pygame.Rect(0, 0, 240, 50)
+    _confirm_rect.center = (center_x, _confirm_cy)
 
     # -- Suavizado de movimiento del tren ------------------------------------
     _train_x += (_train_x_target - _train_x) * TRAIN_EASE
@@ -359,41 +374,40 @@ def mostrar_train_sim(
 
     # -- Grafico RK (parte superior) -----------------------------------------
     font_small = pygame.font.SysFont("Courier New", 18)
-    graph_rect = pygame.Rect(80, 230, WIDTH - 160, 250)
+    graph_rect = pygame.Rect(80, _graph_top, WIDTH - 160, _graph_h)
     n_puntos_mostrar = _paso_actual + (1 if _feedback == "correcto" else 0)
     _draw_velocity_graph(screen, graph_rect, n_puntos_mostrar, font_small)
 
     # -- Zona del tren (parte inferior) --------------------------------------
-    track_rect = pygame.Rect(40, 500, WIDTH - 80, 100)
+    track_rect = pygame.Rect(40, _track_top, WIDTH - 80, _track_h)
     _draw_track_and_train(screen, track_rect, _train_x)
 
     # Etiqueta de progreso del tren
     km_surf = font_button.render(f"Progreso: {int(_train_x * 100)}%", True, YELLOW)
-    screen.blit(km_surf, km_surf.get_rect(center=(center_x, 620)))
+    screen.blit(km_surf, km_surf.get_rect(center=(center_x, _progreso_y)))
 
     # -- Paso actual ----------------------------------------------------------
     if _paso_actual < total_pasos:
         paso_txt  = _preguntas[_paso_actual]["pregunta"]
         paso_surf = font_title.render(f"Calcula:  {paso_txt}", True, WHITE)
-        screen.blit(paso_surf, paso_surf.get_rect(center=(center_x, 658)))
+        screen.blit(paso_surf, paso_surf.get_rect(center=(center_x, _calcula_y)))
 
     # -- Bolitas de progreso --------------------------------------------------
     dot_gap     = 44
     dot_start_x = center_x - (total_pasos * dot_gap) // 2 + dot_gap // 2
     for i in range(total_pasos):
         dx = dot_start_x + i * dot_gap
-        dy = 696
         if i < _paso_actual:
-            pygame.draw.circle(screen, GREEN, (dx, dy), 10)
-            pygame.draw.circle(screen, WHITE, (dx, dy), 10, 2)
+            pygame.draw.circle(screen, GREEN, (dx, _dot_y), 10)
+            pygame.draw.circle(screen, WHITE, (dx, _dot_y), 10, 2)
         elif i == _paso_actual:
-            pygame.draw.circle(screen, WHITE, (dx, dy), 10)
+            pygame.draw.circle(screen, WHITE, (dx, _dot_y), 10)
         else:
-            pygame.draw.circle(screen, LIGHT_GREY, (dx, dy), 8)
+            pygame.draw.circle(screen, LIGHT_GREY, (dx, _dot_y), 8)
 
     # -- Campo de texto -------------------------------------------------------
     field_rect = pygame.Rect(0, 0, 460, 58)
-    field_rect.center = (center_x, 756)
+    field_rect.center = (center_x, _field_cy)
 
     bg_col     = (18, 120, 50) if _feedback == "correcto" else PANEL
     border_col = GREEN if _feedback == "correcto" else ORANGE
