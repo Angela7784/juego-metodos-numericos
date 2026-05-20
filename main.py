@@ -5,6 +5,7 @@ import time
 from screens.menu              import mostrar_mapa
 from screens.select_metodo     import mostrar_select_metodo
 from screens.instructions      import mostrar_instrucciones
+from screens.repaso            import mostrar_repaso
 from screens.level_game        import mostrar_level_game, reset_level
 from screens.minigames.cables       import mostrar_cables,       reset_cables
 from screens.minigames.oscilloscope import mostrar_oscilloscope, reset_oscilloscope
@@ -28,7 +29,7 @@ game_state.ult_nivel_desbloqueado = level_manager.total_levels() - 1
 
 pygame.init()
 WIDTH, HEIGHT = 1280, 750
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
+screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN | pygame.SCALED)
 pygame.display.set_caption("Rescate Numerico en Metrorrey")
 
 background = pygame.image.load("assets/init_background.jpeg")
@@ -98,6 +99,7 @@ def main():
     current_screen   = "inicio"
     start_time       = None
     nivel_completado = None
+    repaso_destino   = "inicio"
     clock            = pygame.time.Clock()
     ctx              = {"game_state": game_state, "nivel_completado": None, "vida_ganada": False}
     transition       = ScreenTransition()
@@ -113,6 +115,9 @@ def main():
         all_events = pygame.event.get()
         for ev in all_events:
             if ev.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if ev.type == pygame.KEYDOWN and ev.key == pygame.K_ESCAPE:
                 pygame.quit()
                 sys.exit()
 
@@ -139,29 +144,51 @@ def main():
         if current_screen == "inicio":
             screen.blit(background, (0, 0))
 
-            btn_iniciar = pygame.Rect(0, 0, 200, 60)
-            btn_iniciar.center = (WIDTH // 2, HEIGHT // 2 + 250)
+            BTN_W, BTN_H = 260, 58
+            BTN_GAP      = 14
+            btn_repaso_y = HEIGHT - 36
+            btn_inst_y   = btn_repaso_y - BTN_H - BTN_GAP
+            btn_inic_y   = btn_inst_y   - BTN_H - BTN_GAP
+
+            btn_iniciar = pygame.Rect(0, 0, BTN_W, BTN_H)
+            btn_iniciar.center = (WIDTH // 2, btn_inic_y)
             color_i = (80, 190, 255) if btn_iniciar.collidepoint(mouse_pos) else BLUE_METRO
             pygame.draw.rect(screen, color_i, btn_iniciar, border_radius=12)
-            draw_text("INICIAR", font_button, WHITE, screen, WIDTH // 2, HEIGHT // 2 + 250)
+            draw_text("Iniciar", font_button, WHITE, screen, WIDTH // 2, btn_inic_y)
 
-            btn_inst = pygame.Rect(0, 0, 220, 50)
-            btn_inst.center = (WIDTH // 2, HEIGHT // 2 + 325)
+            btn_inst = pygame.Rect(0, 0, BTN_W, BTN_H)
+            btn_inst.center = (WIDTH // 2, btn_inst_y)
             color_inst = (60, 60, 60) if btn_inst.collidepoint(mouse_pos) else (40, 40, 40)
-            pygame.draw.rect(screen, color_inst, btn_inst, border_radius=10)
-            draw_text("Instrucciones", font_button, (180, 180, 180), screen, WIDTH // 2, HEIGHT // 2 + 325)
+            pygame.draw.rect(screen, color_inst, btn_inst, border_radius=12)
+            draw_text("Instrucciones", font_button, (180, 180, 180), screen, WIDTH // 2, btn_inst_y)
+
+            btn_repaso = pygame.Rect(0, 0, BTN_W, BTN_H)
+            btn_repaso.center = (WIDTH // 2, btn_repaso_y)
+            color_rep = (60, 60, 60) if btn_repaso.collidepoint(mouse_pos) else (40, 40, 40)
+            pygame.draw.rect(screen, color_rep, btn_repaso, border_radius=12)
+            draw_text("Repaso", font_button, (180, 180, 180), screen, WIDTH // 2, btn_repaso_y)
 
             if not busy and event.type == pygame.MOUSEBUTTONDOWN:
                 if btn_iniciar.collidepoint(mouse_pos):
                     transition.request("menu")
                 elif btn_inst.collidepoint(mouse_pos):
                     transition.request("instrucciones")
+                elif btn_repaso.collidepoint(mouse_pos):
+                    repaso_destino = "inicio"
+                    transition.request("repaso")
 
         # INSTRUCCIONES
         elif current_screen == "instrucciones":
             result = mostrar_instrucciones(screen, WIDTH, HEIGHT, font_title, font_button, event, mouse_pos)
             if not busy and result == "menu":
                 transition.request("menu")
+
+        # REPASO
+        elif current_screen == "repaso":
+            result = mostrar_repaso(screen, WIDTH, HEIGHT, font_title, font_button, event, mouse_pos)
+            if not busy and result == "volver":
+                transition.request(repaso_destino)
+                repaso_destino = "inicio"
 
         # MAPA
         elif current_screen == "menu":
@@ -200,6 +227,14 @@ def main():
                     if nivel and "problema_seleccionado" in nivel:
                         del nivel["problema_seleccionado"]
                     transition.request("game_over" if game_state.vidas <= 0 else "menu")
+                elif result == "ir_repaso":
+                    game_state.vidas -= 1
+                    SaveManager.guardar(game_state)
+                    if game_state.vidas <= 0:
+                        transition.request("game_over")
+                    else:
+                        repaso_destino = "select_metodo"
+                        transition.request("repaso")
 
         # CABLES
         elif current_screen == "cables":

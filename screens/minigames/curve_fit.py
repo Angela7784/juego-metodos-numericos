@@ -13,6 +13,7 @@ import math
 import random
 import re
 import time
+from core.math_fmt import fmt_math
 
 WHITE      = (255, 255, 255)
 DARK_GREY  = (18,  20,  28)
@@ -267,7 +268,7 @@ def mostrar_curve_fit(
         problemas = nivel.get("problemas", [])
         if problemas:
             problema   = nivel.get("problema_seleccionado") or random.choice(problemas)
-            _enunciado = problema.get("enunciado", "")
+            _enunciado = fmt_math(problema.get("enunciado", ""))
             _preguntas = problema.get("opciones", [])
         else:
             _enunciado = ""
@@ -285,8 +286,11 @@ def mostrar_curve_fit(
     # ── Pre-calcular posición del botón Confirmar ──────────────────────────
     _enun_lines_n   = len(_enunciado.split('\n')) if _enunciado else 0
     _pre_enun_bot   = 135 + _enun_lines_n * 26 + 14 if _enun_lines_n else 135
-    _pre_graph_bot  = _pre_enun_bot + 10 + 255
-    _pre_bar_bot    = _pre_graph_bot + 10 + 12 + 4
+    _pre_graph_top  = _pre_enun_bot + 10
+    _below_graph    = 26 + 80 + 55 + 30 + 38 + 25 + 22  # bar+calcula+dots+field+confirm+margen
+    _graph_h        = max(110, min(255, HEIGHT - _pre_graph_top - _below_graph))
+    _pre_graph_bot  = _pre_graph_top + _graph_h
+    _pre_bar_bot    = _pre_graph_bot + 26
     _pre_dot_y      = _pre_bar_bot + 80
     _pre_field_cy   = _pre_dot_y + 55
     _confirm_rect   = pygame.Rect(0, 0, 260, 50)
@@ -380,7 +384,7 @@ def mostrar_curve_fit(
     # ── Gráfico ────────────────────────────────────────────────────────────
     font_small = pygame.font.SysFont("Courier New", 18)
     graph_top  = enun_bottom + 10
-    graph_rect = pygame.Rect(80, graph_top, WIDTH - 160, 255)
+    graph_rect = pygame.Rect(80, graph_top, WIDTH - 160, _graph_h)
 
     if _feedback == "correcto":
         ratio = (_paso_actual + 1) / total_pasos

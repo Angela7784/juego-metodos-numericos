@@ -12,6 +12,7 @@ import math
 import random
 import re
 import time
+from core.math_fmt import fmt_math
 
 WHITE      = (255, 255, 255)
 DARK_GREY  = (22,  25,  30)
@@ -39,6 +40,32 @@ def _get_label_font(size: int):
         else:
             _label_font_cache[size] = pygame.font.SysFont(None, size)
     return _label_font_cache[size]
+
+
+def _make_label_surf(text: str, font, color, max_w: int):
+    """Renderiza texto en una o varias líneas si supera max_w."""
+    if font.size(text)[0] <= max_w:
+        return font.render(text, True, color)
+    words = text.split()
+    lines, cur = [], ""
+    for w in words:
+        test = (cur + " " + w).strip()
+        if font.size(test)[0] <= max_w:
+            cur = test
+        else:
+            if cur:
+                lines.append(cur)
+            cur = w
+    if cur:
+        lines.append(cur)
+    surfs   = [font.render(l, True, color) for l in lines]
+    line_h  = surfs[0].get_height()
+    total_h = line_h * len(surfs) + 3 * (len(surfs) - 1)
+    max_lw  = max(s.get_width() for s in surfs)
+    out     = pygame.Surface((max_lw, total_h), pygame.SRCALPHA)
+    for idx, s in enumerate(surfs):
+        out.blit(s, ((max_lw - s.get_width()) // 2, idx * (line_h + 3)))
+    return out
 
 
 # ── Estado del módulo ──────────────────────────────────────────────────────
@@ -101,46 +128,56 @@ def _wrap_text(text, font, max_width):
 
 # ── Dibujo de un semáforo individual ───────────────────────────────────────
 
-def _draw_semaforo(screen, cx, cy, estado, label_surf, font_button, parpadeo):
+def _draw_semaforo(screen, cx, cy, estado, label_surf, font_button, parpadeo, box_h=160):
     """
     estado: 'rojo' | 'verde' | 'activo'
     parpadeo: bool – si es el activo, hace blink ámbar
+    box_h: altura de la caja (se escala todo proporcionalmente)
     """
-    # Caja del semáforo
-    box_w, box_h = 80, 160
+    scale  = box_h / 160
+    box_w  = int(80  * scale)
+    lr     = int(22  * scale)   # radio luz
+    lo     = int(30  * scale)   # offset luz desde cy
+    sup_h  = int(20  * scale)   # altura soporte
+    sup_w  = max(4, int(10 * scale))
+    glow_r = int(35  * scale)
+
     box = pygame.Rect(cx - box_w // 2, cy - box_h // 2, box_w, box_h)
-    pygame.draw.rect(screen, (20, 22, 28), box, border_radius=10)
-    pygame.draw.rect(screen, LIGHT_GREY,   box, 2, border_radius=10)
+    pygame.draw.rect(screen, (20, 22, 28), box, border_radius=max(4, int(10 * scale)))
+    pygame.draw.rect(screen, LIGHT_GREY,   box, 2, border_radius=max(4, int(10 * scale)))
 
     # Soporte
-    pygame.draw.rect(screen, LIGHT_GREY, (cx - 5, cy + box_h // 2, 10, 20))
+    pygame.draw.rect(screen, LIGHT_GREY, (cx - sup_w // 2, cy + box_h // 2, sup_w, sup_h))
 
-    # Luz superior (roja cuando no resuelta, apagada cuando resuelta)
-    red_on = estado in ("rojo", "activo")
+    # Luz superior
+    red_on  = estado in ("rojo", "activo")
     red_col = RED if red_on else (60, 15, 15)
-    pygame.draw.circle(screen, red_col, (cx, cy - 30), 22)
+    pygame.draw.circle(screen, red_col, (cx, cy - lo), lr)
     if red_on:
-        glow = pygame.Surface((70, 70), pygame.SRCALPHA)
-        pygame.draw.circle(glow, (*RED, 40), (35, 35), 35)
-        screen.blit(glow, (cx - 35, cy - 65))
+        gs = glow_r * 2
+        glow = pygame.Surface((gs, gs), pygame.SRCALPHA)
+        pygame.draw.circle(glow, (*RED, 40), (glow_r, glow_r), glow_r)
+        screen.blit(glow, (cx - glow_r, cy - lo - glow_r))
 
-    # Luz inferior (verde cuando resuelta)
-    green_on = estado == "verde"
+    # Luz inferior
+    green_on  = estado == "verde"
     green_col = GREEN if green_on else (10, 50, 20)
-    pygame.draw.circle(screen, green_col, (cx, cy + 30), 22)
+    pygame.draw.circle(screen, green_col, (cx, cy + lo), lr)
     if green_on:
-        glow = pygame.Surface((70, 70), pygame.SRCALPHA)
-        pygame.draw.circle(glow, (*GREEN, 40), (35, 35), 35)
-        screen.blit(glow, (cx - 35, cy - 5))
+        gs = glow_r * 2
+        glow = pygame.Surface((gs, gs), pygame.SRCALPHA)
+        pygame.draw.circle(glow, (*GREEN, 40), (glow_r, glow_r), glow_r)
+        screen.blit(glow, (cx - glow_r, cy + lo - glow_r))
 
-    # Luz ámbar intermitente (activo)
+    # Luz ámbar (activo)
     if estado == "activo":
         now = pygame.time.get_ticks()
         if (now // 400) % 2 == 0:
-            pygame.draw.circle(screen, AMBER, (cx, cy), 16)
+            pygame.draw.circle(screen, AMBER, (cx, cy), max(8, int(16 * scale)))
 
     # Etiqueta debajo
-    screen.blit(label_surf, label_surf.get_rect(center=(cx, cy + box_h // 2 + 38)))
+    label_top = cy + box_h // 2 + sup_h + max(6, int(10 * scale))
+    screen.blit(label_surf, label_surf.get_rect(midtop=(cx, label_top)))
 
 
 # ── Pantalla principal ─────────────────────────────────────────────────────
@@ -174,7 +211,7 @@ def mostrar_semaforo(
         problemas = nivel.get("problemas", [])
         if problemas:
             problema   = nivel.get("problema_seleccionado") or random.choice(problemas)
-            _enunciado = problema.get("enunciado", "")
+            _enunciado = fmt_math(problema.get("enunciado", ""))
             _preguntas = problema.get("opciones", [])
         else:
             _enunciado = ""
@@ -256,10 +293,12 @@ def mostrar_semaforo(
         screen.blit(font_button.render(f"Vidas: {game_state.vidas}", True, WHITE),
                     (WIDTH - 200, 20))
 
-    # Timer HUD
-    timer_col = RED if remaining <= 10 else (YELLOW if remaining <= 30 else WHITE)
-    screen.blit(font_button.render(f"{remaining // 60:02}:{remaining % 60:02}", True, timer_col),
-                (WIDTH - 305, 55))
+    # Timer HUD (a la izquierda de los corazones)
+    timer_col  = RED if remaining <= 10 else (YELLOW if remaining <= 30 else WHITE)
+    timer_surf = font_title.render(f"{remaining // 60:02}:{remaining % 60:02}", True, timer_col)
+    hearts_left_x = WIDTH - 45 - (max(game_state.vidas, 1) - 1) * 38
+    timer_rect = timer_surf.get_rect(right=hearts_left_x - 18, centery=37)
+    screen.blit(timer_surf, timer_rect)
 
     # ── Título ─────────────────────────────────────────────────────────────
     title = font_title.render("Red de Señales", True, YELLOW)
@@ -280,27 +319,40 @@ def mostrar_semaforo(
         enun_bottom = 150 + panel_h
 
     # ── Semáforos ──────────────────────────────────────────────────────────
-    spacing   = min(160, (WIDTH - 200) // max(total_pasos, 1))
-    start_sem = center_x - (total_pasos - 1) * spacing // 2
-    sem_cy    = max(330, enun_bottom + 90)
+    # Escalar semáforo según cantidad de pasos para que todo quepa
+    sem_box_h   = 120 if total_pasos >= 5 else 160
+    sem_scale   = sem_box_h / 160
+    sup_h       = int(20 * sem_scale)
+    lbl_off     = max(6, int(10 * sem_scale))
+
+    spacing     = min(int(160 * sem_scale), (WIDTH - 200) // max(total_pasos, 1))
+    start_sem   = center_x - (total_pasos - 1) * spacing // 2
+    sem_cy      = max(int(280 * sem_scale) + 60, enun_bottom + sem_box_h // 2 + 20)
+
+    lbl_font_sz = 20 if total_pasos >= 5 else font_button.size("A")[1]
+    label_font  = _get_label_font(lbl_font_sz)
+    label_surfs = []
+    for i in range(total_pasos):
+        label_txt  = _preguntas[i]["pregunta"]
+        label_surfs.append(_make_label_surf(label_txt, label_font, CYAN, spacing - 8))
+
+    max_label_h = max((s.get_height() for s in label_surfs), default=24)
 
     for i in range(total_pasos):
         sx = start_sem + i * spacing
-        label_txt = _preguntas[i]["pregunta"]
-        label_surf = _get_label_font(font_button.size("A")[1]).render(label_txt, True, CYAN)
-
         if i in _resueltas:
             estado = "verde"
         elif i == _paso_actual:
             estado = "activo"
         else:
             estado = "rojo"
-
-        _draw_semaforo(screen, sx, sem_cy, estado, label_surf, font_button, parpadeo=(i == _paso_actual))
+        _draw_semaforo(screen, sx, sem_cy, estado, label_surfs[i], font_button,
+                       parpadeo=(i == _paso_actual), box_h=sem_box_h)
 
     # ── Variable actual ────────────────────────────────────────────────────
-    resuelve_y = max(545, sem_cy + 80 + 38 + 60)   # 60 px below labels
-    field_y    = max(620, resuelve_y + 80)
+    label_bottom = sem_cy + sem_box_h // 2 + sup_h + lbl_off + max_label_h
+    resuelve_y   = max(int(HEIGHT * 0.68), label_bottom + 20)
+    field_y      = max(int(HEIGHT * 0.78), resuelve_y + 62)
     if _paso_actual < total_pasos:
         var_txt  = _preguntas[_paso_actual]["pregunta"]
         var_surf = font_title.render(f"Resuelve:  {var_txt}", True, WHITE)
@@ -328,7 +380,7 @@ def mostrar_semaforo(
     if _feedback is None:
         lbl_confirm = font_button.render("Confirmar", True, WHITE)
         btn = pygame.Rect(0, 0, lbl_confirm.get_width() + 48, 52)
-        btn.center = (center_x, HEIGHT - 95)
+        btn.center = (center_x, field_rect.bottom + 40)
         bc = (50, 65, 80) if btn.collidepoint(mouse_pos) else PANEL
         pygame.draw.rect(screen, bc,   btn, border_radius=10)
         pygame.draw.rect(screen, CYAN, btn, 1, border_radius=10)
