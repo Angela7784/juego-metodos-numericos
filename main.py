@@ -27,7 +27,7 @@ SaveManager.cargar(game_state)
 game_state.ult_nivel_desbloqueado = level_manager.total_levels() - 1
 
 pygame.init()
-WIDTH, HEIGHT = 1200, 850
+WIDTH, HEIGHT = 1280, 750
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Rescate Numerico en Metrorrey")
 

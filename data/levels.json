@@ -283,7 +283,7 @@
           "correcto": "Diferencias Divididas",
           "incorrecto1": "Interpolación Lineal",
           "incorrecto2": "Newton - Raphson",
-          "incorrecto3": "Montante"
+          "incorrecto3": "Newton Hacia Atrás"
         }
       ],
       "problemas": [
@@ -375,8 +375,8 @@
       "seleccion_metodo": [
         {
           "correcto": "Lagrange",
-          "incorrecto1": "Gauss - Jordan",
-          "incorrecto2": "Jacobi",
+          "incorrecto1": "Secante",
+          "incorrecto2": "Bisectriz",
           "incorrecto3": "Interpolación Lineal"
         }
       ],
@@ -457,7 +457,7 @@
       "seleccion_metodo": [
         {
           "correcto": "Diferencias Divididas",
-          "incorrecto1": "Jacobi",
+          "incorrecto1": "Newton - Raphson",
           "incorrecto2": "Secante",
           "incorrecto3": "Interpolación Lineal"
         }
@@ -553,7 +553,7 @@
           "correcto": "Lagrange",
           "incorrecto1": "Interpolación Lineal",
           "incorrecto2": "Gráfico",
-          "incorrecto3": "Gauss - Jordan"
+          "incorrecto3": "Newton Hacia Atrás"
         }
       ],
       "problemas": [
@@ -634,8 +634,8 @@
     {
       "correcto": "Punto Fijo",
       "incorrecto1": "Bisectriz",
-      "incorrecto2": "Gráfico",
-      "incorrecto3": "Interpolación Lineal"
+      "incorrecto2": "Secante",
+      "incorrecto3": "Falsa Posición"
     }
   ],
   "problemas": [
@@ -822,8 +822,8 @@
         {
           "correcto": "Falsa Posición",
           "incorrecto1": "Lagrange",
-          "incorrecto2": "Montante",
-          "incorrecto3": "Cuadrática cúbica"
+          "incorrecto2": "Bisectriz",
+          "incorrecto3": "Punto Fijo"
         }
       ],
       "problemas": [
@@ -951,9 +951,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Secante",
-          "incorrecto1": "Newton - Cotes Cerradas",
-          "incorrecto2": "Euler hacia atrás",
-          "incorrecto3": "Eliminación Gaussiana"
+          "incorrecto1": "Bisectriz",
+          "incorrecto2": "Falsa Posición",
+          "incorrecto3": "Punto Fijo"
         }
       ],
       "problemas": [
@@ -1064,8 +1064,8 @@
     {
       "correcto": "Punto Fijo",
       "incorrecto1": "Diferencias Divididas",
-      "incorrecto2": "Montante",
-      "incorrecto3": "Jacobi"
+      "incorrecto2": "Bisectriz",
+      "incorrecto3": "Secante"
     }
   ],
   "problemas": [
@@ -1170,8 +1170,8 @@
     {
       "correcto": "Falsa Posición",
       "incorrecto1": "Bisectriz",
-      "incorrecto2": "Cúbica",
-      "incorrecto3": "Línea Recta"
+      "incorrecto2": "Punto Fijo",
+      "incorrecto3": "Secante"
     }
   ],
   "problemas": [
@@ -1275,9 +1275,9 @@
   "seleccion_metodo": [
     {
       "correcto": "Secante",
-      "incorrecto1": "Montante",
+      "incorrecto1": "Falsa Posición",
       "incorrecto2": "Bisectriz",
-      "incorrecto3": "Jacobi"
+      "incorrecto3": "Newton - Raphson"
     }
   ],
   "problemas": [
@@ -1381,9 +1381,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Montante",
-          "incorrecto1": "Integración",
-          "incorrecto2": "Lagrange",
-          "incorrecto3": "Punto Fijo"
+          "incorrecto1": "Jacobi",
+          "incorrecto2": "Gauss-Jordán",
+          "incorrecto3": "Eliminación Gaussiana"
         }
       ],
       "problemas": [
@@ -1475,9 +1475,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Gauss-Jordan",
-          "incorrecto1": "Diferencias Divididas",
-          "incorrecto2": "Regla de Simpson 3/8",
-          "incorrecto3": "Regla trapezoidal"
+          "incorrecto1": "Eliminación Gaussiana",
+          "incorrecto2": "Gauss-Seidel",
+          "incorrecto3": "Montante"
         }
       ],
       "problemas": [
@@ -1569,9 +1569,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Eliminación Gaussiana",
-          "incorrecto1": "Regla de 3/8 de Simpson",
-          "incorrecto2": "Línea Recta",
-          "incorrecto3": "Integración"
+          "incorrecto1": "Montante",
+          "incorrecto2": "Gauss-Jordán",
+          "incorrecto3": "Jacobi"
         }
       ],
       "problemas": [
@@ -1663,9 +1663,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Gauss-Seidel",
-          "incorrecto1": "Lagrange",
-          "incorrecto2": "Euler hacia adelante",
-          "incorrecto3": "Cuadrática"
+          "incorrecto1": "Gauss-Jordán",
+          "incorrecto2": "Montante",
+          "incorrecto3": "Eliminación Gaussiana"
         }
       ],
       "problemas": [
@@ -1756,9 +1756,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Jacobi",
-          "incorrecto1": "Interpolación lineal",
-          "incorrecto2": "Lagrange",
-          "incorrecto3": "Newton hacia adelante"
+          "incorrecto1": "Eliminación Gaussiana",
+          "incorrecto2": "Gauss-Seidel",
+          "incorrecto3": "Gauss - Jordan"
         }
       ],
       "problemas": [
@@ -1849,9 +1849,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Eliminación Gaussiana",
-          "incorrecto1": "Línea Recta",
-          "incorrecto2": "Cuadrática",
-          "incorrecto3": "Interpolación Lineal"
+          "incorrecto1": "Jacobi",
+          "incorrecto2": "Montante",
+          "incorrecto3": "Gauss-Jordán"
         }
       ],
       "problemas": [
@@ -1942,9 +1942,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Jacobi",
-          "incorrecto1": "Regla de 3/8 de Simpson",
-          "incorrecto2": "Lineal con función",
-          "incorrecto3": "Newton hacia atrás"
+          "incorrecto1": "Gauss-Jordán",
+          "incorrecto2": "Montante",
+          "incorrecto3": "Eliminación Gaussiana"
         }
       ],
       "problemas": [
@@ -2036,9 +2036,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Línea Recta",
-          "incorrecto1": "Jacobi",
-          "incorrecto2": "Montante",
-          "incorrecto3": "Interpolación Lineal"
+          "incorrecto1": "Cuadrática",
+          "incorrecto2": "Cúbica",
+          "incorrecto3": "Cuadrática con Función"
         }
       ],
       "problemas": [
@@ -2130,9 +2130,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Cuadrática",
-          "incorrecto1": "Eliminación Gaussiana",
-          "incorrecto2": "Gauss-Seidel",
-          "incorrecto3": "Gauss-Jordán"
+          "incorrecto1": "Línea Recta",
+          "incorrecto2": "Cúbica",
+          "incorrecto3": "Cuadrática con Función"
         }
       ],
       "problemas": [
@@ -2224,9 +2224,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Cúbica",
-          "incorrecto1": "Montante",
-          "incorrecto2": "Gauss-Jordán",
-          "incorrecto3": "Eliminación Gaussiana"
+          "incorrecto1": "Cuadrática con Función",
+          "incorrecto2": "Lineal con Función",
+          "incorrecto3": "Línea Recta"
         }
       ],
       "problemas": [
@@ -2316,10 +2316,10 @@
       "minijuego": "curvas",
       "seleccion_metodo": [
         {
-          "correcto": "Lineal con función",
-          "incorrecto1": "Jacobi",
-          "incorrecto2": "Gauss-Seidel",
-          "incorrecto3": "Gráfico"
+          "correcto": "Lineal con Función",
+          "incorrecto1": "Cuadrática con Función",
+          "incorrecto2": "Línea Recta",
+          "incorrecto3": "Cúbica"
         }
       ],
       "problemas": [
@@ -2409,10 +2409,10 @@
       "minijuego": "curvas",
       "seleccion_metodo": [
         {
-          "correcto": "Cuadrática con función",
-          "incorrecto1": "Bisectriz",
-          "incorrecto2": "Montante",
-          "incorrecto3": "Newton hacia atrás"
+          "correcto": "Cuadrática con Función",
+          "incorrecto1": "Línea Recta",
+          "incorrecto2": "Cúbica",
+          "incorrecto3": "Lineal con Función"
         }
       ],
       "problemas": [
@@ -2504,9 +2504,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Cuadrática",
-          "incorrecto1": "Eliminación Gaussiana",
-          "incorrecto2": "Lineal con función",
-          "incorrecto3": "Cuadrática con función"
+          "incorrecto1": "Cúbica con Función",
+          "incorrecto2": "Lineal con Función",
+          "incorrecto3": "Cuadrática con Función"
         }
       ],
       "problemas": [
@@ -2598,9 +2598,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Regla Trapezoidal",
-          "incorrecto1": "Interpolación Lineal",
-          "incorrecto2": "Jacobi",
-          "incorrecto3": "Lagrange"
+          "incorrecto1": "Regla de 1/3 Simpson",
+          "incorrecto2": "Regla de 3/8 Simpson",
+          "incorrecto3": "Newton - Cotes Cerradas"
         }
       ],
       "problemas": [
@@ -2692,9 +2692,9 @@
       "seleccion_metodo": [
         {
           "correcto": "Regla de 1/3 Simpson",
-          "incorrecto1": "Bisectriz",
-          "incorrecto2": "Secante",
-          "incorrecto3": "Punto Fijo"
+          "incorrecto1": "Regla Trapezoidal",
+          "incorrecto2": "Regla de 3/8 Simpson",
+          "incorrecto3": "Newton - Cotes Abiertas"
         }
       ],
       "problemas": [
@@ -2788,7 +2788,7 @@
           "correcto": "Regla de 3/8 Simpson",
           "incorrecto1": "Montante",
           "incorrecto2": "Newton hacia atrás",
-          "incorrecto3": "Gauss-Jordán"
+          "incorrecto3": "Newton - Cotes Abiertas"
         }
       ],
       "problemas": [
