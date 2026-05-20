@@ -62,8 +62,9 @@ def _nombre_pdf(filename: str) -> str:
 
 
 def _abrir_pdf(path: str) -> None:
-    """Abre el PDF con el visor predeterminado del sistema."""
+    """Minimiza el juego y abre el PDF; el usuario vuelve desde el Dock."""
     try:
+        pygame.display.iconify()
         subprocess.Popen(["open", path])
     except Exception:
         pass
@@ -101,9 +102,9 @@ def mostrar_repaso(screen, WIDTH, HEIGHT, font_title, font_button, event, mouse_
     screen.blit(overlay, (0, 0))
 
     # ── Título ─────────────────────────────────────────────────────────────
-    font_small   = pygame.font.SysFont("Arial", 20)
-    font_header  = pygame.font.SysFont("Arial", 22, bold=True)
-    font_pdf     = pygame.font.SysFont("Arial", 19)
+    font_small   = pygame.font.SysFont("Arial", 16)
+    font_header  = pygame.font.SysFont("Arial", 16, bold=True)
+    font_pdf     = pygame.font.SysFont("Arial", 14)
 
     title_surf = font_title.render("Repaso", True, YELLOW)
     screen.blit(title_surf, title_surf.get_rect(center=(WIDTH // 2, 46)))
@@ -128,37 +129,38 @@ def mostrar_repaso(screen, WIDTH, HEIGHT, font_title, font_button, event, mouse_
             archivos = pdfs.get(carpeta, [])
 
             # Encabezado de categoría
-            hdr_rect = pygame.Rect(cx, cy, col_w, 34)
-            pygame.draw.rect(screen, (30, 35, 50), hdr_rect, border_radius=6)
-            pygame.draw.rect(screen, color, hdr_rect, 2, border_radius=6)
+            hdr_rect = pygame.Rect(cx, cy, col_w, 26)
+            pygame.draw.rect(screen, (30, 35, 50), hdr_rect, border_radius=5)
+            pygame.draw.rect(screen, color, hdr_rect, 2, border_radius=5)
             hdr_surf = font_header.render(nombre, True, color)
-            screen.blit(hdr_surf, hdr_surf.get_rect(midleft=(cx + 10, cy + 17)))
-            cy += 40
+            screen.blit(hdr_surf, hdr_surf.get_rect(midleft=(cx + 8, cy + 13)))
+            cy += 31
 
             # Botones de PDF
             for pdf_path in archivos:
                 nombre_archivo = _nombre_pdf(os.path.basename(pdf_path))
-                btn = pygame.Rect(cx + 8, cy, col_w - 8, 30)
+                btn = pygame.Rect(cx + 6, cy, col_w - 6, 23)
 
                 hovering = btn.collidepoint(mouse_pos)
                 bg = HOVER_COL if hovering else PANEL
-                pygame.draw.rect(screen, bg, btn, border_radius=5)
+                pygame.draw.rect(screen, bg, btn, border_radius=4)
 
                 lbl = font_pdf.render(f"  {nombre_archivo}", True, WHITE if hovering else LIGHT_GREY)
-                screen.blit(lbl, lbl.get_rect(midleft=(btn.left + 6, btn.centery)))
+                screen.blit(lbl, lbl.get_rect(midleft=(btn.left + 5, btn.centery)))
 
                 btn_rects.append((btn, pdf_path))
-                cy += 34
+                cy += 26
 
-            cy += 12   # espacio entre categorías
+            cy += 8   # espacio entre categorías
 
     # ── Botón Volver ───────────────────────────────────────────────────────
-    btn_back = pygame.Rect(0, 0, 200, 52)
-    btn_back.center = (WIDTH // 2, HEIGHT - 46)
+    btn_back = pygame.Rect(0, 0, 160, 38)
+    btn_back.bottomright = (WIDTH - 16, HEIGHT - 12)
     bc = (50, 55, 75) if btn_back.collidepoint(mouse_pos) else (35, 38, 55)
-    pygame.draw.rect(screen, bc,   btn_back, border_radius=12)
-    pygame.draw.rect(screen, CYAN, btn_back, 2, border_radius=12)
-    lbl_back = font_button.render("< Volver", True, WHITE)
+    pygame.draw.rect(screen, bc,   btn_back, border_radius=8)
+    pygame.draw.rect(screen, CYAN, btn_back, 2, border_radius=8)
+    font_back = pygame.font.SysFont("Arial", 18, bold=True)
+    lbl_back = font_back.render("< Volver", True, WHITE)
     screen.blit(lbl_back, lbl_back.get_rect(center=btn_back.center))
 
     # ── Eventos ────────────────────────────────────────────────────────────
