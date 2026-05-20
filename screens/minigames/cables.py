@@ -18,6 +18,7 @@ import pygame
 import random
 import math
 import time
+from core.math_fmt import fmt_math
 
 # ── Colores ────────────────────────────────────────────────────────────────
 WHITE      = (255, 255, 255)
@@ -168,7 +169,7 @@ def mostrar_cables(
         problemas = nivel.get("problemas", [])
         if problemas:
             problema   = nivel.get("problema_seleccionado") or random.choice(problemas)
-            _enunciado = problema.get("enunciado", "")
+            _enunciado = fmt_math(problema.get("enunciado", ""))
             _preguntas = problema.get("opciones", [])
         else:
             _enunciado = ""

@@ -12,6 +12,7 @@ import math
 import random
 import re
 import time
+from core.math_fmt import fmt_math
 
 WHITE      = (255, 255, 255)
 DARK_GREY  = (22,  25,  30)
@@ -39,6 +40,32 @@ def _get_label_font(size: int):
         else:
             _label_font_cache[size] = pygame.font.SysFont(None, size)
     return _label_font_cache[size]
+
+
+def _make_label_surf(text: str, font, color, max_w: int):
+    """Renderiza texto en una o varias líneas si supera max_w."""
+    if font.size(text)[0] <= max_w:
+        return font.render(text, True, color)
+    words = text.split()
+    lines, cur = [], ""
+    for w in words:
+        test = (cur + " " + w).strip()
+        if font.size(test)[0] <= max_w:
+            cur = test
+        else:
+            if cur:
+                lines.append(cur)
+            cur = w
+    if cur:
+        lines.append(cur)
+    surfs   = [font.render(l, True, color) for l in lines]
+    line_h  = surfs[0].get_height()
+    total_h = line_h * len(surfs) + 3 * (len(surfs) - 1)
+    max_lw  = max(s.get_width() for s in surfs)
+    out     = pygame.Surface((max_lw, total_h), pygame.SRCALPHA)
+    for idx, s in enumerate(surfs):
+        out.blit(s, ((max_lw - s.get_width()) // 2, idx * (line_h + 3)))
+    return out
 
 
 # ── Estado del módulo ──────────────────────────────────────────────────────
@@ -139,8 +166,8 @@ def _draw_semaforo(screen, cx, cy, estado, label_surf, font_button, parpadeo):
         if (now // 400) % 2 == 0:
             pygame.draw.circle(screen, AMBER, (cx, cy), 16)
 
-    # Etiqueta debajo
-    screen.blit(label_surf, label_surf.get_rect(center=(cx, cy + box_h // 2 + 38)))
+    # Etiqueta debajo (anclada por el tope para que no tape el soporte)
+    screen.blit(label_surf, label_surf.get_rect(midtop=(cx, cy + box_h // 2 + 24)))
 
 
 # ── Pantalla principal ─────────────────────────────────────────────────────
@@ -174,7 +201,7 @@ def mostrar_semaforo(
         problemas = nivel.get("problemas", [])
         if problemas:
             problema   = nivel.get("problema_seleccionado") or random.choice(problemas)
-            _enunciado = problema.get("enunciado", "")
+            _enunciado = fmt_math(problema.get("enunciado", ""))
             _preguntas = problema.get("opciones", [])
         else:
             _enunciado = ""
@@ -256,10 +283,12 @@ def mostrar_semaforo(
         screen.blit(font_button.render(f"Vidas: {game_state.vidas}", True, WHITE),
                     (WIDTH - 200, 20))
 
-    # Timer HUD
-    timer_col = RED if remaining <= 10 else (YELLOW if remaining <= 30 else WHITE)
-    screen.blit(font_button.render(f"{remaining // 60:02}:{remaining % 60:02}", True, timer_col),
-                (WIDTH - 305, 55))
+    # Timer HUD (a la izquierda de los corazones)
+    timer_col  = RED if remaining <= 10 else (YELLOW if remaining <= 30 else WHITE)
+    timer_surf = font_title.render(f"{remaining // 60:02}:{remaining % 60:02}", True, timer_col)
+    hearts_left_x = WIDTH - 45 - (max(game_state.vidas, 1) - 1) * 38
+    timer_rect = timer_surf.get_rect(right=hearts_left_x - 18, centery=37)
+    screen.blit(timer_surf, timer_rect)
 
     # ── Título ─────────────────────────────────────────────────────────────
     title = font_title.render("Red de Señales", True, YELLOW)
@@ -284,22 +313,27 @@ def mostrar_semaforo(
     start_sem = center_x - (total_pasos - 1) * spacing // 2
     sem_cy    = max(330, enun_bottom + 90)
 
+    label_font  = _get_label_font(font_button.size("A")[1])
+    label_surfs = []
+    for i in range(total_pasos):
+        label_txt  = _preguntas[i]["pregunta"]
+        label_surfs.append(_make_label_surf(label_txt, label_font, CYAN, spacing - 10))
+
+    max_label_h = max((s.get_height() for s in label_surfs), default=30)
+
     for i in range(total_pasos):
         sx = start_sem + i * spacing
-        label_txt = _preguntas[i]["pregunta"]
-        label_surf = _get_label_font(font_button.size("A")[1]).render(label_txt, True, CYAN)
-
         if i in _resueltas:
             estado = "verde"
         elif i == _paso_actual:
             estado = "activo"
         else:
             estado = "rojo"
-
-        _draw_semaforo(screen, sx, sem_cy, estado, label_surf, font_button, parpadeo=(i == _paso_actual))
+        _draw_semaforo(screen, sx, sem_cy, estado, label_surfs[i], font_button, parpadeo=(i == _paso_actual))
 
     # ── Variable actual ────────────────────────────────────────────────────
-    resuelve_y = max(545, sem_cy + 80 + 38 + 60)   # 60 px below labels
+    # support bottom = sem_cy + 100, label starts at +24, so label bottom = sem_cy + 124 + max_label_h
+    resuelve_y = max(545, sem_cy + 124 + max_label_h + 28)
     field_y    = max(620, resuelve_y + 80)
     if _paso_actual < total_pasos:
         var_txt  = _preguntas[_paso_actual]["pregunta"]
