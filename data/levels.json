@@ -622,182 +622,194 @@
         }
       ]
     },
+{
+  "id": 7,
+  "linea": "1",
+  "estacion": "Simón Bolívar",
+  "tipo": "semaforo",
+  "puntos": 1000,
+  "minijuego": "semaforo",
+  "tabla_img": "assets/tablas/tabla_simonBolivar.png",
+  "seleccion_metodo": [
     {
-      "id": 7,
-      "linea": "1",
-      "estacion": "Simón Bolívar",
-      "tipo": "semaforo",
-      "puntos": 1000,
-      "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_simonBolivar.png",
-      "seleccion_metodo": [
+      "correcto": "Punto Fijo",
+      "incorrecto1": "Bisectriz",
+      "incorrecto2": "Gráfico",
+      "incorrecto3": "Interpolación Lineal"
+    }
+  ],
+  "problemas": [
+    {
+      "enunciado": "f(x) = e^x - 2x - 4 = 0  [x0 = 0]\nCompleta:  gx = log( ___ ); Selecciona el inciso correcto\nA) (e^x-4)/2     B) 2*x + 4\nC) e^x - 4       D) sqrt(2*x+4)",
+      "opciones": [
         {
-          "correcto": "Punto Fijo",
-          "incorrecto1": "Bisectriz",
-          "incorrecto2": "Gráfico",
-          "incorrecto3": "Interpolación Lineal"
-        }
-      ],
-      "problemas": [
-        {
-          "enunciado": "f(x) = 3x² + 2x - 1 = 0\nx0 = 0",
-          "opciones": [
-            {
-              "pregunta": "x1",
-              "respuesta": "0.5"
-            },
-            {
-              "pregunta": "x2",
-              "respuesta": "0.285714286"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "0.35"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000009293"
-            }
-          ]
+          "pregunta": "Inciso correcto ",
+          "respuesta": "B"
         },
         {
-          "enunciado": "f(x) = 2x² - 5x + 2 = 0\nx0 = 0",
-          "opciones": [
-            {
-              "pregunta": "x1",
-              "respuesta": "0.4"
-            },
-            {
-              "pregunta": "x2",
-              "respuesta": "0.464"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "0.486120"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000005"
-            }
-          ]
+          "pregunta": "x1",
+          "respuesta": "1.3862943611"
         },
         {
-          "enunciado": "f(x) = x² - 2x - 3 = 0\nx0 = 1",
-          "opciones": [
-            {
-              "pregunta": "x1",
-              "respuesta": "2.236068"
-            },
-            {
-              "pregunta": "x2",
-              "respuesta": "2.729759"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "2.909118"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000009"
-            }
-          ]
+          "pregunta": "x2",
+          "respuesta": "1.9128833953"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "2.0574217240"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.0000076491"
         }
       ]
     },
     {
-      "id": 8,
-      "linea": "1",
-      "estacion": "Hospital",
-      "tipo": "semaforo",
-      "puntos": 1000,
-      "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_hospital.png",
-      "seleccion_metodo": [
+      "enunciado": "f(x) = x^2 + sin(x) - 5 = 0  [x0 = 0]\nCompleta:  gx = sqrt( ___ ); Selecciona el inciso correcto\nA) 5 - sin(x)     B) 5 + sin(x)\nC) (5-sin(x))/x   D) 5 - pow(x,2)",
+      "opciones": [
         {
-          "correcto": "Newton-Raphson",
-          "incorrecto1": "Bisectriz",
-          "incorrecto2": "Lagrange",
-          "incorrecto3": "Diferencias Divididas"
-        }
-      ],
-      "problemas": [
-        {
-          "enunciado": "f(x) = 0.6x² + x - 4\nx0 = 1",
-          "opciones": [
-            {
-              "pregunta": "x1",
-              "respuesta": "2.090909091"
-            },
-            {
-              "pregunta": "x2",
-              "respuesta": "1.887423457"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "1.879814103"
-            },
-            {
-              "pregunta": "x4",
-              "respuesta": "1.879803433"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000000000"
-            }
-          ]
+          "pregunta": "Inciso correcto ",
+          "respuesta": "A"
         },
         {
-          "enunciado": "f(x) = 2x² - 9x + 4\nx0 = 0",
-          "opciones": [
-            {
-              "pregunta": "x1",
-              "respuesta": "0.444444444"
-            },
-            {
-              "pregunta": "x2",
-              "respuesta": "0.499145299"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "0.499999791"
-            },
-            {
-              "pregunta": "x4",
-              "respuesta": "0.5"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000000209"
-            }
-          ]
+          "pregunta": "x1",
+          "respuesta": "2.2360679775"
         },
         {
-          "enunciado": "f(x) = x³ + 3x² + 8x - 18\nx0 = 1",
-          "opciones": [
-            {
-              "pregunta": "x1",
-              "respuesta": "1.352941176"
-            },
-            {
-              "pregunta": "x2",
-              "respuesta": "1.316318938"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "1.315872498"
-            },
-            {
-              "pregunta": "x4",
-              "respuesta": "1.315872432"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000000066"
-            }
-          ]
+          "pregunta": "x2",
+          "respuesta": "2.0225485342"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "2.0249238083"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.0000030129"
         }
       ]
     },
+    {
+      "enunciado": "f(x) = x - 0.5*cos(x) - 1 = 0  [x0 = 1.5]\nCompleta:  gx = ___ ; Selecciona el inciso correcto\nA) 0.5*cos(x) - 1   B) acos(2*x-2)\nC) 0.5*cos(x) + 1   D) (1+0.5*cos(x))/x",
+      "opciones": [
+        {
+          "pregunta": "Inciso correcto ",
+          "respuesta": "C"
+        },
+        {
+          "pregunta": "x1",
+          "respuesta": "1.0353686008"
+        },
+        {
+          "pregunta": "x2",
+          "respuesta": "1.2551044760"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "1.1553554109"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.0000098975"
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": 8,
+  "linea": "1",
+  "estacion": "Hospital",
+  "tipo": "semaforo",
+  "puntos": 1000,
+  "minijuego": "semaforo",
+  "tabla_img": "assets/tablas/tabla_hospital.png",
+  "seleccion_metodo": [
+    {
+      "correcto": "Newton-Raphson",
+      "incorrecto1": "Bisectriz",
+      "incorrecto2": "Lagrange",
+      "incorrecto3": "Diferencias Divididas"
+    }
+  ],
+  "problemas": [
+    {
+      "enunciado": "f(x) = e^x + x - 4 = 0  [x0 = 1]",
+      "opciones": [
+        {
+          "pregunta": "x1",
+          "respuesta": "1.0757656855"
+        },
+        {
+          "pregunta": "x2",
+          "respuesta": "1.0737304832"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "1.0737289376"
+        },
+        {
+          "pregunta": "x4",
+          "respuesta": "1.0737289376"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.000000000"
+        }
+      ]
+    },
+    {
+      "enunciado": "f(x) = sin(x) + x - 1 = 0  [x0 = 0]",
+      "opciones": [
+        {
+          "pregunta": "x1",
+          "respuesta": "0.5000000000"
+        },
+        {
+          "pregunta": "x2",
+          "respuesta": "0.5109579530"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "0.5109734294"
+        },
+        {
+          "pregunta": "x4",
+          "respuesta": "0.5109734294"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.000000000"
+        }
+      ]
+    },
+    {
+      "enunciado": "f(x) = Ln(x) + x^2 - 3 = 0  [x0 = 1]",
+      "opciones": [
+        {
+          "pregunta": "x1",
+          "respuesta": "1.6666666667"
+        },
+        {
+          "pregunta": "x2",
+          "respuesta": "1.5932929205"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "1.5921432155"
+        },
+        {
+          "pregunta": "x4",
+          "respuesta": "1.5921429371"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.000000278"
+        }
+      ]
+    }
+  ]
+},  
     {
       "id": 9,
       "linea": "1",
@@ -816,85 +828,113 @@
       ],
       "problemas": [
         {
-          "enunciado": "f(x) = x² - 4x - 5\na = 4,    b = 6",
+          "enunciado": "f(x) = x^3 - e^x = 0\na y b son los enteros consecutivos en el rango [0, 3] donde f(x) cambia de signo",
           "opciones": [
             {
+              "pregunta": "a",
+              "respuesta": "1"
+            },
+            {
+              "pregunta": "b",
+              "respuesta": "2"
+            },
+            {
               "pregunta": "x1",
-              "respuesta": "4.833333333"
+              "respuesta": "1.7377051553"
             },
             {
               "pregunta": "x2",
-              "respuesta": "4.975609756"
+              "respuesta": "1.8470950499"
             },
             {
               "pregunta": "x3",
-              "respuesta": "4.996503497"
+              "respuesta": "1.8563863957"
             },
             {
               "pregunta": "x4",
-              "respuesta": "4.99950025"
+              "respuesta": "1.8571211733"
             },
             {
               "pregunta": "x5",
-              "respuesta": "4.999928602"
+              "respuesta": "1.8571789347"
             },
             {
               "pregunta": "error",
-              "respuesta": "0.000061198"
+              "respuesta": "0.0000577614"
             }
           ]
         },
         {
-          "enunciado": "f(x) = x² - 5\na = 2,    b = 3",
+          "enunciado": "f(x) = e^x - 3x - 8 = 0\na y b son los enteros consecutivos en el rango [0, 5] donde f(x) cambia de signo",
           "opciones": [
             {
+              "pregunta": "a",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "b",
+              "respuesta": "3"
+            },
+            {
               "pregunta": "x1",
-              "respuesta": "2.2"
+              "respuesta": "2.6817879621"
             },
             {
               "pregunta": "x2",
-              "respuesta": "2.230769231"
+              "respuesta": "2.7827613425"
             },
             {
               "pregunta": "x3",
-              "respuesta": "2.235294118"
+              "respuesta": "2.7950302468"
             },
             {
               "pregunta": "x4",
-              "respuesta": "2.235955056"
+              "respuesta": "2.7964791857"
+            },
+            {
+              "pregunta": "x5",
+              "respuesta": "2.7966497150"
             },
             {
               "pregunta": "error",
-              "respuesta": "0.000096446"
+              "respuesta": "0.0001705293"
             }
           ]
         },
         {
-          "enunciado": "f(x) = x² - x - 1\na = 1,    b = 2",
+          "enunciado": "f(x) = Ln(x) + x^2 - 6 = 0\na y b son los enteros consecutivos en el rango [1, 5] donde f(x) cambia de signo",
           "opciones": [
             {
+              "pregunta": "a",
+              "respuesta": "2"
+            },
+            {
+              "pregunta": "b",
+              "respuesta": "3"
+            },
+            {
               "pregunta": "x1",
-              "respuesta": "1.5"
+              "respuesta": "2.2417651013"
             },
             {
               "pregunta": "x2",
-              "respuesta": "1.6"
+              "respuesta": "2.2714887687"
             },
             {
               "pregunta": "x3",
-              "respuesta": "1.615384615"
+              "respuesta": "2.2750094028"
             },
             {
               "pregunta": "x4",
-              "respuesta": "1.617647059"
+              "respuesta": "2.2754245009"
             },
             {
               "pregunta": "x5",
-              "respuesta": "1.617977528"
+              "respuesta": "2.2754734163"
             },
             {
               "pregunta": "error",
-              "respuesta": "0.000048223"
+              "respuesta": "0.0000489154"
             }
           ]
         }
@@ -918,372 +958,418 @@
       ],
       "problemas": [
         {
-          "enunciado": "f(x) = 3x² - 5x - 2\nx0 = -1,   x1 = 0",
+          "enunciado": "f(x) = cos(x) - x*e^x\nx0 = 0,   x1 = 1",
           "opciones": [
             {
               "pregunta": "x2",
-              "respuesta": "-0.25"
+              "respuesta": "0.314680144"
             },
             {
               "pregunta": "x3",
-              "respuesta": "-0.347826087"
+              "respuesta": "0.446727532"
             },
             {
               "pregunta": "x4",
-              "respuesta": "-0.3328"
+              "respuesta": "0.531705784"
             },
             {
               "pregunta": "x5",
-              "respuesta": "-0.33333004"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000003294"
-            }
-          ]
-        },
-        {
-          "enunciado": "f(x) = x² - 3x + 1\nx0 = 0,   x1 = 1",
-          "opciones": [
-            {
-              "pregunta": "x2",
-              "respuesta": "0.5"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "0.333333333"
-            },
-            {
-              "pregunta": "x4",
-              "respuesta": "0.384615385"
-            },
-            {
-              "pregunta": "x5",
-              "respuesta": "0.382022472"
+              "respuesta": "0.517054483"
             },
             {
               "pregunta": "x6",
-              "respuesta": "0.381965944"
+              "respuesta": "0.518020138"
             },
             {
               "pregunta": "error",
-              "respuesta": "0.000056528"
+              "respuesta": "0.000965655"
             }
           ]
         },
+        [
+          {
+            "enunciado": "f(x) = ln(x² + 1) - x + 1\nx0 = 1,   x1 = 2",
+            "opciones": [
+              {
+                "pregunta": "x2",
+                "respuesta": "9.278255562"
+              },
+              {
+                "pregunta": "x3",
+                "respuesta": "2.999719460"
+              },
+              {
+                "pregunta": "x4",
+                "respuesta": "2.449174577"
+              },
+              {
+                "pregunta": "x5",
+                "respuesta": "3.860166297"
+              },
+              {
+                "pregunta": "x6",
+                "respuesta": "3.637042533"
+              },
+              {
+                "pregunta": "x7",
+                "respuesta": "3.589718428"
+              },
+              {
+                "pregunta": "x8",
+                "respuesta": "3.590580459"
+              },
+              {
+                "pregunta": "error",
+                "respuesta": "0.000862031"
+              }
+            ]
+          },
+          {
+            "enunciado": "f(x) = arctan(x) - e^(-x)\nx0 = 0,   x1 = 1",
+            "opciones": [
+              {
+                "pregunta": "x2",
+                "respuesta": "0.705473616"
+              },
+              {
+                "pregunta": "x3",
+                "respuesta": "0.591242398"
+              },
+              {
+                "pregunta": "x4",
+                "respuesta": "0.606346294"
+              },
+              {
+                "pregunta": "x5",
+                "respuesta": "0.606628574"
+              },
+              {
+                "pregunta": "error",
+                "respuesta": "0.000282280"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+   {
+  "id": 11,
+  "linea": "1",
+  "estacion": "Cuauhtémoc",
+  "tipo": "semaforo",
+  "puntos": 1000,
+  "minijuego": "semaforo",
+  "tabla_img": "assets/tablas/tabla_cuauhtemoc.png",
+  "seleccion_metodo": [
+    {
+      "correcto": "Punto Fijo",
+      "incorrecto1": "Diferencias Divididas",
+      "incorrecto2": "Montante",
+      "incorrecto3": "Jacobi"
+    }
+  ],
+  "problemas": [
+    {
+      "enunciado": "f(x) = x^2 - 12x + 4 = 0  [x0 = 0]\nCompleta: g(x) = ___ ; Selecciona el inciso correcto\nA) (pow(x,2)+4)/12   B) 12*x - 4\nC) (pow(x,2)-4)/12   D) pow(x,2) + 4",
+      "opciones": [
         {
-          "enunciado": "f(x) = x³ + x² - 4x - 3\nx0 = 1,   x1 = 2",
-          "opciones": [
-            {
-              "pregunta": "x2",
-              "respuesta": "1.833333333"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "1.907928389"
-            },
-            {
-              "pregunta": "x4",
-              "respuesta": "1.91244964"
-            },
-            {
-              "pregunta": "x5",
-              "respuesta": "1.912228586"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000221054"
-            }
-          ]
+          "pregunta": "Inciso correcto ",
+          "respuesta": "A"
+        },
+        {
+          "pregunta": "x1",
+          "respuesta": "0.3333333333"
+        },
+        {
+          "pregunta": "x2",
+          "respuesta": "0.3425925926"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "0.3431140832"
+        },
+        {
+          "pregunta": "x4",
+          "respuesta": "0.3431439401"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.0000298569"
         }
       ]
     },
     {
-      "id": 11,
-      "linea": "1",
-      "estacion": "Cuauhtémoc",
-      "tipo": "semaforo",
-      "puntos": 1000,
-      "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_cuauhtemoc.png",
-      "seleccion_metodo": [
+      "enunciado": "f(x) = 2x^2 + 9x + 3 = 0  [x0 = 0]\nCompleta: g(x) = ___ ; Selecciona el inciso correcto\nA) (-2*pow(x,2)+3)/9 B) (-2*pow(x,2)-3)/9\nC) (2*pow(x,2)+3)/9  D) -9*x - 3",
+      "opciones": [
         {
-          "correcto": "Punto Fijo",
-          "incorrecto1": "Diferencias Divididas",
-          "incorrecto2": "Montante",
-          "incorrecto3": "Jacobi"
-        }
-      ],
-      "problemas": [
-        {
-          "enunciado": "f(x) = x² - 12x + 4 = 0\nx0 = 0",
-          "opciones": [
-            {
-              "pregunta": "x1",
-              "respuesta": "0.333333333"
-            },
-            {
-              "pregunta": "x2",
-              "respuesta": "0.342592593"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "0.343110828"
-            },
-            {
-              "pregunta": "raiz",
-              "respuesta": "0.343140578"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000001710"
-            }
-          ]
+          "pregunta": "Inciso correcto ",
+          "respuesta": "B"
         },
         {
-          "enunciado": "f(x) = 2x² + 9x + 3 = 0\nx0 = 0",
-          "opciones": [
-            {
-              "pregunta": "x1",
-              "respuesta": "-0.333333333"
-            },
-            {
-              "pregunta": "x2",
-              "respuesta": "-0.358024691"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "-0.361827163"
-            },
-            {
-              "pregunta": "raiz",
-              "respuesta": "-0.362554362"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000000002545"
-            }
-          ]
+          "pregunta": "x1",
+          "respuesta": "-0.3333333333"
         },
         {
-          "enunciado": "f(x) = 2x² - 11x + 3 = 0\nx0 = 0",
-          "opciones": [
-            {
-              "pregunta": "x1",
-              "respuesta": "0.272727273"
-            },
-            {
-              "pregunta": "x2",
-              "respuesta": "0.286240695"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "0.287144951"
-            },
-            {
-              "pregunta": "raiz",
-              "respuesta": "0.287210029"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.0000004112"
-            }
-          ]
+          "pregunta": "x2",
+          "respuesta": "-0.3580246914"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "-0.3618052170"
+        },
+        {
+          "pregunta": "x4",
+          "respuesta": "-0.3624225301"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.0006173131"
         }
       ]
     },
     {
-      "id": 12,
-      "linea": "1",
-      "estacion": "Del Golfo",
-      "tipo": "semaforo",
-      "puntos": 1000,
-      "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_delGolfo.png",
-      "seleccion_metodo": [
+      "enunciado": "f(x) = 2x^2 - 11x + 3 = 0  [x0 = 0]\nCompleta: g(x) = ___ ; Selecciona el inciso correcto\nA) (2*pow(x,2)+3)/11 B) (11*x-3)/2\nC) (2*pow(x,2)-3)/11 D) 2*pow(x,2) + 3",
+      "opciones": [
         {
-          "correcto": "Falsa Posición",
-          "incorrecto1": "Bisectriz",
-          "incorrecto2": "Cúbica",
-          "incorrecto3": "Línea Recta"
+          "pregunta": "Inciso correcto ",
+          "respuesta": "A"
+        },
+        {
+          "pregunta": "x1",
+          "respuesta": "0.2727272727"
+        },
+        {
+          "pregunta": "x2",
+          "respuesta": "0.2862406947"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "0.2876251261"
+        },
+        {
+          "pregunta": "x4",
+          "respuesta": "0.2877694902"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.0001443641"
         }
-      ],
-      "problemas": [
+      ]
+    }
+  ]
+},
+    {
+  "id": 12,
+  "linea": "1",
+  "estacion": "Del Golfo",
+  "tipo": "semaforo",
+  "puntos": 1000,
+  "minijuego": "semaforo",
+  "tabla_img": "assets/tablas/tabla_delGolfo.png",
+  "seleccion_metodo": [
+    {
+      "correcto": "Falsa Posición",
+      "incorrecto1": "Bisectriz",
+      "incorrecto2": "Cúbica",
+      "incorrecto3": "Línea Recta"
+    }
+  ],
+  "problemas": [
+    {
+      "enunciado": "f(x) = x^3 - 4x - 9 = 0\na y b son los enteros consecutivos en el rango [1, 4] donde f(x) cambia de signo",
+      "opciones": [
         {
-          "enunciado": "f(x) = 2x³ - 5x - 2\na = 1,   b = 2",
-          "opciones": [
-            {
-              "pregunta": "x1",
-              "respuesta": "1.555555556"
-            },
-            {
-              "pregunta": "x2",
-              "respuesta": "1.715539947"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "1.746004563"
-            },
-            {
-              "pregunta": "x4",
-              "respuesta": "1.751260520"
-            },
-            {
-              "pregunta": "x5",
-              "respuesta": "1.752151156"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000890636"
-            }
-          ]
+          "pregunta": "a",
+          "respuesta": "2"
         },
         {
-          "enunciado": "f(x) = x² + 4x - 7\na = 1,   b = 2",
-          "opciones": [
-            {
-              "pregunta": "x1",
-              "respuesta": "1.285714286"
-            },
-            {
-              "pregunta": "x2",
-              "respuesta": "1.313725490"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "1.316353887"
-            },
-            {
-              "pregunta": "x4",
-              "respuesta": "1.316599487"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000245600"
-            }
-          ]
+          "pregunta": "b",
+          "respuesta": "3"
         },
         {
-          "enunciado": "f(x) = x³ - x² - 3\na = 1,   b = 2",
-          "opciones": [
-            {
-              "pregunta": "x1",
-              "respuesta": "1.75"
-            },
-            {
-              "pregunta": "x2",
-              "respuesta": "1.853211009"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "1.862780652"
-            },
-            {
-              "pregunta": "x4",
-              "respuesta": "1.863625189"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000844536"
-            }
-          ]
+          "pregunta": "x1",
+          "respuesta": "2.6428571429"
+        },
+        {
+          "pregunta": "x2",
+          "respuesta": "2.6940026940"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "2.7046045888"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.0106018948"
         }
       ]
     },
     {
-      "id": 13,
-      "linea": "1",
-      "estacion": "Félix U. Gómez",
-      "tipo": "semaforo",
-      "puntos": 1000,
-      "minijuego": "semaforo",
-      "tabla_img": "assets/tablas/tabla_felixUGomez.png",
-      "seleccion_metodo": [
+      "enunciado": "f(x) = x^3 + 2x^2 - 5 = 0\na y b son los enteros consecutivos en el rango [0, 3] donde f(x) cambia de signo",
+      "opciones": [
         {
-          "correcto": "Secante",
-          "incorrecto1": "Montante",
-          "incorrecto2": "Bisectriz",
-          "incorrecto3": "Jacobi"
-        }
-      ],
-      "problemas": [
-        {
-          "enunciado": "f(x) = 2x² + x - 5\nx0 = 1,   x1 = 2",
-          "opciones": [
-            {
-              "pregunta": "x2",
-              "respuesta": "1.285714286"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "1.339622642"
-            },
-            {
-              "pregunta": "x4",
-              "respuesta": "1.351013368"
-            },
-            {
-              "pregunta": "x5",
-              "respuesta": "1.350780247"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000233121"
-            }
-          ]
+          "pregunta": "a",
+          "respuesta": "1"
         },
         {
-          "enunciado": "f(x) = x² - 6x + 4\nx0 = 0,   x1 = 1",
-          "opciones": [
-            {
-              "pregunta": "x2",
-              "respuesta": "0.8"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "0.761904762"
-            },
-            {
-              "pregunta": "x4",
-              "respuesta": "0.763948498"
-            },
-            {
-              "pregunta": "x5",
-              "respuesta": "0.763932030"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000016468"
-            }
-          ]
+          "pregunta": "b",
+          "respuesta": "2"
         },
         {
-          "enunciado": "f(x) = x² - 2x - 5\nx0 = 3,   x1 = 4",
-          "opciones": [
-            {
-              "pregunta": "x2",
-              "respuesta": "3.4"
-            },
-            {
-              "pregunta": "x3",
-              "respuesta": "3.444444444"
-            },
-            {
-              "pregunta": "x4",
-              "respuesta": "3.449541284"
-            },
-            {
-              "pregunta": "x5",
-              "respuesta": "3.449489690"
-            },
-            {
-              "pregunta": "error",
-              "respuesta": "0.000051595"
-            }
-          ]
+          "pregunta": "x1",
+          "respuesta": "1.1538461538"
+        },
+        {
+          "pregunta": "x2",
+          "respuesta": "1.2140410959"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "1.2330386129"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.0189975170"
         }
       ]
     },
+    {
+      "enunciado": "f(x) = e^x + x - 3 = 0\na y b son los enteros consecutivos en el rango [0, 3] donde f(x) cambia de signo",
+      "opciones": [
+        {
+          "pregunta": "a",
+          "respuesta": "0"
+        },
+        {
+          "pregunta": "b",
+          "respuesta": "1"
+        },
+        {
+          "pregunta": "x1",
+          "respuesta": "0.7310585786"
+        },
+        {
+          "pregunta": "x2",
+          "respuesta": "0.7832049195"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "0.7915594957"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.0083545762"
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": 13,
+  "linea": "1",
+  "estacion": "Félix U. Gómez",
+  "tipo": "semaforo",
+  "puntos": 1000,
+  "minijuego": "semaforo",
+  "tabla_img": "assets/tablas/tabla_felixUGomez.png",
+  "seleccion_metodo": [
+    {
+      "correcto": "Secante",
+      "incorrecto1": "Montante",
+      "incorrecto2": "Bisectriz",
+      "incorrecto3": "Jacobi"
+    }
+  ],
+  "problemas": [
+    {
+      "enunciado": "f(x) = 2x^2 + x - 5 = 0\na y b son los enteros consecutivos en el rango [1, 3] donde f(x) cambia de signo",
+      "opciones": [
+        {
+          "pregunta": "a",
+          "respuesta": "1"
+        },
+        {
+          "pregunta": "b",
+          "respuesta": "2"
+        },
+        {
+          "pregunta": "x2",
+          "respuesta": "1.2857142857"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "1.3396226415"
+        },
+        {
+          "pregunta": "x4",
+          "respuesta": "1.3510133681"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.0113907266"
+        }
+      ]
+    },
+    {
+      "enunciado": "f(x) = x^2 - 6x + 4 = 0\na y b son los enteros consecutivos en el rango [0, 2] donde f(x) cambia de signo",
+      "opciones": [
+        {
+          "pregunta": "a",
+          "respuesta": "0"
+        },
+        {
+          "pregunta": "b",
+          "respuesta": "1"
+        },
+        {
+          "pregunta": "x2",
+          "respuesta": "0.8000000000"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "0.7619047619"
+        },
+        {
+          "pregunta": "x4",
+          "respuesta": "0.7639484979"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.0020437360"
+        }
+      ]
+    },
+    {
+      "enunciado": "f(x) = x^2 - 2x - 5 = 0\na y b son los enteros consecutivos en el rango [2, 5] donde f(x) cambia de signo",
+      "opciones": [
+        {
+          "pregunta": "a",
+          "respuesta": "3"
+        },
+        {
+          "pregunta": "b",
+          "respuesta": "4"
+        },
+        {
+          "pregunta": "x2",
+          "respuesta": "3.4000000000"
+        },
+        {
+          "pregunta": "x3",
+          "respuesta": "3.4444444444"
+        },
+        {
+          "pregunta": "x4",
+          "respuesta": "3.4495412844"
+        },
+        {
+          "pregunta": "error",
+          "respuesta": "0.0050968400"
+        }
+      ]
+    }
+  ]
+},
     {
       "id": 14,
       "linea": "1",
