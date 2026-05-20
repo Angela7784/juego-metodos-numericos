@@ -986,70 +986,68 @@
             }
           ]
         },
-        [
-          {
-            "enunciado": "f(x) = ln(x² + 1) - x + 1\nx0 = 1,   x1 = 2",
-            "opciones": [
-              {
-                "pregunta": "x2",
-                "respuesta": "9.278255562"
-              },
-              {
-                "pregunta": "x3",
-                "respuesta": "2.999719460"
-              },
-              {
-                "pregunta": "x4",
-                "respuesta": "2.449174577"
-              },
-              {
-                "pregunta": "x5",
-                "respuesta": "3.860166297"
-              },
-              {
-                "pregunta": "x6",
-                "respuesta": "3.637042533"
-              },
-              {
-                "pregunta": "x7",
-                "respuesta": "3.589718428"
-              },
-              {
-                "pregunta": "x8",
-                "respuesta": "3.590580459"
-              },
-              {
-                "pregunta": "error",
-                "respuesta": "0.000862031"
-              }
-            ]
-          },
-          {
-            "enunciado": "f(x) = arctan(x) - e^(-x)\nx0 = 0,   x1 = 1",
-            "opciones": [
-              {
-                "pregunta": "x2",
-                "respuesta": "0.705473616"
-              },
-              {
-                "pregunta": "x3",
-                "respuesta": "0.591242398"
-              },
-              {
-                "pregunta": "x4",
-                "respuesta": "0.606346294"
-              },
-              {
-                "pregunta": "x5",
-                "respuesta": "0.606628574"
-              },
-              {
-                "pregunta": "error",
-                "respuesta": "0.000282280"
-              }
-            ]
-          }
-        ]
+        {
+          "enunciado": "f(x) = ln(x² + 1) - x + 1\nx0 = 1,   x1 = 2",
+          "opciones": [
+            {
+              "pregunta": "x2",
+              "respuesta": "9.278255562"
+            },
+            {
+              "pregunta": "x3",
+              "respuesta": "2.999719460"
+            },
+            {
+              "pregunta": "x4",
+              "respuesta": "2.449174577"
+            },
+            {
+              "pregunta": "x5",
+              "respuesta": "3.860166297"
+            },
+            {
+              "pregunta": "x6",
+              "respuesta": "3.637042533"
+            },
+            {
+              "pregunta": "x7",
+              "respuesta": "3.589718428"
+            },
+            {
+              "pregunta": "x8",
+              "respuesta": "3.590580459"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000862031"
+            }
+          ]
+        },
+        {
+          "enunciado": "f(x) = arctan(x) - e^(-x)\nx0 = 0,   x1 = 1",
+          "opciones": [
+            {
+              "pregunta": "x2",
+              "respuesta": "0.705473616"
+            },
+            {
+              "pregunta": "x3",
+              "respuesta": "0.591242398"
+            },
+            {
+              "pregunta": "x4",
+              "respuesta": "0.606346294"
+            },
+            {
+              "pregunta": "x5",
+              "respuesta": "0.606628574"
+            },
+            {
+              "pregunta": "error",
+              "respuesta": "0.000282280"
+            }
+          ]
+        }
       ]
     },
     {
