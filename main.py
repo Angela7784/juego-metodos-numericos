@@ -1,6 +1,10 @@
 import pygame
 import sys
+import os
 import time
+
+if getattr(sys, 'frozen', False):
+    os.chdir(sys._MEIPASS)
 
 from screens.menu              import mostrar_mapa
 from screens.select_metodo     import mostrar_select_metodo
@@ -202,7 +206,7 @@ def main():
                 start_time = time.time()
                 transition.request("select_metodo")
 
-        # SELECCION DE METODO
+       # SELECCION DE METODO
         elif current_screen == "select_metodo":
             result = mostrar_select_metodo(screen, WIDTH, HEIGHT, font_title, font_button,
                                            WHITE, DARK_GREY, event, mouse_pos,
