@@ -249,7 +249,7 @@ def main():
                     next_s = _nivel_superado(nivel, ctx)
                     nivel_completado = ctx["nivel_completado"]
                     transition.request(next_s)
-                elif result == "tiempo_agotado":
+                elif result in ("incorrecto", "tiempo_agotado"):
                     game_state.vidas -= 1
                     SaveManager.guardar(game_state)
                     transition.request("game_over" if game_state.vidas <= 0 else "incorrecto")

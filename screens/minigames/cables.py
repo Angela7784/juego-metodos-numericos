@@ -36,25 +36,29 @@ CABLE_W   = 5       # grosor del cable
 
 
 # ── Estado del módulo ──────────────────────────────────────────────────────
-_nivel_id       = None
-_derecha_order  = []   # _derecha_order[visual_j] = índice de pregunta real
-_conexiones     = {}   # left_idx → right_visual_j  (parejas correctas bloqueadas)
-_dragging_from  = None # left_idx que se está arrastrando, o None
-_wrong_flash    = {}   # left_idx → tick_fin  (ms)
-_enunciado      = ""   # enunciado del problema seleccionado
-_preguntas      = []   # opciones del problema seleccionado
+_nivel_id           = None
+_derecha_order      = []   # _derecha_order[visual_j] = índice de pregunta real
+_conexiones         = {}   # left_idx → right_visual_j  (parejas correctas bloqueadas)
+_dragging_from      = None # left_idx que se está arrastrando, o None
+_wrong_flash        = {}   # left_idx → tick_fin  (ms)
+_enunciado          = ""   # enunciado del problema seleccionado
+_preguntas          = []   # opciones del problema seleccionado
+_pending_incorrecto = False
+_incorrecto_tick    = 0
 
 
 def reset_cables() -> None:
     global _nivel_id, _derecha_order, _conexiones, _dragging_from, _wrong_flash
-    global _enunciado, _preguntas
-    _nivel_id      = None
-    _derecha_order = []
-    _conexiones    = {}
-    _dragging_from = None
-    _wrong_flash   = {}
-    _enunciado     = ""
-    _preguntas     = []
+    global _enunciado, _preguntas, _pending_incorrecto, _incorrecto_tick
+    _nivel_id           = None
+    _derecha_order      = []
+    _conexiones         = {}
+    _dragging_from      = None
+    _wrong_flash        = {}
+    _enunciado          = ""
+    _preguntas          = []
+    _pending_incorrecto = False
+    _incorrecto_tick    = 0
 
 
 def _wrap_text(text, font, max_width):
@@ -156,7 +160,7 @@ def mostrar_cables(
       None              → sin acción este frame
     """
     global _nivel_id, _derecha_order, _conexiones, _dragging_from, _wrong_flash
-    global _enunciado, _preguntas
+    global _enunciado, _preguntas, _pending_incorrecto, _incorrecto_tick
 
     now = pygame.time.get_ticks()
 
@@ -186,6 +190,11 @@ def mostrar_cables(
     remaining = max(0, 1800 - int(time.time() - start_time)) if start_time else 1800
     if remaining <= 0:
         return "tiempo_agotado"
+
+    # Resolver incorrecto pendiente (después del flash)
+    if _pending_incorrecto and now >= _incorrecto_tick:
+        _pending_incorrecto = False
+        return "incorrecto"
 
     # Limpiar destellos expirados
     _wrong_flash = {k: v for k, v in _wrong_flash.items() if now < v}
@@ -218,6 +227,8 @@ def mostrar_cables(
                         _conexiones[_dragging_from] = j    # ✓ correcto
                     else:
                         _wrong_flash[_dragging_from] = now + FLASH_MS  # ✗ error
+                        _pending_incorrecto = True
+                        _incorrecto_tick    = now + FLASH_MS
                 _dragging_from = None
 
     # ── ¿Completado? ───────────────────────────────────────────────────────
@@ -250,10 +261,12 @@ def mostrar_cables(
         screen.blit(font_button.render(f"Vidas: {game_state.vidas}", True, WHITE),
                     (WIDTH - 200, 20))
 
-    # Timer HUD
-    timer_col = RED if remaining <= 10 else (YELLOW if remaining <= 30 else WHITE)
-    timer_txt = f"{remaining // 60:02}:{remaining % 60:02}"
-    screen.blit(font_button.render(timer_txt, True, timer_col), (WIDTH - 305, 55))
+    # Timer HUD (a la izquierda de los corazones)
+    timer_col  = RED if remaining <= 10 else (YELLOW if remaining <= 30 else WHITE)
+    timer_surf = font_title.render(f"{remaining // 60:02}:{remaining % 60:02}", True, timer_col)
+    hearts_left_x = WIDTH - 45 - (max(game_state.vidas, 1) - 1) * 38
+    timer_rect = timer_surf.get_rect(right=hearts_left_x - 14, centery=37)
+    screen.blit(timer_surf, timer_rect)
 
     # ── Título ─────────────────────────────────────────────────────────────
     title_surf = font_title.render("Conecta los cables", True, YELLOW)
